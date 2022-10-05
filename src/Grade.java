@@ -1,17 +1,14 @@
 public class Grade {
 
-    private static int grade;
-
-    public Grade(){
-        setGrade(0);
-    }
+    private static int grade = 0;
+    private static int questions = 0;
 
     public int getGrade() {
         return grade;
     }
 
     public void setGrade(int grade) {
-        this.grade = grade;
+        Grade.grade = grade;
     }
 
     public void incrementGrade(int marks){
@@ -30,6 +27,7 @@ public class Grade {
     }
 
     public void message(boolean isCorrect){
+        questions++;
         if(isCorrect){
             System.out.println("Correct answer");
             return;
@@ -38,6 +36,6 @@ public class Grade {
     }
 
     public Double arithmetics(int grade){
-        return (double) grade / 100;
+        return (double) grade * 100 / questions;
     }
 }

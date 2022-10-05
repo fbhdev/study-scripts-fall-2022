@@ -23,6 +23,7 @@ public class Question {
             grade.setGrade(grade.getGrade() + 1);
         } else {
             grade.message(false);
+            System.out.println("Correct answer is: " + getAnswer());
         }
     }
 
