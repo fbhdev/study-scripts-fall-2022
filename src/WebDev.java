@@ -69,7 +69,7 @@ public class WebDev {
         }
 
         public void questionSeven(){
-            question = new Question("What do you call applications run on the user’s machine?", "Client-side", 7);
+            question = new Question("What do you call applications running on the user’s machine?", "Client-side", 7);
             questions.add(question);
         }
 
@@ -95,6 +95,104 @@ public class WebDev {
 
         public void questionTwelve(){
             question = new Question("Web designers must build pages in a manner that creates as few barriers as possible to getting to information, regardless of the user’s ability and the device used to access the web. In other words, what must you design it for?", "Accessibility", 12);
+            questions.add(question);
+        }
+    }
+
+
+    static class ModuleTwo{
+
+        private Module module;
+        private Question question;
+        private ArrayList<Question> questions = new ArrayList<>();
+
+        public ModuleTwo(){
+            module = new Module("Web Development", 2);
+            modules.add(module);
+        }
+
+        @Override
+        public String toString() {
+            return module.getCourse() + ", Module " + module.getModule();
+        }
+
+        public void release(){
+            questionOne();
+            questionTwo();
+            questionThree();
+            questionFour();
+            questionFive();
+            questionSix();
+            questionSeven();
+            questionEight();
+            questionNine();
+            questionTen();
+            questionEleven();
+            questionTwelve();
+        }
+
+        public void questionOne(){
+            question = new Question(" refers to marking up documents in ways that provide information about the content itself rather than information about the visual styling of the content?", "Semantic Markup", 1);
+            questions.add(question);
+        }
+
+        public void questionTwo(){
+            question = new Question("Which display value always starts on a new line, and the browsers automatically add some space (a margin) before and after the element?", "Block", 2);
+            questions.add(question);
+        }
+
+        public void questionThree(){
+            question = new Question("Which display value only takes up as much width as necessary?", "Inline", 3);
+            questions.add(question);
+        }
+
+        public void questionFour(){
+            question = new Question("What are instructions that clarify or modify an element?", "Attributes", 4);
+            questions.add(question);
+        }
+
+        public void questionFive(){
+            question = new Question("Which tag would you use when you have a long quotation, a testimonial, or a section of copy from another source?", "Blockquote", 5);
+            questions.add(question);
+        }
+
+        public void questionSix(){
+            question = new Question("In some types of information, such as code examples or certain poems, the whitespace is important for conveying meaning. Which tag would you use to preserve whitespace?", "pre", 6);
+            questions.add(question);
+        }
+
+        public void questionSeven(){
+            question = new Question("Which tag is used for introductory material that typically appears at the beginning of a web page or at the top of a section or article?", "header", 7);
+            questions.add(question);
+        }
+
+        public void questionEight(){
+            question = new Question("Which element is used to indicate the type of information that typically comes at the end of a page or an article, such as its author, copyright information, related documents, or navigation?", "footer", 8);
+            questions.add(question);
+        }
+
+        public void questionNine(){
+            question = new Question("For example, books are divided into chapters, and newspapers have sections for local news, sports, comics, and so on. Which element typically include a heading (inside the parent element) plus content that has a meaningful reason to be grouped together?", "section", 9);
+            questions.add(question);
+        }
+
+        public void questionTen(){
+            question = new Question("Which element is useful for magazine or newspaper articles, blog posts, comments, or other items that could be extracted for external use?", "article", 10);
+            questions.add(question);
+        }
+
+        public void questionEleven(){
+            question = new Question("Which element identifies content that is separate from, but tangentially related to, the surrounding content? In print, its equivalent is a sidebar.", "aside", 11);
+            questions.add(question);
+        }
+
+        public void questionTwelve(){
+            question = new Question("What is used to assign a unique identifier to an element in the document?", "id", 12);
+            questions.add(question);
+        }
+
+        public void questionThirteen(){
+            question = new Question("", "", 13);
             questions.add(question);
         }
     }
