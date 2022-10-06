@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Module {
 
+    private ArrayList<Question> questions = new ArrayList<>();
     private String course;
     private int module;
 
@@ -45,5 +48,14 @@ public class Module {
             }
         }
         return false;
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+
+    @Override
+    public String toString() {
+        return getCourse() + ", Module " + getModule();
     }
 }

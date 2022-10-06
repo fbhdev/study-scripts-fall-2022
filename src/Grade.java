@@ -1,7 +1,7 @@
 public class Grade {
 
     private static int grade = 0;
-    private static int questions = 0;
+    private static int total = 0;
 
     public int getGrade() {
         return grade;
@@ -9,6 +9,10 @@ public class Grade {
 
     public void setGrade(int grade) {
         Grade.grade = grade;
+    }
+
+    public int getTotal() {
+        return total;
     }
 
     public void incrementGrade(int marks){
@@ -27,7 +31,7 @@ public class Grade {
     }
 
     public void message(boolean isCorrect){
-        questions++;
+        total++;
         if(isCorrect){
             System.out.println("Correct answer");
             return;
@@ -35,7 +39,8 @@ public class Grade {
         System.out.println("Incorrect answer");
     }
 
-    public Double arithmetics(int grade){
-        return (double) grade * 100 / questions;
+    public String arithmetics(int grade){
+        Double percentage = (double) grade / total * 100;
+        return String.format("%.2f", percentage);
     }
 }
