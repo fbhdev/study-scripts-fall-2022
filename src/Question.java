@@ -6,10 +6,11 @@ public class Question {
     private Grade grade = new Grade();
     private int number;
 
-    public Question(String question, String answer, int number) {
+    public Question(String question, String answer, int number, Module module){
         this.question = question;
         this.answer = answer;
         this.number = number;
+        module.getQuestions().add(this);
     }
 
     public boolean isCorrect(String input){

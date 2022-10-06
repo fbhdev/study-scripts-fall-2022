@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="Module 2 Web Dev in the works">
+    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="Module 2 Web Dev done + improvements to structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebDev.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,15 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="web dev" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="WebDev" />
+      <module name="study-scripts-fall-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +57,7 @@
       <updated>1664998759030</updated>
       <workItem from="1664998760433" duration="11324000" />
       <workItem from="1665013273329" duration="8010000" />
-      <workItem from="1665028195625" duration="4500000" />
+      <workItem from="1665028195625" duration="7124000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1665005981733</created>
@@ -72,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665018750768</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Module 2 Web Dev done + improvements to structure">
+      <created>1665032724542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665032724542</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +108,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Module 1 Web Dev done" />
     <MESSAGE value="Module 2 Web Dev in the works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 2 Web Dev in the works" />
+    <MESSAGE value="Module 2 Web Dev done + improvements to structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 2 Web Dev done + improvements to structure" />
   </component>
 </project>
