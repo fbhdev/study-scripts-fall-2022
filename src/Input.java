@@ -15,10 +15,25 @@ public class Input {
 
     public void stringInput(){
         try {
-            setInput(scanner().nextLine());
+            while (true) {
+                input = scanner().nextLine();
+                if (input.isEmpty()) {
+                    System.out.print("Please enter a valid input -> ");
+                    continue;
+                }
+                break;
+            }
         }
         // adapts it to int
         catch (Exception e){
+            while (true) {
+                input = String.valueOf(scanner().nextInt());
+                if (input.isEmpty()) {
+                    System.out.print("Please enter a valid input -> ");
+                    continue;
+                }
+                break;
+            }
             setInput(String.valueOf(scanner().nextInt()));
         }
     }
