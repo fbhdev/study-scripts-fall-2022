@@ -1,16 +1,18 @@
-public class Question {
+public class Question extends Course {
 
+    private final int module;
     private final String question;
+    private final String course;
     private final String answer;
-    private final Module module;
     private final int number;
 
-    public Question(String question, String answer, int number, Module module){
+    public Question(String question, String answer, int number, int module, String course) {
         this.question = question;
         this.answer = answer;
         this.number = number;
         this.module = module;
-        module.allQuestions().add(this);
+        this.course = course;
+        allQuestions().add(this);
     }
 
     public boolean isCorrect(String input){
@@ -48,6 +50,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return module.getCourse() + " | Module " + module.getModule() + " | Question " + getNumber();
+        return course + " | Module " + module + " | Question " + getNumber();
     }
 }
