@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         run();
+//        Module module = new Module();
+//        module.getQuestions();
     }
 
     public static int select(){
@@ -20,7 +22,6 @@ public class Main {
         for(int count = 1; count <= 5; count++){
             if(choice == count){
                 System.out.println();
-                System.out.println("You have selected " + choice);
                 return choice;
             }
         }

@@ -18,8 +18,10 @@ public class WebDev{
 
         private Module module;
         public ModuleOne(){
-            module = new Module("Web Development", 1);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Development");
+            module.setModule(1);
+            Module.modules().add(module);
         }
         public void questions(){
             new Question("Who makes sure that every bit of text on a site, from long explanatory text down to the labels on buttons, supports the brand identity and marketing goals of the organization?", "Content Strategist", 1, module);
@@ -41,8 +43,10 @@ public class WebDev{
 
         private Module module;
         public ModuleTwo() {
-            module = new Module("Web Development", 2);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Development");
+            module.setModule(2);
+            Module.modules().add(module);
         }
 
         public void questions(){
@@ -66,8 +70,10 @@ public class WebDev{
 
         private Module module;
         public ModuleThree() {
-            module = new Module("Web Development", 3);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Development");
+            module.setModule(3);
+            Module.modules().add(module);
         }
 
         public void questions(){
@@ -92,7 +98,7 @@ public class WebDev{
         ArrayList<Question> questions = new ArrayList<>();
         new WebDev().release();
         for (Module module : modules) {
-            questions.addAll(module.getQuestions());
+            questions.addAll(module.allQuestions());
         }
         Collections.shuffle(questions);
         return questions;
@@ -103,7 +109,7 @@ public class WebDev{
         new WebDev().release();
         for(Module module : modules){
             System.out.println(module);
-            for(Question question : module.getQuestions()){
+            for(Question question : module.allQuestions()){
                 System.out.println(question);
                 question.askUser();
                 System.out.println();

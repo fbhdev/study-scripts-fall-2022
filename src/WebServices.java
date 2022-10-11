@@ -6,8 +6,8 @@ public class WebServices {
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
-    private static final ArrayList<Module> modules = new ArrayList<>();
     private static ArrayList<Question> questions = new ArrayList<>();
+    private final Module module = new Module();
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -20,8 +20,10 @@ public class WebServices {
         private Module module;
 
         public ModuleOne(){
-            module = new Module("Web Services", 1);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Services");
+            module.setModule(1);
+            Module.modules().add(module);
         }
 
         public void questions(){
@@ -47,8 +49,10 @@ public class WebServices {
         private Module module;
 
         public ModuleTwo(){
-            module = new Module("Web Services", 2);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Services");
+            module.setModule(2);
+            Module.modules().add(module);
         }
 
         public void questions(){
@@ -67,8 +71,10 @@ public class WebServices {
         private Module module;
 
         public ModuleThree(){
-            module = new Module("Web Services", 3);
-            modules.add(module);
+            module = new Module();
+            module.setCourse("Web Services");
+            module.setModule(3);
+            Module.modules().add(module);
         }
 
         public void questions(){
@@ -84,32 +90,25 @@ public class WebServices {
         }
     }
 
-    public void release(){
+    public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
-    }
-
-    public static ArrayList<Question> shuffle(){
-        new WebServices().release();
-        for (Module module : modules) {
-            questions.addAll(module.getQuestions());
-        }
-        Collections.shuffle(questions);
-        return questions;
+        questions.addAll(module.allQuestions());
+        if (shuffle) Collections.shuffle(questions);
     }
 
     public void run() {
-        shuffle();
+        release(true);
         Grade grade = new Grade();
         int size = questions.size();
         for (Question question : questions) {
-            System.out.println(size + " questions left");
-            size--;
             System.out.println();
+            System.out.println(size + " questions left");
             System.out.println(question);
             question.askUser();
             System.out.println();
+            size--;
         }
         System.out.println("Scored " + grade.getGrade() + "/" + grade.getTotal());
         System.out.println("Your grade is: " + grade.arithmetics(grade.getGrade()) + "%");

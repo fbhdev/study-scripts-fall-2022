@@ -12,7 +12,7 @@ public class Question {
         this.answer = answer;
         this.number = number;
         this.module = module;
-        module.getQuestions().add(this);
+        module.allQuestions().add(this);
     }
 
     public boolean isCorrect(String input){

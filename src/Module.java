@@ -1,19 +1,12 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Module {
 
-    private ArrayList<Question> questions = new ArrayList<>();
+    private static ArrayList<Module> modules = new ArrayList<>();
+    private static ArrayList<Question> questions = new ArrayList<>();
     private String course;
     private int module;
-
-    /**
-     * @param course the course to set
-     * @param module the module to set
-     */
-    public Module(String course, int module){
-        setCourse(course);
-        setModule(module);
-    }
 
     public String getCourse() {
         return course;
@@ -34,6 +27,10 @@ public class Module {
         this.module = module;
     }
 
+    public static ArrayList<Module> modules(){
+        return modules;
+    }
+
     public boolean isValid(String course){
         String[] courses = {
                 "Web Development",
@@ -50,7 +47,7 @@ public class Module {
         return false;
     }
 
-    public ArrayList<Question> getQuestions() {
+    public ArrayList<Question> allQuestions() {
         return questions;
     }
 
