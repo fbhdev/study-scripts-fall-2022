@@ -6,7 +6,7 @@ public class WebServices {
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
-    private static ArrayList<Question> questions = new ArrayList<>();
+    private static final ArrayList<Question> questions = new ArrayList<>();
     private final Module module = new Module();
 
     public WebServices() {
@@ -17,7 +17,7 @@ public class WebServices {
 
     static class ModuleOne{
 
-        private Module module;
+        private final Module module;
 
         public ModuleOne(){
             module = new Module();
@@ -46,7 +46,7 @@ public class WebServices {
 
     static class ModuleTwo{
 
-        private Module module;
+        private final Module module;
 
         public ModuleTwo(){
             module = new Module();
@@ -68,7 +68,7 @@ public class WebServices {
     }
     static class ModuleThree{
 
-        private Module module;
+        private final Module module;
 
         public ModuleThree(){
             module = new Module();
@@ -100,25 +100,21 @@ public class WebServices {
 
     public void run() {
         release(true);
-        Grade grade = new Grade();
         int length = module.length();
-        int count = length;
+        if (length == 0) return;
         for (Question question : questions) {
-            if (count == 0) break;
+            if (length == 0) break;
             System.out.println();
-            if(count == 1){
-                System.out.println(count + " question left");
-            }
-            else {
-                System.out.println(count + " questions left");
+            if (length == 1) {
+                System.out.println(length + " question left");
+            } else {
+                System.out.println(length + " questions left");
             }
             System.out.println(question);
             question.askUser();
             System.out.println();
-            count--;
+            length--;
         }
-        System.out.print("Scored " + grade.getGrade() + "/" + grade.getTotal());
-        System.out.println("\t\tYour grade is: " + grade.arithmetics(grade.getGrade()) + "%");
-        System.out.println();
+        new Grade().grade();
     }
 }

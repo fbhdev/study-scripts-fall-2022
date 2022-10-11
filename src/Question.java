@@ -1,11 +1,9 @@
 public class Question {
 
-    private String question;
-    private String answer;
-    private Input input;
-    private Grade grade = new Grade();
-    private Module module;
-    private int number;
+    private final String question;
+    private final String answer;
+    private final Module module;
+    private final int number;
 
     public Question(String question, String answer, int number, Module module){
         this.question = question;
@@ -20,11 +18,17 @@ public class Question {
     }
 
     public void askUser(){
-        input = new Input(getQuestion());
+        Input input = new Input(getQuestion());
+        Grade grade = new Grade();
         if(isCorrect(input.getInput())){
             grade.message(true);
             grade.setGrade(grade.getGrade() + 1);
-        } else {
+        }
+        else if(grade.leniency(getAnswer(), input)){
+            grade.message(true);
+            grade.setGrade(grade.getGrade() + 1);
+        }
+        else{
             grade.message(false);
             System.out.println("Correct answer is: " + getAnswer());
         }
@@ -34,24 +38,12 @@ public class Question {
         return question;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
-    }
-
     public String getAnswer() {
         return answer;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     @Override

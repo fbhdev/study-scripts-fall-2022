@@ -6,7 +6,8 @@ public class WebDev{
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
-    private static final ArrayList<Module> modules = new ArrayList<>();
+    private static final ArrayList<Question> questions = new ArrayList<>();
+    private final Module module = new Module();
 
     public WebDev() {
         moduleOne = new ModuleOne();
@@ -16,7 +17,7 @@ public class WebDev{
 
     static class ModuleOne{
 
-        private Module module;
+        private final Module module;
         public ModuleOne(){
             module = new Module();
             module.setCourse("Web Development");
@@ -41,7 +42,7 @@ public class WebDev{
 
     static class ModuleTwo {
 
-        private Module module;
+        private final Module module;
         public ModuleTwo() {
             module = new Module();
             module.setCourse("Web Development");
@@ -68,7 +69,7 @@ public class WebDev{
 
     static class ModuleThree {
 
-        private Module module;
+        private final Module module;
         public ModuleThree() {
             module = new Module();
             module.setCourse("Web Development");
@@ -88,39 +89,31 @@ public class WebDev{
         }
     }
 
-    public void release(){
+    public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
-    }
-
-    public static ArrayList<Question> shuffle(){
-        ArrayList<Question> questions = new ArrayList<>();
-        new WebDev().release();
-        for (Module module : modules) {
-            questions.addAll(module.allQuestions());
-        }
-        Collections.shuffle(questions);
-        return questions;
+        questions.addAll(module.allQuestions());
+        if (shuffle) Collections.shuffle(questions);
     }
 
     public void run(){
-        Grade grade = new Grade();
-        new WebDev().release();
-        for(Module module : modules){
-            System.out.println(module);
-            for(Question question : module.allQuestions()){
-                System.out.println(question);
-                question.askUser();
-                System.out.println();
+        release(true);
+        int length = module.length();
+        if (length == 0) return;
+        for (Question question : questions) {
+            if (length == 0) break;
+            System.out.println();
+            if (length == 1) {
+                System.out.println(length + " question left");
+            } else {
+                System.out.println(length + " questions left");
             }
+            System.out.println(question);
+            question.askUser();
+            System.out.println();
+            length--;
         }
-        System.out.println("Scored " + grade.getGrade() + "/" + grade.getTotal());
-        System.out.println("Your grade is: " + grade.arithmetics(grade.getGrade()) + "%");
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(shuffle());
+        new Grade().grade();
     }
 }

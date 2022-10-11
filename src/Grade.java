@@ -3,6 +3,15 @@ public class Grade {
     private static int grade = 0;
     private static int total = 0;
 
+    public void grade(){
+        if(!isValid(getGrade())){
+            throw new IllegalArgumentException("Invalid grade");
+        }
+        System.out.print("Scored " + getGrade() + "/" + getTotal());
+        System.out.println("\t|\tYour grade is: " + arithmetics(getGrade()) + "%");
+        System.out.println();
+    }
+
     public int getGrade() {
         return grade;
     }
@@ -13,13 +22,6 @@ public class Grade {
 
     public int getTotal() {
         return total;
-    }
-
-    public void incrementGrade(int marks){
-        if(!isValid(getGrade())){
-            throw new IllegalArgumentException("Invalid grade");
-        }
-        setGrade(getGrade() + marks);
     }
 
     public boolean isValid(int grade){
@@ -33,6 +35,25 @@ public class Grade {
             return;
         }
         System.out.println("Incorrect answer");
+    }
+
+    public boolean leniency(String answer, Input input){
+        int total = 0;
+        for(int count = 0; count < input.getInput().length(); count++){
+            try {
+                char a = input.getInput().charAt(count);
+                char b = answer.charAt(count);
+                a = Character.toLowerCase(a);
+                b = Character.toLowerCase(b);
+                if (a == b || a + 1 == b || a - 1 == b) {
+                    total++;
+                }
+            }
+            catch (StringIndexOutOfBoundsException ignored){
+            }
+        }
+        total = total * 100 / input.getInput().length();
+        return total >= 80;
     }
 
     public String arithmetics(int grade){

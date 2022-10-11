@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Module {
 
-    private static ArrayList<Module> modules = new ArrayList<>();
-    private static ArrayList<Question> questions = new ArrayList<>();
+    private static final ArrayList<Module> modules = new ArrayList<>();
+    private static final ArrayList<Question> questions = new ArrayList<>();
     private String course;
     private int module;
 
@@ -53,7 +52,11 @@ public class Module {
 
     public int length(){
         Input input = new Input("How many questions would you like to answer?");
-        return Integer.parseInt(input.getInput());
+        int length = Integer.parseInt(input.getInput());
+        if(length > 0 && length <= questions.size()){
+            return length;
+        }
+        return 0;
     }
 
     @Override

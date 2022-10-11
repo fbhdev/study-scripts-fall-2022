@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Main {
 
@@ -27,10 +26,7 @@ public class Main {
 
     public static boolean again(){
         Input input = new Input("Would you like to study more? (y/n)");
-        if (input.getInput().equalsIgnoreCase("y")){
-            return true;
-        }
-        return false;
+        return input.getInput().equalsIgnoreCase("y");
     }
 
     public static void run(){
