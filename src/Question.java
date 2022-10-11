@@ -56,6 +56,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Module " + module.getModule() + " | Question " + getNumber();
+        return module.getCourse() + " | Module " + module.getModule() + " | Question " + getNumber();
     }
 }

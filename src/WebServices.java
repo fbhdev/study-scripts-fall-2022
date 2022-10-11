@@ -7,6 +7,7 @@ public class WebServices {
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
     private static final ArrayList<Module> modules = new ArrayList<>();
+    private static ArrayList<Question> questions = new ArrayList<>();
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -83,15 +84,14 @@ public class WebServices {
         }
     }
 
-    public static void release(){
+    public void release(){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
     }
 
     public static ArrayList<Question> shuffle(){
-        ArrayList<Question> questions = new ArrayList<>();
-        new WebDev().release();
+        new WebServices().release();
         for (Module module : modules) {
             questions.addAll(module.getQuestions());
         }
@@ -99,23 +99,20 @@ public class WebServices {
         return questions;
     }
 
-    public static void run(){
+    public void run() {
+        shuffle();
         Grade grade = new Grade();
-        new WebDev().release();
-        for(Module module : modules){
-            System.out.println(module);
-            for(Question question : module.getQuestions()){
-                System.out.println(question);
-                question.askUser();
-                System.out.println();
-            }
+        int size = questions.size();
+        for (Question question : questions) {
+            System.out.println(size + " questions left");
+            size--;
+            System.out.println();
+            System.out.println(question);
+            question.askUser();
+            System.out.println();
         }
         System.out.println("Scored " + grade.getGrade() + "/" + grade.getTotal());
         System.out.println("Your grade is: " + grade.arithmetics(grade.getGrade()) + "%");
         System.out.println();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(shuffle());
     }
 }

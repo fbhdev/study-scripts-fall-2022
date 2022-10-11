@@ -79,15 +79,10 @@ public class WebDev{
             new Question("attribute specifies how the information should be sent to the server?", "Method", 6, module);
             new Question("True or False | All form controls (except submit and reset buttons) must include a name attribute.", "true", 7, module);
             new Question("", "", 8, module);
-//            new Question("For example, books are divided into chapters, and newspapers have sections for local news, sports, comics, and so on. Which element typically include a heading (inside the parent element) plus content that has a meaningful reason to be grouped together?", "section", 9, module);
-//            new Question("Which element is useful for magazine or newspaper articles, blog posts, comments, or other items that could be extracted for external use?", "article", 10, module);
-//            new Question("Which element identifies content that is separate from, but tangentially related to, the surrounding content? In print, its equivalent is a sidebar.", "aside", 11, module);
-//            new Question("What is used to assign a unique identifier to an element in the document?", "id", 12, module);
-//            new Question("What symbol denotes document fragments?", "#", 13, module);
         }
     }
 
-    public static void release(){
+    public void release(){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
@@ -103,7 +98,7 @@ public class WebDev{
         return questions;
     }
 
-    public static void run(){
+    public void run(){
         Grade grade = new Grade();
         new WebDev().release();
         for(Module module : modules){
