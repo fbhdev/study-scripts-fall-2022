@@ -4,12 +4,14 @@ public class Question {
     private String answer;
     private Input input;
     private Grade grade = new Grade();
+    private Module module;
     private int number;
 
     public Question(String question, String answer, int number, Module module){
         this.question = question;
         this.answer = answer;
         this.number = number;
+        this.module = module;
         module.getQuestions().add(this);
     }
 
@@ -54,6 +56,6 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Question " + getNumber();
+        return "Module " + module.getModule() + " | Question " + getNumber();
     }
 }

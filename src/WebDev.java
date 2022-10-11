@@ -1,17 +1,17 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class WebDev{
     
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
-    private static ArrayList<Module> modules = new ArrayList<>();
+    private static final ArrayList<Module> modules = new ArrayList<>();
 
     public WebDev() {
         moduleOne = new ModuleOne();
         moduleTwo = new ModuleTwo();
         moduleThree = new ModuleThree();
-        release();
     }
 
     static class ModuleOne{
@@ -78,7 +78,7 @@ public class WebDev{
             new Question("Which attribute provides the location (URL) of the application or script that will be used to process the form?", "Action", 5, module);
             new Question("attribute specifies how the information should be sent to the server?", "Method", 6, module);
             new Question("True or False | All form controls (except submit and reset buttons) must include a name attribute.", "true", 7, module);
-            new Question("Which element is used to indicate the type of information that typically comes at the end of a page or an article, such as its author, copyright information, related documents, or navigation?", "footer", 8, module);
+            new Question("", "", 8, module);
 //            new Question("For example, books are divided into chapters, and newspapers have sections for local news, sports, comics, and so on. Which element typically include a heading (inside the parent element) plus content that has a meaningful reason to be grouped together?", "section", 9, module);
 //            new Question("Which element is useful for magazine or newspaper articles, blog posts, comments, or other items that could be extracted for external use?", "article", 10, module);
 //            new Question("Which element identifies content that is separate from, but tangentially related to, the surrounding content? In print, its equivalent is a sidebar.", "aside", 11, module);
@@ -93,9 +93,19 @@ public class WebDev{
         moduleThree.questions();
     }
 
-    public static void main(String[] args) {
+    public static ArrayList<Question> shuffle(){
+        ArrayList<Question> questions = new ArrayList<>();
+        new WebDev().release();
+        for (Module module : modules) {
+            questions.addAll(module.getQuestions());
+        }
+        Collections.shuffle(questions);
+        return questions;
+    }
+
+    public static void run(){
         Grade grade = new Grade();
-        new WebDev();
+        new WebDev().release();
         for(Module module : modules){
             System.out.println(module);
             for(Question question : module.getQuestions()){
@@ -107,5 +117,9 @@ public class WebDev{
         System.out.println("Scored " + grade.getGrade() + "/" + grade.getTotal());
         System.out.println("Your grade is: " + grade.arithmetics(grade.getGrade()) + "%");
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(shuffle());
     }
 }

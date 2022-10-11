@@ -19,10 +19,6 @@ public class Grade {
         if(!isValid(getGrade())){
             throw new IllegalArgumentException("Invalid grade");
         }
-        if (marks == 1){
-            setGrade(getGrade() + 1);
-            return;
-        }
         setGrade(getGrade() + marks);
     }
 

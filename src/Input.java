@@ -17,24 +17,22 @@ public class Input {
         try {
             while (true) {
                 input = scanner().nextLine();
-                if (input.isEmpty()) {
+                if (input.equals(" ") || input.isEmpty()) {
                     System.out.print("Please enter a valid input -> ");
                     continue;
                 }
                 break;
             }
         }
-        // adapts it to int
         catch (Exception e){
             while (true) {
                 input = String.valueOf(scanner().nextInt());
-                if (input.isEmpty()) {
+                if (input.equals(" ") || input.isEmpty()) {
                     System.out.print("Please enter a valid input -> ");
                     continue;
                 }
                 break;
             }
-            setInput(String.valueOf(scanner().nextInt()));
         }
     }
 
