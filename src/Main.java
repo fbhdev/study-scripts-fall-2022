@@ -3,29 +3,34 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        run();
-//        Module module = new Module();
-//        module.getQuestions();
+        do {
+            run();
+        } while (again());
+        System.out.println("Thanks for studying!");
     }
 
     public static int select(){
-        System.out.println("Select a module");
         System.out.println("1. Web Services");
         System.out.println("2. Web Development");
         System.out.println("3. Data Structures and Algorithms");
         System.out.println("4. Programming Techniques 2");
         System.out.println("5. Exit");
+        Input input = new Input("Select a module");
         System.out.println();
-        System.out.print("Enter your choice -> ");
-        Scanner input = new Scanner(System.in);
-        int choice = input.nextInt();
         for(int count = 1; count <= 5; count++){
-            if(choice == count){
-                System.out.println();
-                return choice;
+            if(input.getInput().equals(String.valueOf(count))){
+                return count;
             }
         }
         return 0;
+    }
+
+    public static boolean again(){
+        Input input = new Input("Would you like to study more? (y/n)");
+        if (input.getInput().equalsIgnoreCase("y")){
+            return true;
+        }
+        return false;
     }
 
     public static void run(){

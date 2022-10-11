@@ -36,7 +36,7 @@ public class WebServices {
             new Question("What do you call the physical implementation of the service?", "Service Implementation", 7, module);
             new Question("What is referred to a piece of code that converts parameters passed between client and server during a service call?", "Stub", 8, module);
             new Question("What is the layer responsible for transporting messages between the client and the server. HTTP/HTTPS?", "Service Transport", 9, module);
-            new Question("What is a logically centralized directory of services. The registry is a central point where service developers publish new services or find existing ones?", "Service Registry", 10, module);
+            new Question("What is a central point where service developers publish new services or find existing ones?", "Service Registry", 10, module);
             new Question("What is the process of finding and locating a particular service?", "Service Discovery", 11, module);
             new Question("Name the operation consisting of firstly describing the web service itself then registering the web service.", "Publishing", 12, module);
             new Question("Name the operation firstly discovering the services in the registry and then selecting the desired web service(s) from the search results", "Finding", 13, module);
@@ -80,7 +80,7 @@ public class WebServices {
         public void questions(){
             new Question("What is a software architectural style that defines a set of constraints to be used for creating Web services?", "REST", 1, module);
             new Question("What refers to the ability of software to easily integrate with other systems in terms of sharing functionality and data?", "interoperability", 2, module);
-            new Question("Name the terms that means how calls can be made independently of one another, and each call contains all of the data necessary to complete itself successfully.", "stateless", 3, module);
+            new Question("Name the term meaning how calls can be made independently of one another, and each call contains all of the data necessary to complete itself successfully.", "stateless", 3, module);
             new Question("Which verb provides a read only access to a resource?", "GET", 4, module);
             new Question("Which verb is used to create a new resource?", "POST", 5, module);
             new Question("Which verb is used to remove a resource?", "DELETE", 6, module);
@@ -101,17 +101,24 @@ public class WebServices {
     public void run() {
         release(true);
         Grade grade = new Grade();
-        int size = questions.size();
+        int length = module.length();
+        int count = length;
         for (Question question : questions) {
+            if (count == 0) break;
             System.out.println();
-            System.out.println(size + " questions left");
+            if(count == 1){
+                System.out.println(count + " question left");
+            }
+            else {
+                System.out.println(count + " questions left");
+            }
             System.out.println(question);
             question.askUser();
             System.out.println();
-            size--;
+            count--;
         }
-        System.out.println("Scored " + grade.getGrade() + "/" + grade.getTotal());
-        System.out.println("Your grade is: " + grade.arithmetics(grade.getGrade()) + "%");
+        System.out.print("Scored " + grade.getGrade() + "/" + grade.getTotal());
+        System.out.println("\t\tYour grade is: " + grade.arithmetics(grade.getGrade()) + "%");
         System.out.println();
     }
 }

@@ -51,6 +51,11 @@ public class Module {
         return questions;
     }
 
+    public int length(){
+        Input input = new Input("How many questions would you like to answer?");
+        return Integer.parseInt(input.getInput());
+    }
+
     @Override
     public String toString() {
         return getCourse() + ", Module " + getModule();
