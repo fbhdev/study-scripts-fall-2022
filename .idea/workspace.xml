@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="Module 3 Web Dev in the works + improvements to structure">
-      <change afterPath="$PROJECT_DIR$/src/WebServices.java" afterDir="false" />
+    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="Added Web Services, module 1 + 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebDev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,7 @@
       <workItem from="1665028195625" duration="7124000" />
       <workItem from="1665035711663" duration="50000" />
       <workItem from="1665093393602" duration="4000" />
-      <workItem from="1665191454939" duration="14570000" />
+      <workItem from="1665191454939" duration="17308000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1665005981733</created>
@@ -107,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665237717088</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Web Services, module 1 + 2">
+      <created>1665446973079</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665446973079</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +133,7 @@
     <MESSAGE value="Module 2 Web Dev in the works" />
     <MESSAGE value="Module 2 Web Dev done + improvements to structure" />
     <MESSAGE value="Module 3 Web Dev in the works + improvements to structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 3 Web Dev in the works + improvements to structure" />
+    <MESSAGE value="Added Web Services, module 1 + 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Web Services, module 1 + 2" />
   </component>
 </project>
