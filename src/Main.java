@@ -15,7 +15,7 @@ public class Main {
         System.out.println("3. Data Structures and Algorithms");
         System.out.println("4. Programming Techniques 2");
         System.out.println("5. Exit");
-        Input input = new Input("Select a module");
+        Input input = new Input("Select a course");
         System.out.println();
         for(int count = 1; count <= 5; count++){
             if(input.getInput().equals(String.valueOf(count))){
@@ -31,11 +31,14 @@ public class Main {
     }
 
     public static int length(ArrayList<Question> questions){
+        System.out.println(questions.size() + " questions available.");
         Input input = new Input("How many questions would you like to answer?");
         int length = Integer.parseInt(input.getInput());
         if(length > 0 && length <= questions.size()){
             return length;
         }
+        System.out.println(questions.size() + " questions available.");
+        System.out.println();
         return 0;
     }
 
@@ -48,10 +51,25 @@ public class Main {
         }
         else if (choice == 2){
             WebDev wd = new WebDev();
+            wd.release(true);
             wd.run(length(wd.allQuestions()));
         }
-        else{
-            return;
+        else if (choice == 3){
+            DSA dsa = new DSA();
+            dsa.release(true);
+            dsa.run(length(dsa.allQuestions()));
+        }
+//        else if (choice == 4){
+//            PT2 pt2 = new PT2();
+//            pt2.release(true);
+//            pt2.run(length(pt2.allQuestions()));
+//        }
+        else if (choice == 5){
+            System.exit(0);
+        }
+        else {
+            System.out.println("Invalid choice");
+            System.out.println();
         }
     }
 }

@@ -5,13 +5,15 @@ public class WebDev extends Course {
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
+//    private static ModuleFour moduleFour;
     private static final Course course = new Course();
 
     public WebDev() {
         moduleOne = new ModuleOne();
         moduleTwo = new ModuleTwo();
         moduleThree = new ModuleThree();
-        setCourse("Web Development");
+//        moduleFour = new ModuleFour();
+        course.setCourse("Web Development");
     }
 
     static class ModuleOne{
@@ -82,23 +84,40 @@ public class WebDev extends Course {
             new Question("What is the stretching of a cell to cover several rows or columns?", "cell spanning", 3, module.getModule(), course.getCourse());
             new Question("Which element is a container for all the content of the form, including some number of form controls, such as text-entry fields and buttons?", "Form", 4, module.getModule(), course.getCourse());
             new Question("Which attribute provides the location (URL) of the application or script that will be used to process the form?", "Action", 5, module.getModule(), course.getCourse());
-            new Question("attribute specifies how the information should be sent to the server?", "Method", 6, module.getModule(), course.getCourse());
+            new Question("Which attribute specifies how the information should be sent to the server?", "Method", 6, module.getModule(), course.getCourse());
             new Question("True or False | All form controls (except submit and reset buttons) must include a name attribute.", "true", 7, module.getModule(), course.getCourse());
-            new Question("", "", 8, module.getModule(), course.getCourse());
         }
     }
+
+
+/*    static class ModuleFour {
+
+        private final Module module;
+
+        public ModuleFour() {
+            module = new Module();
+            module.setModule(4);
+            course.allModules().add(module);
+        }
+
+        public void questions(){
+            new Question("What is a set of rules that govern how a web page should be displayed?", "CSS", 1, module.getModule(), course.getCourse());
+        }
+    }*/
 
     public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
-        if (shuffle) Collections.shuffle(new Course().allQuestions());
+//        moduleFour.questions();
+        if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
-    public void run(int length){
-        release(true);
+    public void run(int length) {
         if (length == 0) return;
-        for (Question question : new Course().allQuestions()) {
+        System.out.println("Welcome to the " + course.getCourse() + " quiz!");
+        System.out.println("You will be asked " + length + " questions.");
+        for (Question question : course.allQuestions()) {
             if (length == 0) break;
             System.out.println();
             if (length == 1) {

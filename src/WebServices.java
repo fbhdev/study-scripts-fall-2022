@@ -6,6 +6,7 @@ public class WebServices extends Course {
     private static ModuleOne moduleOne;
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
+//    private static ModuleFour moduleFour;
     private static final Course course = new Course();
     private final ArrayList<Question> questions = new ArrayList<>();
 
@@ -13,6 +14,7 @@ public class WebServices extends Course {
         moduleOne = new ModuleOne();
         moduleTwo = new ModuleTwo();
         moduleThree = new ModuleThree();
+//        moduleFour = new ModuleFour();
         course.setCourse("Web Services");
     }
 
@@ -88,10 +90,34 @@ public class WebServices extends Course {
         }
     }
 
+    /*static class ModuleFour{
+
+        private final Module module;
+
+        public ModuleFour(){
+            module = new Module();
+            module.setModule(4);
+            course.allModules().add(module);
+        }
+
+        public void questions(){
+            new Question("What is intended to simplify the reuse of web services, based on the existing HTTP architecture?", "WADL", 1, module.getModule(), course.getCourse());
+            new Question("True | False\nThe WADL file does not provide the service information regardless of the implementation platform.", "false", 2, module.getModule(), course.getCourse());
+            new Question("", "", 2, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 1, module.getModule(), course.getCourse());
+        }
+    }*/
+
     public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
+//        moduleFour.questions();
         if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
