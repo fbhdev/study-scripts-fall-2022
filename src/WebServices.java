@@ -94,13 +94,24 @@ public class WebServices extends Course {
         public void questions(){
             new Question("What is a software architectural style that defines a set of constraints to be used for creating Web services?", "REST", 1, module.getModule(), course.getCourse());
             new Question("What refers to the ability of software to easily integrate with other systems in terms of sharing functionality and data?", "interoperability", 2, module.getModule(), course.getCourse());
-            new Question("Name the term meaning how calls can be made independently of one another, and each call contains all of the data necessary to complete itself successfully.", "stateless", 3, module.getModule(), course.getCourse());
+            new Question("Name the term meaning how calls can be made independently of one another while each call contains all of the data necessary to complete itself successfully.", "stateless", 3, module.getModule(), course.getCourse());
             new Question("Which verb provides a read only access to a resource?", "GET", 4, module.getModule(), course.getCourse());
             new Question("Which verb is used to create a new resource?", "POST", 5, module.getModule(), course.getCourse());
             new Question("Which verb is used to remove a resource?", "DELETE", 6, module.getModule(), course.getCourse());
             new Question("Which verb is used to update an existing resource or create a new resource?", "PUT", 7, module.getModule(), course.getCourse());
             new Question("What refers to storing the server response in the client itself, so that a client need not make a server request for the same resource again and again?", "Caching", 8, module.getModule(), course.getCourse());
-            new Question("What may be received at the same time which may cause conflicts? ", "Concurrency", 9, module.getModule(), course.getCourse());
+            new Question("What refers to the number of requests that the system can process simultaneously which can cause conflicts? ", "Concurrency", 9, module.getModule(), course.getCourse());
+            new Question("What do you also call REST components? ", "Resources", 10, module.getModule(), course.getCourse());
+            new Question("What is a disadvantage of REST's statelessness?", "Additional Information", 11, module.getModule(), course.getCourse());
+            new Question("What do you call the design principle for separating a computer program into distinct sections?", "Separation of Concerns", 12, module.getModule(), course.getCourse());
+            new Question("True | False, responses define themselves as cacheable or not to prevent clients from getting stale or inappropriate data in response to further requests.", "True", 13, module.getModule(), course.getCourse());
+            new Question("True | False, a server cannot call multiple other servers to generate a response to the client.", "False", 14, module.getModule(), course.getCourse());
+            new Question("What simplifies and decouples the architecture, which enables each part to evolve independently?", "Uniform Interface", 15, module.getModule(), course.getCourse());
+            new Question("Which protocol uses a MIME-like envelope format to encode representations?", "HTTP", 16, module.getModule(), course.getCourse());
+            new Question("Which non-access modifier should you avoid using out of concurrency issues in REST?", "Static", 17, module.getModule(), course.getCourse());
+            new Question("What are ordinary objects increasing readability and re-usability of a Java program that are widely accepted because of their easy maintenance?", "POJO", 18, module.getModule(), course.getCourse());
+            new Question("In computer software, what is the part of the program that encodes the real-world business rules that determine how data can be created, stored, and changed. It is contrasted with the remainder of the software that might be concerned with lower-level details of managing a database or displaying the user interface, system infrastructure, or generally connecting various parts of the program.", "Business Logic", 19, module.getModule(), course.getCourse());
+            new Question("What is a specification, a set of interfaces and annotations offered by Java EE?", "JAX-RS", 20, module.getModule(), course.getCourse());
         }
     }
 
