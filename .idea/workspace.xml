@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="added questions to web serv modules 1, 2 and 3">
+    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="added questions to DSA module">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <workItem from="1665686405449" duration="4423000" />
       <workItem from="1665691181951" duration="16932000" />
       <workItem from="1665771616276" duration="602000" />
-      <workItem from="1665807993224" duration="10992000" />
+      <workItem from="1665807993224" duration="15360000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1665005981733</created>
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665692376165</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added questions to DSA module">
+      <created>1665860919081</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665860919081</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +233,7 @@
     <MESSAGE value="added module 4 for web services, added empty DSA class + improved UX" />
     <MESSAGE value="added questions to web serv modules 1 and 2" />
     <MESSAGE value="added questions to web serv modules 1, 2 and 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="added questions to web serv modules 1, 2 and 3" />
+    <MESSAGE value="added questions to DSA module" />
+    <option name="LAST_COMMIT_MESSAGE" value="added questions to DSA module" />
   </component>
 </project>

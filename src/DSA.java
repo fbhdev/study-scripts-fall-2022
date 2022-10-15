@@ -62,7 +62,8 @@ public class DSA extends Course{
             new Question("What involves the use of literals, variables, and operators?", "Expressions", 27, module.getModule(), course.getCourse());
             new Question("What is any “constant” value that can be used in an assignment or other expression?", "Literals", 28, module.getModule(), course.getCourse());
             new Question("What is an operation that allows us to change the type of a value?", "Casting", 29, module.getModule(), course.getCourse());
-            new Question("", "", 30, module.getModule(), course.getCourse());
+            new Question("Which loop allows the boolean condition to be checked at the end of each pass of the loop rather than before each pass?", "Do-While", 30, module.getModule(), course.getCourse());
+            new Question("Which statement causes the execution to skip over the remaining steps of the current iteration of the loop body, but then, unlike the break statement, the flow of control returns to the top of the loop, assuming its condition remains satisfied?", "Continue", 31, module.getModule(), course.getCourse());
         }
     }
 
@@ -76,7 +77,20 @@ public class DSA extends Course{
         }
 
         public void questions() {
-            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("What is the Object-Oriented design goal that is, capable of handling unexpected inputs that are not explicitly defined for its application?", "Robustness", 1, module.getModule(), course.getCourse());
+            new Question("Because modern software applications are used for many years, what is the Object-Oriented design goal specifying that software needs to be able to evolve over time in response to changing conditions in its environment?", "Adaptability", 2, module.getModule(), course.getCourse());
+            new Question("Which Object-Oriented design goal says the same code should be usable as a component of different systems in various applications?", "Reusability", 3, module.getModule(), course.getCourse());
+            new Question("What do you call the notion of distilling a complicated system down to its most funda- mental parts?", "Abstraction", 4, module.getModule(), course.getCourse());
+            new Question("What is a mathematical model of a data structure that specifies the type of data stored, the operations sup- ported on them, and the types of parameters of the operations?", "Abstract Data Type", 5, module.getModule(), course.getCourse());
+            new Question("Which Object-Oriented principle says different components of a software system should not reveal the internal details of their respective implementations?", "Encapsulation", 6, module.getModule(), course.getCourse());
+            new Question("Which Object-Oriented principle refers to an organizing principle in which different components of a software system are divided into separate functional units?", "Modularity", 7, module.getModule(), course.getCourse());
+            new Question("In Object-Oriented programming, what do you call the mechanism for a modular and hierarchical organization?", "Inheritance", 8, module.getModule(), course.getCourse());
+            new Question("", "", 9, module.getModule(), course.getCourse());
+            new Question("", "", 10, module.getModule(), course.getCourse());
+            new Question("", "", 11, module.getModule(), course.getCourse());
+            new Question("", "", 12, module.getModule(), course.getCourse());
+            new Question("", "", 13, module.getModule(), course.getCourse());
+            new Question("", "", 14, module.getModule(), course.getCourse());
         }
     }
 
