@@ -7,6 +7,7 @@ public class WebServices extends Course {
     private static ModuleTwo moduleTwo;
     private static ModuleThree moduleThree;
 //    private static ModuleFour moduleFour;
+    private static ModuleFive moduleFive;
     private static final Course course = new Course();
     private final ArrayList<Question> questions = new ArrayList<>();
 
@@ -15,6 +16,7 @@ public class WebServices extends Course {
         moduleTwo = new ModuleTwo();
         moduleThree = new ModuleThree();
 //        moduleFour = new ModuleFour();
+        moduleFive = new ModuleFive();
         course.setCourse("Web Services");
     }
 
@@ -128,7 +130,7 @@ public class WebServices extends Course {
         public void questions(){
             new Question("What is intended to simplify the reuse of web services, based on the existing HTTP architecture?", "WADL", 1, module.getModule(), course.getCourse());
             new Question("True | False\nThe WADL file does not provide the service information regardless of the implementation platform.", "false", 2, module.getModule(), course.getCourse());
-            new Question("", "", 2, module.getModule(), course.getCourse());
+            new Question("True | False, WADL is XML based?", "True", 3, module.getModule(), course.getCourse());
             new Question("", "", 1, module.getModule(), course.getCourse());
             new Question("", "", 1, module.getModule(), course.getCourse());
             new Question("", "", 1, module.getModule(), course.getCourse());
@@ -138,11 +140,36 @@ public class WebServices extends Course {
         }
     }*/
 
+    static class ModuleFive{
+
+        private final Module module;
+
+        public ModuleFive(){
+            module = new Module();
+            module.setModule(5);
+            course.allModules().add(module);
+        }
+
+        public void questions(){
+            new Question("What is an open standard file and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types?", "JSON", 1, module.getModule(), course.getCourse());
+            new Question("True | False, JSON can include the world null.", "True", 2, module.getModule(), course.getCourse());
+            new Question("True | False, JSON allows data validation against schemas as well as data transformation vis XSLT.", "False", 3, module.getModule(), course.getCourse());
+            new Question("What is a high-performance JSON processor for Java?", "Jackson", 4, module.getModule(), course.getCourse());
+            new Question("What is the process of converting a set of object instances that contain references to each other into a linear stream of bytes, which can then be sent through a socket, stored to a file, or simply manipulated as a stream of data?", "Serialization", 5, module.getModule(), course.getCourse());
+            new Question("What means that the managed data in these systems are not structured in a strict format, as defined by a schema?", "Schemaless", 6, module.getModule(), course.getCourse());
+            new Question("What supports automatic marshalling and unmarshalling of POJO objects in XML?", "JAX-RS", 7, module.getModule(), course.getCourse());
+            new Question("What uses serialization and is the process of encoding an object to be sent across the network?", "Marshalling", 8, module.getModule(), course.getCourse());
+            new Question("Which class may be used to control the response that is being sent to the client?", "Response Builder", 9, module.getModule(), course.getCourse());
+            new Question("What is the practice of calling different methods in a single line instead of calling other methods with the same object reference separately? It is also known as named parameter idiom.", "Method Chaining", 10, module.getModule(), course.getCourse());
+        }
+    }
+
     public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
         moduleThree.questions();
 //        moduleFour.questions();
+        moduleFive.questions();
         if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
