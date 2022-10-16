@@ -9,7 +9,6 @@ public class DSA extends Course{
     private static ModuleFour moduleFour;
     private static ModuleFive moduleFive;
     private static ModuleSix moduleSix;
-    private static ModuleSeven moduleSeven;
 
     public DSA(){
         moduleOne = new ModuleOne();
@@ -18,7 +17,6 @@ public class DSA extends Course{
         moduleFour = new ModuleFour();
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
-        moduleSeven = new ModuleSeven();
         course.setCourse("Data Structures and Algorithms");
     }
 
@@ -85,12 +83,23 @@ public class DSA extends Course{
             new Question("Which Object-Oriented principle says different components of a software system should not reveal the internal details of their respective implementations?", "Encapsulation", 6, module.getModule(), course.getCourse());
             new Question("Which Object-Oriented principle refers to an organizing principle in which different components of a software system are divided into separate functional units?", "Modularity", 7, module.getModule(), course.getCourse());
             new Question("In Object-Oriented programming, what do you call the mechanism for a modular and hierarchical organization?", "Inheritance", 8, module.getModule(), course.getCourse());
-            new Question("", "", 9, module.getModule(), course.getCourse());
-            new Question("", "", 10, module.getModule(), course.getCourse());
-            new Question("", "", 11, module.getModule(), course.getCourse());
-            new Question("", "", 12, module.getModule(), course.getCourse());
-            new Question("", "", 13, module.getModule(), course.getCourse());
-            new Question("", "", 14, module.getModule(), course.getCourse());
+            new Question("True | False, a constructor for a subclass not making an explicit call to super or this as its first command will still have it called implicitly behind the scenes.", "True", 9, module.getModule(), course.getCourse());
+            new Question("What refers to the ability of a reference variable to take different forms?", "Polymorphism", 10, module.getModule(), course.getCourse());
+            new Question("What states that a variable (or parameter) with a declared type can be assigned an instance from any direct or indirect subclass of that type?", "Liskov Substitution Principle", 11, module.getModule(), course.getCourse());
+            new Question("What is the name of the process deciding at runtime to call the ver- sion of the method that is most specific to the actual type of the referenced object (not the declared type)?", "Dynamic Dispatch", 12, module.getModule(), course.getCourse());
+            new Question("What determines the next number by adding a fixed constant to the previous value?", "Arithmetic Progression", 13, module.getModule(), course.getCourse());
+            new Question("What determines the next number by multiplying the previous value by a fixed constant?", "Geometric Progression", 14, module.getModule(), course.getCourse());
+            new Question("What are collection of method declarations with no data and no bodies?", "Interfaces", 15, module.getModule(), course.getCourse());
+            new Question("What is the ability of extending from more than one type?", "Multiple Inheritance", 16, module.getModule(), course.getCourse());
+            new Question("True | False, multiple inheritance is allowed for both interfaces and classes.", "", 17, module.getModule(), course.getCourse());
+            new Question("Which keyword prepares users about the possibility of an exceptional case, so that they might be better prepared to handle an exception that may arise?", "Throws", 18, module.getModule(), course.getCourse());
+            new Question("What are typically thrown only by the Java Virtual Machine and designate the most serious situations that are unlikely to be recoverable, such as when the virtual machine is asked to execute a corrupt class file, or when the system runs out of memory?", "Errors", 19, module.getModule(), course.getCourse());
+            new Question("Which conversion is automatically performed to store the result of an expression into a variable, without the need for an explicit cast?", "Widening", 20, module.getModule(), course.getCourse());
+            new Question("Which conversion requires an explicit cast?", "Narrowing", 21, module.getModule(), course.getCourse());
+            new Question("Which operator allows us to test whether an object variable is referring to an object that belongs to a particular type?", "instanceof", 22, module.getModule(), course.getCourse());
+            new Question("?", "", 23, module.getModule(), course.getCourse());
+            new Question("", "", 24, module.getModule(), course.getCourse());
+            new Question("", "", 25, module.getModule(), course.getCourse());
         }
     }
 
@@ -106,7 +115,14 @@ public class DSA extends Course{
         }
 
         public void questions() {
-            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("What is the time complexity of the add method in a linked list?", "O(1)", 1, module.getModule(), course.getCourse());
+            new Question("What is the time complexity of accessing a linked list item?", "O(n)", 2, module.getModule(), course.getCourse());
+            new Question("What is the time complexity to count the number of elements in the linked list?", "O(n)", 3, module.getModule(), course.getCourse());
+            new Question("What is the worst case time complexity of inserting a node in a doubly linked list?", "O(1)", 4, module.getModule(), course.getCourse());
+            new Question("", "", 5, module.getModule(), course.getCourse());
+            new Question("", "", 6, module.getModule(), course.getCourse());
+            new Question("", "", 7, module.getModule(), course.getCourse());
+            new Question("", "", 8, module.getModule(), course.getCourse());
         }
     }
 
@@ -122,6 +138,13 @@ public class DSA extends Course{
 
         public void questions() {
             new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("", "", 2, module.getModule(), course.getCourse());
+            new Question("", "", 3, module.getModule(), course.getCourse());
+            new Question("", "", 4, module.getModule(), course.getCourse());
+            new Question("", "", 5, module.getModule(), course.getCourse());
+            new Question("", "", 6, module.getModule(), course.getCourse());
+            new Question("", "", 7, module.getModule(), course.getCourse());
+            new Question("", "", 8, module.getModule(), course.getCourse());
         }
     }
 
@@ -136,7 +159,14 @@ public class DSA extends Course{
         }
 
         public void questions() {
-            new Question("", "", 1, module.getModule(), course.getCourse());
+            new Question("Which principle does a Queue follow?", "FIFO", 1, module.getModule(), course.getCourse());
+            new Question("Which principle does a Stack follow?", "LIFO", 2, module.getModule(), course.getCourse());
+            new Question("Inserting in a Queue is known as?", "Enqueue", 3, module.getModule(), course.getCourse());
+            new Question("Deletion in a Queue is known as?", "Dequeue", 4, module.getModule(), course.getCourse());
+            new Question("What is the time complexity of the pop() operation when the Stack is implemented using an array?", "O(n)", 5, module.getModule(), course.getCourse());
+            new Question("", "", 6, module.getModule(), course.getCourse());
+            new Question("", "", 7, module.getModule(), course.getCourse());
+            new Question("", "", 8, module.getModule(), course.getCourse());
         }
     }
 
@@ -147,21 +177,6 @@ public class DSA extends Course{
         public ModuleSix() {
             module = new Module();
             module.setModule(6);
-            course.allModules().add(module);
-        }
-
-        public void questions() {
-            new Question("", "", 1, module.getModule(), course.getCourse());
-        }
-    }
-
-    static class ModuleSeven {
-
-        private final Module module;
-
-        public ModuleSeven() {
-            module = new Module();
-            module.setModule(7);
             course.allModules().add(module);
         }
 
@@ -195,7 +210,6 @@ public class DSA extends Course{
         moduleFour.questions();
         moduleFive.questions();
         moduleSix.questions();
-        moduleSeven.questions();
         if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
