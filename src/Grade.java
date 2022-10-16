@@ -1,7 +1,7 @@
 public class Grade {
 
-    private int grade = 0;
-    private int total = 0;
+    private static int grade = 0;
+    private static int total = 0;
 
     public void grade(){
         if(!isValid(getGrade())){
@@ -17,7 +17,7 @@ public class Grade {
     }
 
     public void setGrade(int grade) {
-        this.grade = grade;
+        Grade.grade = grade;
     }
 
     public int getTotal() {

@@ -24,7 +24,7 @@ public class DSA extends Course{
     static class ModuleOne {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleOne(){
             module = new Module();
@@ -96,7 +96,7 @@ public class DSA extends Course{
     static class ModuleTwo {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleTwo() {
             module = new Module();
@@ -136,7 +136,7 @@ public class DSA extends Course{
     static class ModuleThree {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleThree() {
             module = new Module();
@@ -175,7 +175,7 @@ public class DSA extends Course{
     static class ModuleFour {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleFour() {
             module = new Module();
@@ -206,7 +206,7 @@ public class DSA extends Course{
     static class ModuleFive {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleFive() {
             module = new Module();
@@ -241,7 +241,7 @@ public class DSA extends Course{
     static class ModuleSix {
 
         private final Module module;
-        private int count = 0;
+        private int count = 1;
 
         public ModuleSix() {
             module = new Module();

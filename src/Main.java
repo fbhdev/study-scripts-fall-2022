@@ -26,8 +26,16 @@ public class Main {
     }
 
     public static boolean again(){
-        Input input = new Input("Would you like to study more? (y/n)");
-        return input.getInput().equalsIgnoreCase("y");
+        while (true) {
+            Input input = new Input("Would you like to study more? (y/n)");
+            if (input.getInput().equalsIgnoreCase("y")) {
+                return true;
+            }
+            if (input.getInput().equalsIgnoreCase("n")) {
+                return false;
+            }
+            System.out.print("Please enter a valid input -> ");
+        }
     }
 
     public static int length(ArrayList<Question> questions){
