@@ -4,6 +4,7 @@ public class Question extends Course {
     private final String question;
     private final String course;
     private final String answer;
+    private boolean isCorrect;
     private final int number;
 
     public Question(String question, String answer, int number, int module, String course) {
@@ -22,16 +23,21 @@ public class Question extends Course {
     public void askUser(){
         Input input = new Input(getQuestion());
         Grade grade = new Grade();
+        Records.addName(this.toString());
         if(isCorrect(input.getInput())){
             grade.message(true);
+            Records.addSuccess(true);
             grade.setGrade(grade.getGrade() + 1);
+
         }
         else if(grade.leniency(getAnswer(), input)){
             grade.message(true);
+            Records.addSuccess(true);
             grade.setGrade(grade.getGrade() + 1);
         }
         else{
             grade.message(false);
+            Records.addSuccess(false);
             System.out.println("Correct answer is: " + getAnswer());
         }
     }
@@ -50,6 +56,6 @@ public class Question extends Course {
 
     @Override
     public String toString() {
-        return course + " | Module " + module + " | Question " + getNumber();
+        return "Module " + module + " | Question " + getNumber();
     }
 }

@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Collections;
 
 public class DSA extends Course{
@@ -68,8 +69,8 @@ public class DSA extends Course{
             new Question("What is the Object-Oriented design goal that is, capable of handling unexpected inputs that are not explicitly defined for its application?", "Robustness", count++, module.getModule(), course.getCourse());
             new Question("Because modern software applications are used for many years, what is the Object-Oriented design goal specifying that software needs to be able to evolve over time in response to changing conditions in its environment?", "Adaptability", count++, module.getModule(), course.getCourse());
             new Question("Which Object-Oriented design goal says the same code should be usable as a component of different systems in various applications?", "Reusability", count++, module.getModule(), course.getCourse());
-            new Question("What do you call the notion of distilling a complicated system down to its most funda- mental parts?", "Abstraction", count++, module.getModule(), course.getCourse());
-            new Question("What is a mathematical model of a data structure that specifies the type of data stored, the operations sup- ported on them, and the types of parameters of the operations?", "Abstract Data Type", count++, module.getModule(), course.getCourse());
+            new Question("What do you call the notion of distilling a complicated system down to its most fundamental parts?", "Abstraction", count++, module.getModule(), course.getCourse());
+            new Question("What is a mathematical model of a data structure that specifies the type of data stored, the operations supported on them, and the types of parameters of the operations?", "Abstract Data Type", count++, module.getModule(), course.getCourse());
             new Question("Which Object-Oriented principle says different components of a software system should not reveal the internal details of their respective implementations?", "Encapsulation", count++, module.getModule(), course.getCourse());
             new Question("Which Object-Oriented principle refers to an organizing principle in which different components of a software system are divided into separate functional units?", "Modularity", count++, module.getModule(), course.getCourse());
             new Question("In Object-Oriented programming, what do you call the mechanism for a modular and hierarchical organization?", "Inheritance", count++, module.getModule(), course.getCourse());
@@ -92,6 +93,7 @@ public class DSA extends Course{
             new Question("Which nested class has access to other members of the enclosing class, even if they are declared private?", "Inner Class", count++, module.getModule(), course.getCourse());
         }
     }
+
     // Module 2 – Linked Lists
     static class ModuleTwo {
 
@@ -158,10 +160,10 @@ public class DSA extends Course{
             new Question("What are algebraic expressions that consist of variables and coefficients?", "Polynomials", count++, module.getModule(), course.getCourse());
             new Question("What is the numerical factor of a term containing constant and variables?", "Coefficients", count++, module.getModule(), course.getCourse());
             new Question("Which notation gives us a shorthand way of expressing sums of increasing terms that have a regular structure?", "Summation", count++, module.getModule(), course.getCourse());
-            new Question("Which function assigns to the input argument n the value obtained by multiplying the base by itself n times?", "Exponential", count++, module.getModule(), course.getCourse());
+            new Question("Which function assigns to the input argument n the value obtained by multiplying the base by itself n times?", "Factorial", count++, module.getModule(), course.getCourse());
             new Question("What refers to computing the running time of any operation in mathematical units of computation?", "Asymptotic Analysis", count++, module.getModule(), course.getCourse());
-            new Question("Which notation is used for analyzing the best-case complexity of an algorithm?", "Omega", count++, module.getModule(), course.getCourse());
-            new Question("Which notation is used for analyzing the average-case complexity of an algorithm?", "Theta", count++, module.getModule(), course.getCourse());
+            new Question("Which notation is used for analyzing the best-case complexity of an algorithm?", "Big Omega", count++, module.getModule(), course.getCourse());
+            new Question("Which notation is used for analyzing the average-case complexity of an algorithm?", "Big Theta", count++, module.getModule(), course.getCourse());
             new Question("Which notation is used for analyzing the worst-case complexity of an algorithm?", "Big-O", count++, module.getModule(), course.getCourse());
             new Question("What is the Big-Theta of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "O(n^3log(n))", count++, module.getModule(), course.getCourse());
             new Question("What is the Big-O of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "O(n^4)", count++, module.getModule(), course.getCourse());
@@ -293,8 +295,9 @@ public class DSA extends Course{
         if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
-    public void run(int length) {
+    public void run(int length) throws IOException {
         if (length == 0) return;
+        Records.setNumQuestions(length);
         System.out.println("Welcome to the " + course.getCourse() + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
         for (Question question : course.allQuestions()) {
@@ -312,5 +315,6 @@ public class DSA extends Course{
         }
         new Grade().grade();
         course.allQuestions().clear();
+        Records.save("DSA");
     }
 }

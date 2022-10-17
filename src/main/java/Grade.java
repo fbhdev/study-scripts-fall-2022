@@ -56,7 +56,7 @@ public class Grade {
         return total >= 80;
     }
 
-    public String arithmetics(int grade){
+    public  String arithmetics(int grade){
         Double percentage = (double) grade / total * 100;
         return String.format("%.2f", percentage);
     }

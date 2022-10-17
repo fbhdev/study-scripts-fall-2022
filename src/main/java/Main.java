@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         do {
             run();
         } while (again());
@@ -50,7 +51,7 @@ public class Main {
         return 0;
     }
 
-    public static void run(){
+    public static void run() throws IOException {
         int choice = select();
         if (choice == 1){
             WebServices ws = new WebServices();

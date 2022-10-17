@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="added questions to DSA module">
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/study-script-fall2022.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Records.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study-script-fall2022.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Module.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebDev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-scripts-fall-2022.iml" beforeDir="false" afterPath="$PROJECT_DIR$/study-scripts-fall-2022.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -25,214 +51,88 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2FjHpoS4ECpY0g8AqxGRMrTTVVD" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2GF9CYWgmwKpOcFBWqzVM01vQDw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Embedded JDK&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5282258&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/python" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="study-scripts-fall-2022" />
+      <module name="study-script-fall2022" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WebServices" />
-      <module name="study-scripts-fall-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="study-script-fall2022" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/python" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.WebServices" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c9507f8e-0f5c-42a9-90ca-3973cfc394ba" name="Changes" comment="" />
-      <created>1664998759030</created>
+      <changelist id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="" />
+      <created>1665973337603</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1664998759030</updated>
-      <workItem from="1664998760433" duration="11324000" />
-      <workItem from="1665013273329" duration="8010000" />
-      <workItem from="1665028195625" duration="7124000" />
-      <workItem from="1665035711663" duration="50000" />
-      <workItem from="1665093393602" duration="4000" />
-      <workItem from="1665191454939" duration="23825000" />
-      <workItem from="1665502729827" duration="21092000" />
-      <workItem from="1665526209605" duration="484000" />
-      <workItem from="1665528924484" duration="2822000" />
-      <workItem from="1665537942820" duration="1011000" />
-      <workItem from="1665540550996" duration="1054000" />
-      <workItem from="1665675714939" duration="7190000" />
-      <workItem from="1665686405449" duration="4423000" />
-      <workItem from="1665691181951" duration="16932000" />
-      <workItem from="1665771616276" duration="602000" />
-      <workItem from="1665807993224" duration="19898000" />
-      <workItem from="1665885087922" duration="2005000" />
-      <workItem from="1665934053504" duration="5000" />
-      <workItem from="1665935465611" duration="748000" />
-      <workItem from="1665936751462" duration="1285000" />
-      <workItem from="1665938881250" duration="7102000" />
-      <workItem from="1665947281555" duration="13647000" />
+      <updated>1665973337603</updated>
+      <workItem from="1665973338837" duration="2330000" />
+      <workItem from="1665977776747" duration="5050000" />
+      <workItem from="1666020066173" duration="1210000" />
     </task>
-    <task id="LOCAL-00001" summary="initial commit">
-      <created>1665005981733</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665005981733</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Module 1 Web Dev done">
-      <created>1665013295893</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1665013295893</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Module 2 Web Dev in the works">
-      <created>1665018750768</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1665018750768</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Module 2 Web Dev done + improvements to structure">
-      <created>1665032724542</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1665032724542</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Module 2 Web Dev done + improvements to structure">
-      <created>1665035731545</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1665035731545</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Module 3 Web Dev in the works + improvements to structure">
-      <created>1665237717088</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665237717088</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added Web Services, module 1 + 2">
-      <created>1665446973079</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1665446973079</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Added Web Services, modules 1-2-3 done">
-      <created>1665451739890</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1665451739890</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Added Web Services, modules 1-2-3 done">
-      <created>1665502817600</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1665502817600</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Added Web Services, modules 1-2-3 done">
-      <created>1665504521571</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1665504521571</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Improvements to the main class.">
-      <created>1665508514383</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1665508514383</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Solved warnings in all classes + improved grading">
-      <created>1665518242834</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1665518242834</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Solved warnings in all classes + improved grading">
-      <created>1665525135934</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1665525135934</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added module 4 for web services, added empty DSA class + improved UX">
-      <created>1665677862924</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1665677862924</updated>
-    </task>
-    <task id="LOCAL-00015" summary="added questions to web serv modules 1 and 2">
-      <created>1665686476707</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1665686476707</updated>
-    </task>
-    <task id="LOCAL-00016" summary="added questions to web serv modules 1, 2 and 3">
-      <created>1665692376165</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1665692376165</updated>
-    </task>
-    <task id="LOCAL-00017" summary="added questions to DSA module">
-      <created>1665860919081</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1665860919081</updated>
-    </task>
-    <task id="LOCAL-00018" summary="added questions to DSA module">
-      <created>1665865758627</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1665865758627</updated>
-    </task>
-    <task id="LOCAL-00019" summary="added questions to DSA module">
-      <created>1665937672915</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1665937672915</updated>
-    </task>
-    <task id="LOCAL-00020" summary="added questions to DSA module">
-      <created>1665960591897</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1665960591897</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,20 +149,8 @@
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="Module 1 Web Dev done" />
-    <MESSAGE value="Module 2 Web Dev in the works" />
-    <MESSAGE value="Module 2 Web Dev done + improvements to structure" />
-    <MESSAGE value="Module 3 Web Dev in the works + improvements to structure" />
-    <MESSAGE value="Added Web Services, module 1 + 2" />
-    <MESSAGE value="Added Web Services, modules 1-2-3 done" />
-    <MESSAGE value="Improvements to the main class." />
-    <MESSAGE value="Solved warnings in all classes + improved grading" />
-    <MESSAGE value="added module 4 for web services, added empty DSA class + improved UX" />
-    <MESSAGE value="added questions to web serv modules 1 and 2" />
-    <MESSAGE value="added questions to web serv modules 1, 2 and 3" />
-    <MESSAGE value="added questions to DSA module" />
-    <option name="LAST_COMMIT_MESSAGE" value="added questions to DSA module" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

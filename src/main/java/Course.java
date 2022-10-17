@@ -2,19 +2,19 @@ import java.util.ArrayList;
 
 public class Course {
 
-    private String course;
+    private static String course;
     private static final ArrayList<Module> modules = new ArrayList<>();
     private static final ArrayList<Question> questions = new ArrayList<>();
 
-    public String getCourse() {
-        return course;
+    public static String getCourse() {
+        return Course.course;
     }
 
     public void setCourse(String course) {
         if(!isValid(course)){
             throw new IllegalArgumentException("Invalid course");
         }
-        this.course = course;
+        Course.course = course;
     }
 
     public boolean isValid(String course){
