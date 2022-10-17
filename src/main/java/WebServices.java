@@ -175,6 +175,7 @@ public class WebServices extends Course {
 
     public void run(int length) {
         if (length == 0) return;
+        Records.setNumQuestions(length);
         System.out.println("Welcome to the " + course.getCourse() + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
         for (Question question : course.allQuestions()) {
@@ -192,5 +193,6 @@ public class WebServices extends Course {
         }
         new Grade().grade();
         course.allQuestions().clear();
+        Records.save("DSA");
     }
 }

@@ -115,6 +115,7 @@ public class WebDev extends Course {
 
     public void run(int length) {
         if (length == 0) return;
+        Records.setNumQuestions(length);
         System.out.println("Welcome to the " + course.getCourse() + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
         for (Question question : course.allQuestions()) {
@@ -131,5 +132,7 @@ public class WebDev extends Course {
             length--;
         }
         new Grade().grade();
+        course.allQuestions().clear();
+        Records.save("Web Dev");
     }
 }

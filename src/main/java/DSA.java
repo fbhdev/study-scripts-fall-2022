@@ -62,7 +62,7 @@ public class DSA extends Course{
             new Question("What is the process of implicitly converting between base types and their wrapper types?", "Automatic Boxing and Unboxing", count++, module.getModule(), course.getCourse());
             new Question("What is a special class representing static constants with the final keyword?", "Enums", count++, module.getModule(), course.getCourse());
             new Question("What involves the use of literals, variables, and operators?", "Expressions", count++, module.getModule(), course.getCourse());
-            new Question("What is any “constant” value that can be used in an assignment or other expression?", "Literals", count++, module.getModule(), course.getCourse());
+            new Question("What is any constant value that can be used in an assignment or other expression?", "Literals", count++, module.getModule(), course.getCourse());
             new Question("What is an operation that allows us to change the type of a value?", "Casting", count++, module.getModule(), course.getCourse());
             new Question("Which loop allows the boolean condition to be checked at the end of each pass of the loop rather than before each pass?", "Do-While", count++, module.getModule(), course.getCourse());
             new Question("Which statement causes the execution to skip over the remaining steps of the current iteration of the loop body, but then, unlike the break statement, the flow of control returns to the top of the loop, assuming its condition remains satisfied?", "Continue", count++, module.getModule(), course.getCourse());
@@ -77,7 +77,7 @@ public class DSA extends Course{
             new Question("True | False, a constructor for a subclass not making an explicit call to super or this as its first command will still have it called implicitly behind the scenes.", "True", count++, module.getModule(), course.getCourse());
             new Question("What refers to the ability of a reference variable to take different forms?", "Polymorphism", count++, module.getModule(), course.getCourse());
             new Question("What states that a variable (or parameter) with a declared type can be assigned an instance from any direct or indirect subclass of that type?", "Liskov Substitution Principle", count++, module.getModule(), course.getCourse());
-            new Question("What is the name of the process deciding at runtime to call the ver- sion of the method that is most specific to the actual type of the referenced object (not the declared type)?", "Dynamic Dispatch", count++, module.getModule(), course.getCourse());
+            new Question("What is the name of the process deciding at runtime to call the version of the method that is most specific to the actual type of the referenced object (not the declared type)?", "Dynamic Dispatch", count++, module.getModule(), course.getCourse());
             new Question("What determines the next number by adding a fixed constant to the previous value?", "Arithmetic Progression", count++, module.getModule(), course.getCourse());
             new Question("What determines the next number by multiplying the previous value by a fixed constant?", "Geometric Progression", count++, module.getModule(), course.getCourse());
             new Question("What are collection of method declarations with no data and no bodies?", "Interfaces", count++, module.getModule(), course.getCourse());
@@ -295,7 +295,7 @@ public class DSA extends Course{
         if (shuffle) Collections.shuffle(course.allQuestions());
     }
 
-    public void run(int length) throws IOException {
+    public void run(int length) {
         if (length == 0) return;
         Records.setNumQuestions(length);
         System.out.println("Welcome to the " + course.getCourse() + " quiz!");

@@ -1,4 +1,10 @@
 import asyncio
+import csv
+import json
+from csv import reader
+from datetime import datetime
+
+import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 import os
@@ -8,40 +14,110 @@ class Screen:
 
     def __init__(self):
         self.sleep = 60  # seconds
-        self.global_array = []
-        self.course = {
+        self.flags = [False, False, False, False]
+        self.courses = {
             "Web Services": 0,
             "Web Dev": 0,
             "DSA": 0,
             "PT2": 0
         }
 
+    @staticmethod
+    def directory_length(course):
+        return len(os.listdir("../records/" + course + "/"))
+
+    @staticmethod
+    def directory(course):
+        length = []
+        for item in os.listdir("../records/" + course + "/"):
+            if item.endswith(".json"):
+                length.append(item)
+        return length
+
     def update_length(self):
-        for course in self.course:
-            directory = os.listdir("../records/" + course + "/")
-            self.course[course] = len(directory)
-            if self.course[course] != len(directory):
-                self.course[course] = len(directory)
+        flag = False
+        for count, course in enumerate(self.courses):
+            if self.courses[course] != len(self.directory(course)):
+                self.courses[course] = len(self.directory(course))
+                self.flags[count] = True
+                flag = True
+        if flag:
+            return True
+        return False
 
-    def update_dataset(self):
-        for item in os.listdir("../records"):
-            self.global_array.append(item)
+    def clear_flags(self):
+        for count, flag in enumerate(self.flags):
+            if flag:
+                self.flags[count] = False
 
-    def open(self, course):
-        for item in self.global_array:
-            with(open("../records/" + course + "/" + item)) as file:
-                print(file.read())
+    @staticmethod
+    def read_files(name: str, course: str):
+        with open(f"../records/{course}/{name}", "r") as file:
+            if name.endswith(".json"):
+                return json.load(file)
+            elif name.endswith(".csv"):
+                return reader(file)
+            else:
+                return file.read()
 
-    async def check(self):
+    def read_data(self, name: str, index: int):
+        course = list(self.courses.keys())[index]
+        if name.endswith(".json"):
+            data = self.read_files(name, course)
+            num_question = list(data.values())[0]
+            grade = list(data.values())[1]
+            course = list(data.values())[3]
+            return [grade, num_question, course]
+
+    async def check(self) -> None:
         while True:
-            self.update_length()
-            for course in self.course:
-                self.open(course)
+            if self.update_length():
+                for count, flag in enumerate(self.flags):
+                    if flag:
+                        self.save_data(count)
+                        self.clear_flags()
+            print(f"Sleeping for {self.sleep} seconds")
             await asyncio.sleep(self.sleep)
 
-    def plot(self):
-        # plot
-        plt.title("Title")
+    def plot(self, index: int) -> None:
+        course = list(self.courses.keys())[index]
+        try:
+            data = pd.read_csv(f"../records/{course}/records.csv")
+            if data.empty:
+                print("No data to plot")
+                return
+        except FileNotFoundError:
+            return
+        plt.figure(figsize=(10, 6))
+        sns.color_palette("light:#5A9", as_cmap=True)
+        sns.despine()
+        plt.ylabel("Questions")
+        plt.xlabel("Grade")
+        plt.title(f"{course} Grades")
+        grades = []
+        questions = []
+        for row in data.itertuples():
+            grades.append(row[1])
+            questions.append(row[2])
+        sns.barplot(x=grades, y=questions)
+        data = pd.DataFrame({"Grade": grades, "Number of Questions": questions})
+        sns.scatterplot(x="Grade", y="Number of Questions", data=data)
+        try:
+            plt.savefig(f"../records/{course}/plots/{datetime.now()}.png")
+        except FileNotFoundError:
+            os.mkdir(f"../records/{course}/plots")
+
+    def save_data(self, index: int) -> None:
+        course = list(self.courses.keys())[index]
+        with open(f"../records/{course}/records.csv", "w") as file:
+            writer = csv.writer(file)
+            if os.stat(f"../records/{course}/records.csv").st_size == 0:
+                writer.writerow(["Grade", "Number of Questions", "Course"])
+            for name in self.directory(course):
+                if name.__contains__("plot"):
+                    continue
+                writer.writerow(self.read_data(name, list(self.courses.keys()).index(course)))
+        self.plot(index)
 
     def run(self):
         asyncio.run(self.check())
