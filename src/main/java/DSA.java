@@ -297,6 +297,7 @@ public class DSA extends Course{
     public void run(int length) {
         if (length == 0) return;
         Records.setNumQuestions(length);
+        System.out.println();
         System.out.println("Welcome to the " + course.getCourse() + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
         for (Question question : course.allQuestions()) {

@@ -12,6 +12,8 @@ public class Grade {
         System.out.print("Scored " + getGrade() + "/" + getTotal());
         System.out.println("\t|\tYour grade is: " + arithmetics(getGrade()) + "%");
         System.out.println();
+        total = 0;
+        grade = 0;
     }
 
     public int getGrade() {

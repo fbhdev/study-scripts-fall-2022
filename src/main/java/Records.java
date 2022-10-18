@@ -57,6 +57,7 @@ public class Records {
     private static void clearLists(){
         names.clear();
         successes.clear();
+        setNumQuestions(0);
     }
 
     public void addName(String name){

@@ -41,6 +41,10 @@ public class Main {
 
     public static int length(ArrayList<Question> questions){
         System.out.println(questions.size() + " questions available.");
+        Input random = new Input("Random number of questions?");
+        if(random.getInput().equalsIgnoreCase("y")){
+            return (int) (Math.random() * 50);
+        }
         Input input = new Input("How many questions would you like to answer?");
         int length = Integer.parseInt(input.getInput());
         if(length > 0 && length <= questions.size()){
