@@ -36,7 +36,7 @@ public class Grade {
             System.out.println("Correct answer");
             return;
         }
-        System.out.println("Incorrect answer");
+        System.out.print("Incorrect answer");
     }
 
     public boolean leniency(String answer, Input input){
@@ -70,10 +70,12 @@ public class Grade {
         setGrade(getGrade() + 1);
     }
 
-    public void failure(String answer){
+    public void failure(String answer, boolean message){
         message(false);
         records.addSuccess(false);
-        System.out.print(" -> Correct answer is: " + answer);
+        if(message){
+            System.out.println(" -> Correct answer is: " + answer);
+        }
     }
 
     public String arithmetics(int grade){

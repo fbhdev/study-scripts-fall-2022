@@ -34,7 +34,7 @@ public class Question extends Course {
             grade.success();
         }
         else{
-            grade.failure(getAnswer());
+            grade.failure(getAnswer(), false);
         }
     }
 
