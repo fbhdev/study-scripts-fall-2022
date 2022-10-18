@@ -16,9 +16,17 @@ public class Records {
 
     public static void save(String course) {
         JSONObject obj = new JSONObject();
-        int grade = Grade.getGrade();
+        Grade gde = new Grade();
+        int grade = gde.getGrade();
         if (grade > 100) grade = 100;
         int percentage = grade / getNumQuestions() * 100;
+        if(percentage < 10) {
+            Input input = new Input("Was " + percentage + "% a typo? (y/n)");
+            if (input.getInput().equals("y")) {
+                Input newGrade = new Input("What was the correct percentage?");
+                percentage = Integer.parseInt(newGrade.getInput());
+            }
+        }
         obj.put("course", Course.getCourse());
         obj.put("grade", percentage);
         obj.put("number of questions", getNumQuestions());
@@ -42,16 +50,16 @@ public class Records {
         }
     }
 
-    public static void clearLists(){
+    private static void clearLists(){
         names.clear();
         successes.clear();
     }
 
-    public static void addName(String name){
+    public void addName(String name){
         names.add(name);
     }
 
-    public static void addSuccess(boolean success){
+    public void addSuccess(boolean success){
         successes.add(success);
     }
 

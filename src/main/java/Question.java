@@ -4,8 +4,9 @@ public class Question extends Course {
     private final String question;
     private final String course;
     private final String answer;
-    private boolean isCorrect;
     private final int number;
+    private Grade grade = new Grade();
+    private Records records = new Records();
 
     public Question(String question, String answer, int number, int module, String course) {
         this.question = question;
@@ -22,23 +23,18 @@ public class Question extends Course {
 
     public void askUser(){
         Input input = new Input(getQuestion());
-        Grade grade = new Grade();
-        Records.addName(this.toString());
+        records.addName(this.toString());
         if(isCorrect(input.getInput())){
-            grade.message(true);
-            Records.addSuccess(true);
-            grade.setGrade(grade.getGrade() + 1);
-
+            grade.success();
         }
         else if(grade.leniency(getAnswer(), input)){
-            grade.message(true);
-            Records.addSuccess(true);
-            grade.setGrade(grade.getGrade() + 1);
+            grade.success();
+        }
+        else if(grade.manualCorrection()){
+            grade.success();
         }
         else{
-            grade.message(false);
-            Records.addSuccess(false);
-            System.out.println("Correct answer is: " + getAnswer());
+            grade.failure(getAnswer());
         }
     }
 

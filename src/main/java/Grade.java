@@ -2,17 +2,19 @@ public class Grade {
 
     private static int grade = 0;
     private static int total = 0;
+    private Records records = new Records();
 
     public void grade(){
         if(!isValid(getGrade())){
             throw new IllegalArgumentException("Invalid grade");
         }
+        setGrade(getGrade());
         System.out.print("Scored " + getGrade() + "/" + getTotal());
         System.out.println("\t|\tYour grade is: " + arithmetics(getGrade()) + "%");
         System.out.println();
     }
 
-    public static int getGrade() {
+    public int getGrade() {
         return grade;
     }
 
@@ -56,7 +58,24 @@ public class Grade {
         return total >= 80;
     }
 
-    public  String arithmetics(int grade){
+    public boolean manualCorrection(){
+        Input input = new Input("Is manual correction justified in this case? (y/n)");
+        return input.getInput().equals("y");
+    }
+
+    public void success(){
+        message(true);
+        records.addSuccess(true);
+        setGrade(getGrade() + 1);
+    }
+
+    public void failure(String answer){
+        message(false);
+        records.addSuccess(false);
+        System.out.print(" -> Correct answer is: " + answer);
+    }
+
+    public String arithmetics(int grade){
         Double percentage = (double) grade / total * 100;
         return String.format("%.2f", percentage);
     }
