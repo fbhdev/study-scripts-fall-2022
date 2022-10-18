@@ -30,7 +30,7 @@ public class Question extends Course {
         else if(grade.leniency(getAnswer(), input)){
             grade.success();
         }
-        else if(grade.manualCorrection()){
+        else if(grade.manualCorrection(getAnswer())){
             grade.success();
         }
         else{

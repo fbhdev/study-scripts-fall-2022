@@ -16,19 +16,8 @@ public class Records {
 
     public static void save(String course) {
         JSONObject obj = new JSONObject();
-        Grade gde = new Grade();
-        int grade = gde.getGrade();
-        if (grade > 100) grade = 100;
-        int percentage = grade / getNumQuestions() * 100;
-        if(percentage < 10) {
-            Input input = new Input("Was " + percentage + "% a typo? (y/n)");
-            if (input.getInput().equals("y")) {
-                Input newGrade = new Input("What was the correct percentage?");
-                percentage = Integer.parseInt(newGrade.getInput());
-            }
-        }
         obj.put("course", Course.getCourse());
-        obj.put("grade", percentage);
+        obj.put("grade", gradeBugs());
         obj.put("number of questions", getNumQuestions());
         JSONArray list = new JSONArray();
         JSONArray innerList;
@@ -48,6 +37,21 @@ public class Records {
         catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static int gradeBugs(){
+        Grade gde = new Grade();
+        int grade = gde.getGrade();
+        if (grade > 100) grade = 100;
+        int percentage = grade / getNumQuestions() * 100;
+        if(percentage < 10) {
+            Input input = new Input("Was " + percentage + "% a typo? (y/n)");
+            if (input.getInput().equals("y")) {
+                Input newGrade = new Input("What was the correct percentage?");
+                percentage = Integer.parseInt(newGrade.getInput());
+            }
+        }
+        return percentage;
     }
 
     private static void clearLists(){

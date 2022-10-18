@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Fixed bugs both Java and Python scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Records.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Records.java" afterDir="false" />
@@ -114,7 +113,7 @@
       <workItem from="1666024542451" duration="15872000" />
       <workItem from="1666043860581" duration="313000" />
       <workItem from="1666066799302" duration="8352000" />
-      <workItem from="1666108030448" duration="3158000" />
+      <workItem from="1666108030448" duration="3808000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666072211116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed bugs both Java and Python scripts">
+      <created>1666111288891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666111288891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

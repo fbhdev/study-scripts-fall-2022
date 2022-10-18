@@ -58,7 +58,8 @@ public class Grade {
         return total >= 80;
     }
 
-    public boolean manualCorrection(){
+    public boolean manualCorrection(String answer){
+        System.out.println("The correct answer is: " + answer);
         Input input = new Input("Is manual correction justified in this case? (y/n)");
         return input.getInput().equals("y");
     }
