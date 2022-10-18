@@ -12,7 +12,7 @@ public class Grade {
         System.out.println();
     }
 
-    public int getGrade() {
+    public static int getGrade() {
         return grade;
     }
 

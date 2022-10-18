@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.Collections;
 
 public class DSA extends Course{
@@ -50,8 +49,8 @@ public class DSA extends Course{
             new Question("What defines the name and parameters for a method?", "Signature", count++, module.getModule(), course.getCourse());
             new Question("Which keyword must be used when a method does not return a value?", "void", count++, module.getModule(), course.getCourse());
             new Question("Are all objects passed by value or reference?", "Value", count++, module.getModule(), course.getCourse());
-            new Question("What does it mean when Java makes a copy in memory of the parameter’s value, or a copy of the contents of the parameter?", "Pass by Value", count++, module.getModule(), course.getCourse());
-            new Question("What does it mean when Java stores a copy of the address to the parameter rather than the value itself?", "Pass by Reference", count++, module.getModule(), course.getCourse());
+            new Question("Which passing value is it when Java makes a copy in memory of the parameter’s value, or a copy of the contents of the parameter?", "Pass by Value", count++, module.getModule(), course.getCourse());
+            new Question("Which passing value is it when Java stores a copy of the address to the parameter rather than the value itself?", "Pass by Reference", count++, module.getModule(), course.getCourse());
             new Question("What is a special kind of method that is used to initialize a newly created instance of the class so that it will be in a consistent and stable initial state?", "Constructor", count++, module.getModule(), course.getCourse());
             new Question("True | False, constructors can be static, abstract or final.", "False", count++, module.getModule(), course.getCourse());
             new Question("True | False, constructors can be Protected or Private", "True", count++, module.getModule(), course.getCourse());
@@ -82,7 +81,7 @@ public class DSA extends Course{
             new Question("What determines the next number by multiplying the previous value by a fixed constant?", "Geometric Progression", count++, module.getModule(), course.getCourse());
             new Question("What are collection of method declarations with no data and no bodies?", "Interfaces", count++, module.getModule(), course.getCourse());
             new Question("What is the ability of extending from more than one type?", "Multiple Inheritance", count++, module.getModule(), course.getCourse());
-            new Question("True | False, multiple inheritance is allowed for both interfaces and classes.", "", count++, module.getModule(), course.getCourse());
+            new Question("True | False, multiple inheritance is allowed for both interfaces and classes.", "False", count++, module.getModule(), course.getCourse());
             new Question("Which keyword prepares users about the possibility of an exceptional case, so that they might be better prepared to handle an exception that may arise?", "Throws", count++, module.getModule(), course.getCourse());
             new Question("What are typically thrown only by the Java Virtual Machine and designate the most serious situations that are unlikely to be recoverable, such as when the virtual machine is asked to execute a corrupt class file, or when the system runs out of memory?", "Errors", count++, module.getModule(), course.getCourse());
             new Question("Which conversion is automatically performed to store the result of an expression into a variable, without the need for an explicit cast?", "Widening", count++, module.getModule(), course.getCourse());
@@ -108,7 +107,7 @@ public class DSA extends Course{
 
         public void questions() {
             new Question("When an array is instantiated in memory, what are its default values?", "null", count++, module.getModule(), course.getCourse());
-            new Question("Which algorithm proceeds by considering one element at a time, placing the element in the correct order relative to those before it?", "Insertion-Sort", count++, module.getModule(), course.getCourse());
+            new Question("Which sorting algorithm proceeds by considering one element at a time, placing the element in the correct order relative to those before it?", "Insertion-Sort", count++, module.getModule(), course.getCourse());
             new Question("In Java, are Arrays mutable or immutable objects?", "Mutable", count++, module.getModule(), course.getCourse());
             new Question("What do you call a collection of nodes that collectively form a linear sequence?", "Linked List", count++, module.getModule(), course.getCourse());
             new Question("Which Linked List says each node stores a reference to an object that is an element of the sequence, as well as a reference to the next node of the list?", "Singly Linked List", count++, module.getModule(), course.getCourse());

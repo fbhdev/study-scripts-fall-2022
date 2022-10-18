@@ -76,6 +76,7 @@ class Screen:
                     if flag:
                         self.save_data(count)
                         self.clear_flags()
+                        print(f"Data saved for {list(self.courses.keys())[count]}")
             print(f"Sleeping for {self.sleep} seconds")
             await asyncio.sleep(self.sleep)
 
@@ -91,17 +92,16 @@ class Screen:
         plt.figure(figsize=(10, 6))
         sns.color_palette("light:#5A9", as_cmap=True)
         sns.despine()
-        plt.ylabel("Questions")
-        plt.xlabel("Grade")
         plt.title(f"{course} Grades")
+        plt.ylabel("Grades")
+        plt.xlabel("Questions")
         grades = []
         questions = []
         for row in data.itertuples():
             grades.append(row[1])
             questions.append(row[2])
-        sns.barplot(x=grades, y=questions)
-        data = pd.DataFrame({"Grade": grades, "Number of Questions": questions})
-        sns.scatterplot(x="Grade", y="Number of Questions", data=data)
+        pd.DataFrame({"Grades": grades, "Questions": questions})
+        sns.scatterplot(x="Number of Questions", y="Grade", data=data, hue="Course")
         try:
             plt.savefig(f"../records/{course}/plots/{datetime.now()}.png")
         except FileNotFoundError:
