@@ -16,8 +16,8 @@ class Screen:
         self.flags = [False, False, False, False]
         self.courses = {
             "Web Services": 0,
-            "Web Dev": 0,
-            "DSA": 0,
+            "Web Development": 0,
+            "Data Structures and Algorithms": 0,
             "PT2": 0
         }
 
@@ -50,7 +50,7 @@ class Screen:
             else:
                 return file.read()
 
-    def read_data(self, name: str, index: int):
+    def read_json(self, name: str, index: int):
         course = list(self.courses.keys())[index]
         if name.endswith(".json"):
             data = self.read_files(name, course)
@@ -78,7 +78,7 @@ class Screen:
         fig = px.scatter(df,
                          x="Questions",
                          y="Grade",
-                         width=1920, height=1080,
+                         width=1440, height=900,
                          color="Course",
                          title=f"Fall 2022 Study Script Grades",
                          labels={"Questions": "Number of Questions", "Grade": "Grades"},
@@ -101,7 +101,7 @@ class Screen:
                 if name.__contains__("plot"):
                     continue
                 if not self.is_logged(name):
-                    writer.writerow(self.read_data(name, list(self.courses.keys()).index(course)))
+                    writer.writerow(self.read_json(name, list(self.courses.keys()).index(course)))
             file.close()
         self.plot()
 
@@ -114,13 +114,44 @@ class Screen:
                     return True
             return False
 
+    @staticmethod
+    def averages(course):
+        with open(f"../records/records.csv", "r") as file:
+            csv = reader(file)
+            grades = []
+            for row in csv:
+                if course in row:
+                    grades.append(float(row[0]))
+            try:
+                return round(sum(grades) / len(grades), 2)
+            except ZeroDivisionError:
+                return 0
+
+    @staticmethod
+    def total_questions(course):
+        with open(f"../records/records.csv", "r") as file:
+            csv = reader(file)
+            questions = []
+            for row in csv:
+                if course in row:
+                    questions.append(int(row[1]))
+            return sum(questions)
+
+    def stats(self, course):
+        print()
+        print(f"Data Saved for {course}")
+        print(f"Average Grade for {course} is {self.averages(course)}")
+        print(f"{self.total_questions(course)} questions answered.")
+        print()
+
     async def check(self) -> None:
         while True:
             self.update_length()
             for count, flag in enumerate(self.flags):
                 if flag:
                     self.save_data(count)
-                    print(f"Data saved for {list(self.courses.keys())[count]}")
+                    course = list(self.courses.keys())[count]
+                    self.stats(course)
             self.clear_flags()
             print(f"Sleeping for {self.sleep} seconds")
             await asyncio.sleep(self.sleep)
@@ -130,5 +161,6 @@ class Screen:
 
 
 if __name__ == "__main__":
-    Screen().run()
+    # Screen().run()
+    print()
     # print(dir(px.colors.qualitative))

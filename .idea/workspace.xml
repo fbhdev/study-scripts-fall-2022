@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Fixed bugs both Java and Python scripts">
-      <change afterPath="$PROJECT_DIR$/records/records.csv" afterDir="false" />
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/records/records.csv" beforeDir="false" afterPath="$PROJECT_DIR$/records/records.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Records.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Records.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebDev.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
     </list>
@@ -75,7 +72,7 @@
       <recent name="$PROJECT_DIR$/python" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Python.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -107,6 +104,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -143,7 +145,8 @@
       <workItem from="1666368564778" duration="3047000" />
       <workItem from="1666383193895" duration="39000" />
       <workItem from="1666383390389" duration="3409000" />
-      <workItem from="1666391085732" duration="7469000" />
+      <workItem from="1666391085732" duration="8487000" />
+      <workItem from="1666407593277" duration="6441000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -194,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666125041308</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes.">
+      <created>1666406598576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666406598576</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,10 +225,14 @@
     <MESSAGE value="Added logging component + fixed bugs + added JSON dependency" />
     <MESSAGE value="Bugs to fix for python script" />
     <MESSAGE value="Fixed bugs both Java and Python scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs both Java and Python scripts" />
+    <MESSAGE value="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/study_script_fall2022$Main.coverage" NAME="Main Coverage Results" MODIFIED="1666416149418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
   </component>
 </project>

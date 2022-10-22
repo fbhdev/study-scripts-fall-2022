@@ -134,6 +134,6 @@ public class WebDev extends Course {
         }
         new Grade().printGrade();
         course.allQuestions().clear();
-        Records.save("Web Dev");
+        Records.save("Web Development");
     }
 }

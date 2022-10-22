@@ -315,6 +315,6 @@ public class DSA extends Course{
         }
         new Grade().printGrade();
         course.allQuestions().clear();
-        Records.save("DSA");
+        Records.save("Data Structures and Algorithms");
     }
 }

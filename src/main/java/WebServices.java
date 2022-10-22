@@ -42,7 +42,7 @@ public class WebServices extends Course {
             new Question("What do you call the consumer of the service?", "Client", ++count, module.getModule(), getCourse());
             new Question("What do you call the physical implementation of the service?", "Service Implementation", ++count, module.getModule(), getCourse());
             new Question("What is referred to a piece of code that converts parameters passed between client and server during a service call?", "Stub", ++count, module.getModule(), getCourse());
-            new Question("What is the layer responsible for transporting messages between the client and the server. HTTP/HTTPS?", "Service Transport", ++count, module.getModule(), getCourse());
+            new Question("What is the layer responsible for transporting messages between the client and the server?", "Service Transport", ++count, module.getModule(), getCourse());
             new Question("Where does the service provider publish or find the service and its description?", "Service Registry", ++count, module.getModule(), getCourse());
             new Question("What is the process of finding and locating a particular service?", "Service Discovery", ++count, module.getModule(), getCourse());
             new Question("Name the operation consisting of firstly describing the web service itself then registering the web service.", "Publishing", ++count, module.getModule(), getCourse());
@@ -56,7 +56,7 @@ public class WebServices extends Course {
             new Question("What is referred to the process of the execution of the service and returning the result to the client?", "Service Processing", ++count, module.getModule(), getCourse());
             new Question("Name the protocol acting as conversation between the client and the server and the TCP/IP network model.", "HTTP", ++count, module.getModule(), getCourse());
             new Question("What is an enterprise application sees both requests and sessions from two angles?", "Web Server", ++count, module.getModule(), getCourse());
-            new Question("What provides additional information to the server and the client, respectively?", "Headers", ++count, module.getModule(), getCourse());
+            new Question("What are used to pass additional information between the client and the server?", "Headers", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -140,12 +140,12 @@ public class WebServices extends Course {
             new Question("True | False, The WADL file does not provide the service information regardless of the implementation platform.", "false", ++count, module.getModule(), getCourse());
             new Question("True | False, WADL is XML based.", "True", ++count, module.getModule(), getCourse());
             new Question("What is like a switchboard between the client and the server that also confirms that the client has authorization to send HTTP requests to the server?", "Uniform Interface", ++count, module.getModule(), getCourse());
-            new Question("What specifies what kind of content the client is expecting and able to receive from the server?", "Request Header", ++count, module.getModule(), getCourse());
+            new Question("How are the details about the request sent to the server?", "Request Headers", ++count, module.getModule(), getCourse());
             new Question("What uses the following syntax -> type/subtype, and are used to specify the content types in the Accept field", "MIME types", ++count, module.getModule(), getCourse());
             new Question("What do you call the specification for the format of non-text e-mail attachments that allows the attachment to be sent over the Internet?", "MIME", ++count, module.getModule(), getCourse());
             new Question("How would you denote a file containing HTML in MIME?", "text/html", ++count, module.getModule(), getCourse());
             new Question("How would you denote a JSON file in MIME?", "application/json", ++count, module.getModule(), getCourse());
-            new Question("In cases where the server is sending a data payload to the client, what does the server must include in the header of the response?", "content-type", ++count, module.getModule(), getCourse());
+            new Question("Which important Response header tells the client what media type (e.g., application/json, application/javascript, etc.) a response is sent in as it helps the client know how to process the response body correctly?", "content-type", ++count, module.getModule(), getCourse());
             new Question("What alerts the client to information about the success of the operation?", "Status Codes", ++count, module.getModule(), getCourse());
             new Question("Which status code means a successful HTTP request?", "200", ++count, module.getModule(), getCourse());
             new Question("Which status code is the standard response for an HTTP request that resulted an item being successfully created?", "201", ++count, module.getModule(), getCourse());
@@ -155,7 +155,7 @@ public class WebServices extends Course {
             new Question("Which status code says the resource could not be found at this time, with possible deletion or not being created yet?", "404", ++count, module.getModule(), getCourse());
             new Question("When no more specific information is available, which status code is the generic answer for an unexpected failure?", "500", ++count, module.getModule(), getCourse());
             new Question("What is the point where the API and the rest of the internet meet and communicate?", "Endpoint", ++count, module.getModule(), getCourse());
-            new Question("What are unique identifiers that are typically long, unique strings of numbers and letters assisting endpoint security?", "Key", ++count, module.getModule(), getCourse());
+            new Question("What are unique identifiers that are typically long, unique strings of numbers and letters assisting endpoint security?", "Keys", ++count, module.getModule(), getCourse());
             new Question("What sits between the client service and the backend, effectively decoupling the client interface from your backend implementation?", "Gateway", ++count, module.getModule(), getCourse());
             new Question("What is intended to simplify the reuse of web services by intending to model the resources provided by a service and the relationships between them?", "WADL", ++count, module.getModule(), getCourse());
             new Question("True | False, WADL is the REST equivalent to SOAP's WSDL.", "True", ++count, module.getModule(), getCourse());
@@ -163,6 +163,26 @@ public class WebServices extends Course {
             new Question("Name the subclass supporting https-specific features.", "HttpsURLConnection", ++count, module.getModule(), getCourse());
             new Question("Which package provides basic functionality for accessing resources via HTTP, but does NOT provide the full flexibility or functionality needed by many applications?", "java.net", ++count, module.getModule(), getCourse());
             new Question("Which class fills the void of java.net not providing the full flexibility of https needed by most applications?", "HttpClient", ++count, module.getModule(), getCourse());
+            new Question("True | False, headers are case sensitive.", "True", ++count, module.getModule(), getCourse());
+            new Question("Which type of headers contains the location of the source that has been requested by the client?", "Response Headers", ++count, module.getModule(), getCourse());
+            new Question("What is the type of headers applied on both Request and Response types?", "General Headers", ++count, module.getModule(), getCourse());
+            new Question("Which Response header defines the authentication method that should be used to gain access to a resource behind a proxy serve?", "Proxy-Authenticate", ++count, module.getModule(), getCourse());
+            new Question("Which Request header contains the credentials to authenticate a user agent to a proxy server?", "Proxy-Authorization", ++count, module.getModule(), getCourse());
+            new Question("Which header contains the time in seconds the object was in a proxy cache?", "Age", ++count, module.getModule(), getCourse());
+            new Question("Which header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs)?", "cache-control", ++count, module.getModule(), getCourse());
+            new Question("Which header clears browsing data (cookies, storage, cache) associated with the requesting website?", "Clear-Site-Data", ++count, module.getModule(), getCourse());
+            new Question("Which Response header contains the date/time after which the response is considered expired?", "expires", ++count, module.getModule(), getCourse());
+            new Question("Which header may the server send as an initial response if it needs some form of authentication before responding with the actual resource being requested?", "WWW-Authenticate", ++count, module.getModule(), getCourse());
+            new Question("Which Request header tells the server which character sets are acceptable by the client?", "Accept-Charset", ++count, module.getModule(), getCourse());
+            new Question("Which Request header indicates the natural language and locale that the client prefers?", "Accept-Language", ++count, module.getModule(), getCourse());
+            new Question("What is the mandatory Request header specifying the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resource?", "host", ++count, module.getModule(), getCourse());
+            new Question("What Request header is used to inform the server by the client what content-type to send back?", "Accept", ++count, module.getModule(), getCourse());
+            new Question("Which Response header indicates the security contexts without exposing the path information?", "Origin", ++count, module.getModule(), getCourse());
+            new Question("What is the Request header using a characteristic string that lets servers and network peers identify the application, operating system, vendor?", "user-agent", ++count, module.getModule(), getCourse());
+            /*new Question("?", "", ++count, module.getModule(), getCourse());
+            new Question("?", "", ++count, module.getModule(), getCourse());
+            new Question("?", "", ++count, module.getModule(), getCourse());
+            new Question("?", "", ++count, module.getModule(), getCourse());*/
         }
     }
 
@@ -203,7 +223,7 @@ public class WebServices extends Course {
         }
 
         public void questions() {
-            new Question("Despite consuming significant bandwidth and resources, what makes it easier for it to operate across firewalls and proxies without modifications to the SOAP protocol itself?", "SOAP", ++count, module.getModule(), getCourse());
+            new Question("Despite consuming significant bandwidth and resources, what is the protocol making it easier to operate across firewalls and proxies without modification?", "SOAP", ++count, module.getModule(), getCourse());
             new Question("What is an XML-based interface description language that is used for describing the functionality offered by a web service?", "WSDL", ++count, module.getModule(), getCourse());
             new Question("What is the Java API for SOAP web services?", "JAX-WS", ++count, module.getModule(), getCourse());
             new Question("What inherits security measures from the underlying service transport?", "REST", ++count, module.getModule(), getCourse());
@@ -212,10 +232,10 @@ public class WebServices extends Course {
             new Question("True | False, SOAP defines it own security.", "True", ++count, module.getModule(), getCourse());
             new Question("Which XML tag defines the XML schema data types used by the web service in WSDL documents?", "types", ++count, module.getModule(), getCourse());
             new Question("Which XML tag defines the data elements for each operation in WSDL documents?", "message", ++count, module.getModule(), getCourse());
-            new Question("Which XML tag describes the operations that cn be performed and the messages involved in WSDL documents?", "portType", ++count, module.getModule(), getCourse());
+            new Question("Which XML tag describes the operations that can be performed and the messages involved in WSDL documents?", "portType", ++count, module.getModule(), getCourse());
             new Question("Which XML tag defines the protocol and the data format for each port type in WSDL documents?", "binding", ++count, module.getModule(), getCourse());
             new Question("Which WSDL style document says that you can structure the SOAP body any way you want it as long as the content of the SOAP message body is any arbitrary XML instance?", "Document Style", ++count, module.getModule(), getCourse());
-            new Question("In WSDL, what is Document Style also known as?", "Messaged-Oriented Style", ++count, module.getModule(), getCourse());
+            new Question("In WSDL, what is Document Style also known as?", "Message-Oriented Style", ++count, module.getModule(), getCourse());
             new Question("Which WSDL model says the structure of the SOAP request body must contain both the operation name and the set of method parameters?", "RPC", ++count, module.getModule(), getCourse());
             new Question("As part of the GlassFish project, what bundles the Reference Implementation and WSIT, the component providing enhanced support for Microsoft's .NET Framework?", "Metro", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP's WSDL cannot be used to described REST web services.", "False", ++count, module.getModule(), getCourse());
