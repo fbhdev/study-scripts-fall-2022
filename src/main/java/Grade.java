@@ -4,17 +4,26 @@ public class Grade {
     private static int total = 0;
     private Records records = new Records();
 
-    public void grade(){
+    public double finalGrade(){
         if(!isValid(getGrade())){
             throw new IllegalArgumentException("Invalid grade");
         }
         setGrade(getGrade());
+        return arithmetics(getGrade());
+    }
+
+    public void printGrade(){
+        double percentage = arithmetics(getGrade());
         System.out.print("Scored " + getGrade() + "/" + getTotal());
-        System.out.println("\t|\tYour grade is: " + arithmetics(getGrade()) + "%");
+        System.out.println("\t–\tYour grade is: " + String.format("%.2f", percentage) + "%");
         System.out.println();
+    }
+
+    public void reset(){
         total = 0;
         grade = 0;
     }
+
 
     public int getGrade() {
         return grade;
@@ -80,8 +89,8 @@ public class Grade {
         }
     }
 
-    public String arithmetics(int grade){
-        Double percentage = (double) grade / total * 100;
-        return String.format("%.2f", percentage);
+    public double arithmetics(int grade){
+        return (double) grade / total * 100;
     }
 }
+

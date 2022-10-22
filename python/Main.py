@@ -3,10 +3,9 @@ import csv
 import json
 from csv import reader
 from datetime import datetime
+import plotly.express as px
 
 import pandas as pd
-from matplotlib import pyplot as plt
-import seaborn as sns
 import os
 
 
@@ -23,10 +22,6 @@ class Screen:
         }
 
     @staticmethod
-    def directory_length(course):
-        return len(os.listdir("../records/" + course + "/"))
-
-    @staticmethod
     def directory(course):
         length = []
         for item in os.listdir("../records/" + course + "/"):
@@ -35,15 +30,10 @@ class Screen:
         return length
 
     def update_length(self):
-        flag = False
         for count, course in enumerate(self.courses):
             if self.courses[course] != len(self.directory(course)):
                 self.courses[course] = len(self.directory(course))
                 self.flags[count] = True
-                flag = True
-        if flag:
-            return True
-        return False
 
     def clear_flags(self):
         for count, flag in enumerate(self.flags):
@@ -67,57 +57,73 @@ class Screen:
             num_question = list(data.values())[0]
             grade = list(data.values())[1]
             course = list(data.values())[3]
-            return [grade, num_question, course]
+            return [grade, num_question, course, name]
 
-    async def check(self) -> None:
-        while True:
-            if self.update_length():
-                for count, flag in enumerate(self.flags):
-                    if flag:
-                        self.save_data(count)
-                        self.clear_flags()
-                        print(f"Data saved for {list(self.courses.keys())[count]}")
-            print(f"Sleeping for {self.sleep} seconds")
-            await asyncio.sleep(self.sleep)
-
-    def plot(self, index: int) -> None:
-        course = list(self.courses.keys())[index]
+    def plot(self) -> None:
         try:
-            data = pd.read_csv(f"../records/{course}/records.csv")
-            if data.empty:
+            data = pd.read_csv(f"../records/records.csv")
+            if os.stat(f"../records/records.csv").st_size == 0:
                 print("No data to plot")
                 return
         except FileNotFoundError:
             return
-        plt.figure(figsize=(10, 6))
-        sns.color_palette("light:#5A9", as_cmap=True)
-        sns.despine()
-        plt.title(f"{course} Grades")
-        plt.ylabel("Grades")
-        plt.xlabel("Questions")
         grades = []
         questions = []
+        courses = []
         for row in data.itertuples():
             grades.append(row[1])
             questions.append(row[2])
-        pd.DataFrame({"Grades": grades, "Questions": questions})
-        sns.scatterplot(x="Number of Questions", y="Grade", data=data, hue="Course")
-        try:
-            plt.savefig(f"../records/{course}/plots/{datetime.now()}.png")
-        except FileNotFoundError:
-            os.mkdir(f"../records/{course}/plots")
+            courses.append(row[3])
+        df = pd.DataFrame({"Grade": grades, "Questions": questions, "Course": courses})
+        fig = px.scatter(df,
+                         x="Questions",
+                         y="Grade",
+                         width=1920, height=1080,
+                         color="Course",
+                         title=f"Fall 2022 Study Script Grades",
+                         labels={"Questions": "Number of Questions", "Grade": "Grades"},
+                         size="Questions",
+                         template="plotly_dark",
+                         color_discrete_sequence=px.colors.qualitative.Pastel)
+        fig.update_xaxes(showgrid=False)
+        for item in os.listdir(f"../records/plots"):
+            os.remove(f"../records/plots/{item}")
+        fig.write_image(f"../records/plots/{datetime.now()}.png")
+        fig.write_html(f"../records/plots/{datetime.now()}.html")
 
     def save_data(self, index: int) -> None:
         course = list(self.courses.keys())[index]
-        with open(f"../records/{course}/records.csv", "w") as file:
+        with open(f"../records/records.csv", "a") as file:
             writer = csv.writer(file)
-            if os.stat(f"../records/{course}/records.csv").st_size == 0:
-                writer.writerow(["Grade", "Number of Questions", "Course"])
+            if os.stat(f"../records/records.csv").st_size == 0:
+                writer.writerow(["Grade", "Number of Questions", "Course", "File Name"])
             for name in self.directory(course):
                 if name.__contains__("plot"):
                     continue
-                writer.writerow(self.read_data(name, list(self.courses.keys()).index(course)))
-        self.plot(index)
+                if not self.is_logged(name):
+                    writer.writerow(self.read_data(name, list(self.courses.keys()).index(course)))
+            file.close()
+        self.plot()
+
+    @staticmethod
+    def is_logged(name):
+        with open("../records/records.csv", "r") as file:
+            csv = reader(file)
+            for row in csv:
+                if name in row:
+                    return True
+            return False
+
+    async def check(self) -> None:
+        while True:
+            self.update_length()
+            for count, flag in enumerate(self.flags):
+                if flag:
+                    self.save_data(count)
+                    print(f"Data saved for {list(self.courses.keys())[count]}")
+            self.clear_flags()
+            print(f"Sleeping for {self.sleep} seconds")
+            await asyncio.sleep(self.sleep)
 
     def run(self):
         asyncio.run(self.check())
@@ -125,3 +131,4 @@ class Screen:
 
 if __name__ == "__main__":
     Screen().run()
+    # print(dir(px.colors.qualitative))

@@ -17,7 +17,7 @@ public class Records {
     public static void save(String course) {
         JSONObject obj = new JSONObject();
         obj.put("course", Course.getCourse());
-        obj.put("grade", gradeBugs());
+        obj.put("grade", grade());
         obj.put("number of questions", getNumQuestions());
         JSONArray list = new JSONArray();
         JSONArray innerList;
@@ -32,32 +32,32 @@ public class Records {
             FileWriter writer = new FileWriter("records/" + course + "/" + java.time.LocalDateTime.now() + ".json");
             writer.write(obj.toJSONString());
             writer.close();
-            clearLists();
         }
         catch (IOException e){
             e.printStackTrace();
         }
+        reset();
     }
 
-    public static int gradeBugs(){
-        Grade gde = new Grade();
-        int grade = gde.getGrade();
+    public static int grade(){
+        int grade = (int) new Grade().finalGrade();
         if (grade > 100) grade = 100;
-        int percentage = grade / getNumQuestions() * 100;
-        if(percentage < 10) {
-            Input input = new Input("Was " + percentage + "% a typo? (y/n)");
+        if(grade < 10) {
+            Input input = new Input("Was " + grade + "% a typo? (y/n)");
             if (input.getInput().equals("y")) {
                 Input newGrade = new Input("What was the correct percentage?");
-                percentage = Integer.parseInt(newGrade.getInput());
+                grade = Integer.parseInt(newGrade.getInput());
             }
         }
-        return percentage;
+        new Grade().reset();
+        return grade;
     }
 
-    private static void clearLists(){
+    private static void reset(){
         names.clear();
         successes.clear();
         setNumQuestions(0);
+        new Grade().reset();
     }
 
     public void addName(String name){

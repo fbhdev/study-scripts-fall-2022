@@ -43,7 +43,8 @@ public class Main {
         System.out.println(questions.size() + " questions available.");
         Input random = new Input("Random number of questions?");
         if(random.getInput().equalsIgnoreCase("y")){
-            return (int) (Math.random() * 50);
+            int num = (int) (Math.random() * 50 + 1);
+            return Math.min(num, questions.size());
         }
         Input input = new Input("How many questions would you like to answer?");
         int length = Integer.parseInt(input.getInput());
@@ -59,16 +60,19 @@ public class Main {
         int choice = select();
         if (choice == 1){
             WebServices ws = new WebServices();
+            System.out.println(Course.getCourse());
             ws.release(true);
             ws.run(length(ws.allQuestions()));
         }
         else if (choice == 2){
             WebDev wd = new WebDev();
+            System.out.println(Course.getCourse());
             wd.release(true);
             wd.run(length(wd.allQuestions()));
         }
         else if (choice == 3){
             DSA dsa = new DSA();
+            System.out.println(Course.getCourse());
             dsa.release(true);
             dsa.run(length(dsa.allQuestions()));
         }
