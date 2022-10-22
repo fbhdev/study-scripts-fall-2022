@@ -5,20 +5,20 @@ public class Input {
     private String input;
 
     public Input(String question){
-        System.out.print(question + " -> ");
-        stringInput();
+        System.out.print(question + " ⟶ ");
+        input();
     }
 
     public Scanner scanner(){
         return new Scanner(System.in);
     }
 
-    public void stringInput(){
+    public void input(){
         try {
             while (true) {
                 input = scanner().nextLine();
                 if (input.equals(" ") || input.isEmpty()) {
-                    System.out.print("Please enter a valid input -> ");
+                    System.out.print("Please enter a valid input ⟶ ");
                     continue;
                 }
                 break;
@@ -28,7 +28,7 @@ public class Input {
             while (true) {
                 input = String.valueOf(scanner().nextInt());
                 if (input.equals(" ") || input.isEmpty()) {
-                    System.out.print("Please enter a valid input -> ");
+                    System.out.print("Please enter a valid input ⟶ ");
                     continue;
                 }
                 break;

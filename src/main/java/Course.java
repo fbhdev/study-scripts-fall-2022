@@ -33,11 +33,11 @@ public class Course {
         return false;
     }
 
-    public ArrayList<Module> allModules(){
+    public static ArrayList<Module> allModules(){
         return modules;
     }
 
-    public ArrayList<Question> allQuestions() {
+    public static ArrayList<Question> allQuestions() {
         return questions;
     }
 }

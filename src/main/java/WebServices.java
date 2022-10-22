@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class WebServices extends Course {
@@ -9,8 +8,6 @@ public class WebServices extends Course {
     private static ModuleFour moduleFour;
     private static ModuleFive moduleFive;
     private static ModuleSix moduleSix;
-    private static final Course course = new Course();
-    private final ArrayList<Question> questions = new ArrayList<>();
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -19,7 +16,7 @@ public class WebServices extends Course {
         moduleFour = new ModuleFour();
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
-        course.setCourse("Web Services");
+        setCourse("Web Services");
     }
 
     static class ModuleOne{
@@ -30,7 +27,7 @@ public class WebServices extends Course {
         public ModuleOne(){
             module = new Module();
             module.setModule(1);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions(){
@@ -68,7 +65,7 @@ public class WebServices extends Course {
         public ModuleTwo(){
             module = new Module();
             module.setModule(2);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions(){
@@ -95,7 +92,7 @@ public class WebServices extends Course {
         public ModuleThree(){
             module = new Module();
             module.setModule(3);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions(){
@@ -132,7 +129,7 @@ public class WebServices extends Course {
         public ModuleFour(){
             module = new Module();
             module.setModule(4);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions(){
@@ -194,7 +191,7 @@ public class WebServices extends Course {
         public ModuleFive(){
             module = new Module();
             module.setModule(5);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions(){
@@ -219,7 +216,7 @@ public class WebServices extends Course {
         public ModuleSix(){
             module = new Module();
             module.setModule(6);
-            course.allModules().add(module);
+            allModules().add(module);
         }
 
         public void questions() {
@@ -249,30 +246,6 @@ public class WebServices extends Course {
         moduleFour.questions();
         moduleFive.questions();
         moduleSix.questions();
-        if (shuffle) Collections.shuffle(course.allQuestions());
-    }
-
-    public void run(int length) {
-        if (length == 0) return;
-        Records.setNumQuestions(length);
-        System.out.println();
-        System.out.println("Welcome to the " + getCourse() + " quiz!");
-        System.out.println("You will be asked " + length + " questions.");
-        for (Question question : course.allQuestions()) {
-            if (length == 0) break;
-            System.out.println();
-            if (length == 1) {
-                System.out.println(length + " question left");
-            } else {
-                System.out.println(length + " questions left");
-            }
-            System.out.println(question);
-            question.askUser();
-            System.out.println();
-            length--;
-        }
-        new Grade().printGrade();
-        course.allQuestions().clear();
-        Records.save("Web Services");
+        if (shuffle) Collections.shuffle(allQuestions());
     }
 }

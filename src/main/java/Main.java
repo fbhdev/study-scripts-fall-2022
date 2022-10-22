@@ -56,31 +56,58 @@ public class Main {
         return 0;
     }
 
+    public static void flow(int length, String course) {
+        if (length == 0) return;
+        Records.setNumQuestions(length);
+        System.out.println();
+        System.out.println("Welcome to the " + course + " quiz!");
+        System.out.println("You will be asked " + length + " questions.");
+        for (Question question : Course.allQuestions()) {
+            if (length == 0) {
+                break;
+            }
+            if (length > 1) {
+                System.out.println(length + " questions left");
+            }
+            else {
+                System.out.println(length + " question left");
+            }
+            System.out.println(question);
+            question.askUser();
+            length--;
+        }
+        new Grade().printGrade();
+        Course.allQuestions().clear();
+        Records.save(course);
+    }
+
     public static void run() {
         int choice = select();
         if (choice == 1){
             WebServices ws = new WebServices();
             System.out.println(Course.getCourse());
             ws.release(true);
-            ws.run(length(ws.allQuestions()));
+            flow(length(Course.allQuestions()), Course.getCourse());
         }
         else if (choice == 2){
             WebDev wd = new WebDev();
             System.out.println(Course.getCourse());
             wd.release(true);
-            wd.run(length(wd.allQuestions()));
+            flow(length(Course.allQuestions()), Course.getCourse());
         }
         else if (choice == 3){
             DSA dsa = new DSA();
             System.out.println(Course.getCourse());
             dsa.release(true);
-            dsa.run(length(dsa.allQuestions()));
+            flow(length(Course.allQuestions()), Course.getCourse());
         }
+
 //        else if (choice == 4){
 //            PT2 pt2 = new PT2();
 //            pt2.release(true);
 //            pt2.run(length(pt2.allQuestions()));
 //        }
+
         else if (choice == 5){
             System.exit(0);
         }

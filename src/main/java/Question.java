@@ -36,6 +36,7 @@ public class Question extends Course {
         else{
             grade.failure(getAnswer(), false);
         }
+        System.out.println();
     }
 
     public String getQuestion() {

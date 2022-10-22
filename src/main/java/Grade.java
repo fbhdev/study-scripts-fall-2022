@@ -48,6 +48,7 @@ public class Grade {
             return;
         }
         System.out.print("Incorrect answer");
+        System.out.println();
     }
 
     public boolean leniency(String answer, Input input){
@@ -72,7 +73,18 @@ public class Grade {
     public boolean manualCorrection(String answer){
         System.out.println("The correct answer is: " + answer);
         Input input = new Input("Is manual correction justified in this case? (y/n)");
-        return input.getInput().equals("y");
+        while(true){
+            if(input.getInput().equals("y")) {
+                return true;
+            }
+            else if(input.getInput().equals("n")) {
+                return false;
+            }
+            else {
+                System.out.println("Invalid Input");
+            }
+            System.out.println();
+        }
     }
 
     public void success(){
@@ -84,9 +96,7 @@ public class Grade {
     public void failure(String answer, boolean message){
         message(false);
         records.addSuccess(false);
-        if(message){
-            System.out.println(" -> Correct answer is: " + answer);
-        }
+        if(message) System.out.println(" -> Correct answer is: " + answer);
     }
 
     public double arithmetics(int grade){

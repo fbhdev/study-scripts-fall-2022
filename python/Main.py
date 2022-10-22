@@ -161,6 +161,6 @@ class Screen:
 
 
 if __name__ == "__main__":
-    # Screen().run()
-    print()
+    Screen().run()
+    # print()
     # print(dir(px.colors.qualitative))
