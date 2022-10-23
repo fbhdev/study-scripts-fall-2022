@@ -8,6 +8,7 @@ public class DSA extends Course{
     private static ModuleFour moduleFour;
     private static ModuleFive moduleFive;
     private static ModuleSix moduleSix;
+    private static ModuleSeven moduleSeven;
 
     public DSA(){
         moduleOne = new ModuleOne();
@@ -16,6 +17,7 @@ public class DSA extends Course{
         moduleFour = new ModuleFour();
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
+        moduleSeven = new ModuleSeven();
         setCourse("Data Structures and Algorithms");
     }
 
@@ -283,6 +285,55 @@ public class DSA extends Course{
         }
     }
 
+
+    // General Trees, Binary Trees, Tree Traversals
+    static class ModuleSeven {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleSeven() {
+            module = new Module();
+            module.setModule(7);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("What's the abstract data type storing elements hierarchically?", "Trees", ++count, module.getModule(), getCourse());
+            new Question("Which element does not have a parent element?", "Root", ++count, module.getModule(), getCourse());
+            new Question("What's the smallest number of children an element can have?", "0", ++count, module.getModule(), getCourse());
+            new Question("What do you call two nodes that are children of the same parent?", "Siblings", ++count, module.getModule(), getCourse());
+            new Question("What do you a node having no children?", "External", ++count, module.getModule(), getCourse());
+            new Question("What do you call a node with one or more children?", "Internal", ++count, module.getModule(), getCourse());
+            new Question("What is any other node on the path from the node to the root?", "Ancestors", ++count, module.getModule(), getCourse());
+            new Question("What do you call a node having the inverse relationship of ancestor?", "Descendants", ++count, module.getModule(), getCourse());
+            new Question("What connects two nodes to show that there is a relationship between them?", "Edges", ++count, module.getModule(), getCourse());
+            new Question("What is a sequence of nodes such that any two consecutive nodes in the sequence form an edge?", "Paths", ++count, module.getModule(), getCourse());
+            new Question("What do you call the meaningful linear order among the children of each node?", "Ordered", ++count, module.getModule(), getCourse());
+            new Question("What do you call the length of the path from the root to the node?", "Depth", ++count, module.getModule(), getCourse());
+            new Question("What do you call the number of edges on the longest path from the node to a leaf?", "Height", ++count, module.getModule(), getCourse());
+            new Question("What do you also call an external node?", "Leaf", ++count, module.getModule(), getCourse());
+            new Question("What is a tree data structure in which each parent node can have at most two children?", "Binary Trees", ++count, module.getModule(), getCourse());
+            new Question("What do you call a Binary Tree with 0 or 2 children?", "Proper", ++count, module.getModule(), getCourse());
+            new Question("What is a proper tree structure used in analysis and strategy?", "Decision Trees", ++count, module.getModule(), getCourse());
+            new Question("What is a node based binary tree that further has right and left subtrees?", "Binary Search Trees", ++count, module.getModule(), getCourse());
+            new Question("Which of the Binary Tree and Binary Search Tree is unordered hence slower in process of insertion, deletion and searching?", "Binary Tree", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of a Binary Tree", "O(n)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of a Binary Search Tree?", "O(logn)", ++count, module.getModule(), getCourse());
+            new Question("What is utilized in the implementations of AVL Trees, Red Black Trees, and so on?", "Binary Search Trees", ++count, module.getModule(), getCourse());
+            new Question("What refers to the process of visiting each node in a tree data structure exactly once?", "Traversal", ++count, module.getModule(), getCourse());
+            new Question("True | False, similarly to stacks, queues and arrays, trees have only one way to traverse the data.", "False", ++count, module.getModule(), getCourse());
+            new Question("What says the root node is first visited, then left sub-tree and after that right sub-tree is visited?", "Preorder Traversal", ++count, module.getModule(), getCourse());
+            new Question("Which policy does the Preorder Traversal technique follow?", "Root Left Right", ++count, module.getModule(), getCourse());
+            new Question("Which policy does the Postorder Traversal Technique follow?", "Left Right Root", ++count, module.getModule(), getCourse());
+            new Question("What is the opposite of Preorder Traversal?", "Postorder Traversal", ++count, module.getModule(), getCourse());
+            new Question("What is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layer-wise thus exploring the neighbour node?", "Breadth First Traversal", ++count, module.getModule(), getCourse());
+            new Question("Which traversal technique follows the Left Root Right policy?", "Inorder Traversal", ++count, module.getModule(), getCourse());
+            new Question("What says that the left subtree of the root node is traversed first, then the root node, and then the right subtree of the root node is traversed?", "Left Root Right", ++count, module.getModule(), getCourse());
+            new Question("What is the term used to unify the tree-traversal algorithms into a single framework?", "Euler Tour Traversal", ++count, module.getModule(), getCourse());
+        }
+    }
+
     public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
@@ -290,6 +341,7 @@ public class DSA extends Course{
         moduleFour.questions();
         moduleFive.questions();
         moduleSix.questions();
+        moduleSeven.questions();
         if (shuffle) Collections.shuffle(allQuestions());
     }
 }

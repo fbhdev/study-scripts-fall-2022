@@ -40,20 +40,29 @@ public class Main {
     }
 
     public static int length(ArrayList<Question> questions){
+        int length = 0;
         System.out.println(questions.size() + " questions available.");
         Input random = new Input("Random number of questions?");
         if(random.getInput().equalsIgnoreCase("y")){
-            int num = (int) (Math.random() * 50 + 1);
-            return Math.min(num, questions.size());
+            length = (int) (Math.random() * 50 + 1);
+            if (length > questions.size()){
+                length = questions.size();
+            }
         }
-        Input input = new Input("How many questions would you like to answer?");
-        int length = Integer.parseInt(input.getInput());
-        if(length > 0 && length <= questions.size()){
-            return length;
+        else {
+            while(true) {
+                Input input = new Input("How many questions would you like to answer?");
+                length = Integer.parseInt(input.getInput());
+                if (!(length > 0 && length <= questions.size())) {
+                    continue;
+                }
+                length = Integer.parseInt(input.getInput());
+                break;
+            }
         }
-        System.out.println(questions.size() + " questions available.");
+        System.out.println("You will answer " + length + " questions.");
         System.out.println();
-        return 0;
+        return length;
     }
 
     public static void flow(int length, String course) {

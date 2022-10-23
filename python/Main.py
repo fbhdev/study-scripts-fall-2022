@@ -138,11 +138,9 @@ class Screen:
             return sum(questions)
 
     def stats(self, course):
-        print()
-        print(f"Data Saved for {course}")
+        print(f"\nData Saved for {course}")
         print(f"Average Grade for {course} is {self.averages(course)}")
-        print(f"{self.total_questions(course)} questions answered.")
-        print()
+        print(f"{self.total_questions(course)} questions answered.\n")
 
     async def check(self) -> None:
         while True:
