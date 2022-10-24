@@ -35,8 +35,8 @@ public class WebDev extends Course {
         public void questions(){
             new Question("Who makes sure that every bit of text on a site, from long explanatory text down to the labels on buttons, supports the brand identity and marketing goals of the organization?", "Content Strategist", ++count, module.getModule(), getCourse());
             new Question("Who organizes the content logically and for ease of findability?", "Information Architect", ++count, module.getModule(), getCourse());
-            new Question("What is based on a solid understanding of users and their needs based on observations and interviews?", "UX Design", ++count, module.getModule(), getCourse());
             new Question("What shows the structure of a web page using only outlines for each content type and widget?", "Wireframe", ++count, module.getModule(), getCourse());
+            new Question("What involves the design of the entire process of acquiring and integrating the product, including aspects of branding, design, usability and function?", "UX Design", ++count, module.getModule(), getCourse());
             new Question("Who is the organization that oversees the development of web technologies such as HTML, CSS, and JavaScript?", "W3C", ++count, module.getModule(), getCourse());
             new Question("Which protocol works in tandem with another protocol, SSL (for Secure Socket Layer), which needs to be enabled on the server for secure transactions to work?", "HTTPS", ++count, module.getModule(), getCourse());
             new Question("What do you call applications running on the user’s machine?", "Client-side", ++count, module.getModule(), getCourse());
@@ -142,11 +142,11 @@ public class WebDev extends Course {
             new Question("In some cases, where is the ideal placement for your script to do something before the body completely loads?", "Head", ++count, module.getModule(), getCourse());
             new Question("What do you call a command telling a browser what to do?", "Statement", ++count, module.getModule(), getCourse());
             new Question("What tells JavaScript that it’s the end of the command, just as a period ends a sentence?", ";", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
 
     }

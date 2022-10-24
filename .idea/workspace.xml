@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Removed redundant code, moved individual run methods to Main and renamed it &quot;flow&quot;.">
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added Module 7 for both DSA and Web Dev.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/Main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/records/records.csv" beforeDir="false" afterPath="$PROJECT_DIR$/records/records.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebDev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +147,10 @@
       <workItem from="1666391085732" duration="8487000" />
       <workItem from="1666407593277" duration="6497000" />
       <workItem from="1666453712672" duration="6079000" />
-      <workItem from="1666465351970" duration="14411000" />
+      <workItem from="1666465351970" duration="21430000" />
+      <workItem from="1666561121146" duration="645000" />
+      <workItem from="1666571428062" duration="3088000" />
+      <workItem from="1666580011611" duration="5529000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666457968698</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added Module 7 for both DSA and Web Dev.">
+      <created>1666542913141</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666542913141</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +245,8 @@
     <MESSAGE value="Fixed bugs both Java and Python scripts" />
     <MESSAGE value="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes." />
     <MESSAGE value="Removed redundant code, moved individual run methods to Main and renamed it &quot;flow&quot;." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed redundant code, moved individual run methods to Main and renamed it &quot;flow&quot;." />
+    <MESSAGE value="Added Module 7 for both DSA and Web Dev." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Module 7 for both DSA and Web Dev." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

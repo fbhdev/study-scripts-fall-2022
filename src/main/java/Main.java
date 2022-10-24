@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -10,7 +9,7 @@ public class Main {
         System.out.println("Thanks for studying!");
     }
 
-    public static int select(){
+    public static int selectCourse(){
         System.out.println("1. Web Services");
         System.out.println("2. Web Development");
         System.out.println("3. Data Structures and Algorithms");
@@ -40,20 +39,14 @@ public class Main {
     }
 
     public static int length(ArrayList<Question> questions){
-        int length = 0;
-        System.out.println(questions.size() + " questions available.");
-        Input random = new Input("Random number of questions?");
-        if(random.getInput().equalsIgnoreCase("y")){
-            length = (int) (Math.random() * 50 + 1);
-            if (length > questions.size()){
-                length = questions.size();
-            }
-        }
-        else {
+        int size = questions.size();
+        System.out.println(size + " questions available.");
+        int length = random(size);
+        if(length == 0){
             while(true) {
                 Input input = new Input("How many questions would you like to answer?");
                 length = Integer.parseInt(input.getInput());
-                if (!(length > 0 && length <= questions.size())) {
+                if (!(length > 0 && length <= questions.size() && length <= 100)) {
                     continue;
                 }
                 length = Integer.parseInt(input.getInput());
@@ -62,6 +55,31 @@ public class Main {
         }
         System.out.println("You will answer " + length + " questions.");
         System.out.println();
+        return length;
+    }
+
+
+    public static int random(int size){
+        int length = 0;
+        Input random = new Input("Random number of questions?");
+        while(true) {
+            if (random.getInput().equalsIgnoreCase("y")) {
+                length = (int) (Math.random() * size + 1);
+                if(length > 100){
+                    length = 100;
+                }
+                if (length > size) {
+                    length = size;
+                }
+                break;
+            }
+            else if (random.getInput().equalsIgnoreCase("n")) {
+                break;
+            }
+            else {
+                System.out.print("Please enter a valid input -> ");
+            }
+        }
         return length;
     }
 
@@ -91,7 +109,7 @@ public class Main {
     }
 
     public static void run() {
-        int choice = select();
+        int choice = selectCourse();
         if (choice == 1){
             WebServices ws = new WebServices();
             System.out.println(Course.getCourse());

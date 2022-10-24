@@ -19,6 +19,8 @@ public class WebServices extends Course {
         setCourse("Web Services");
     }
 
+
+    // Module 1: Introduction to Web Services
     static class ModuleOne{
 
         private final Module module;
@@ -57,6 +59,8 @@ public class WebServices extends Course {
         }
     }
 
+
+    // Module 2: Java Web and Servlets
     static class ModuleTwo {
 
         private final Module module;
@@ -84,6 +88,9 @@ public class WebServices extends Course {
             new Question("Which Java class includes the methods by which the servlet developer must implement?", "HttpServlet", ++count, module.getModule(), getCourse());
         }
     }
+
+
+    // Module 3: RESTful Web Services
     static class ModuleThree{
 
         private final Module module;
@@ -116,11 +123,15 @@ public class WebServices extends Course {
             new Question("What are ordinary objects increasing readability and re-usability of a Java program that are widely accepted because of their easy maintenance?", "POJO", ++count, module.getModule(), getCourse());
             new Question("In computer software, what is the part of the program that encodes the real-world business rules that determine how data can be created, stored, and changed. It is contrasted with the remainder of the software that might be concerned with lower-level details of managing a database or displaying the user interface, system infrastructure, or generally connecting various parts of the program.", "Business Logic", ++count, module.getModule(), getCourse());
             new Question("What is a specification, a set of interfaces and annotations offered by Java EE?", "JAX-RS", ++count, module.getModule(), getCourse());
+            /*new Question("Which framework allows us to manage the lifecycle of stateful components via domain-specific lifecycle contexts and inject components (services) into client objects in a type-safe way?", "CDI", ++count, module.getModule(), getCourse());
+            new Question("What does CDI stand for?", "Contexts and Dependency Injection", ++count, module.getModule(), getCourse());
+            new Question("What allows us to implement factory classes, whose responsibility is the creation of fully-initialized services?", "@Produces", ++count, module.getModule(), getCourse());*/
+
         }
     }
 
 
-    // REST the Client-Side + WADL
+    // Module 4: REST, The Client Side
     static class ModuleFour{
 
         private final Module module;
@@ -183,6 +194,8 @@ public class WebServices extends Course {
         }
     }
 
+
+    // Module 5: Understanding XML and JSON Data Types
     static class ModuleFive{
 
         private final Module module;
@@ -208,6 +221,8 @@ public class WebServices extends Course {
         }
     }
 
+
+    // Module 6: SOAP Web Services
     static class ModuleSix {
 
         private final Module module;
