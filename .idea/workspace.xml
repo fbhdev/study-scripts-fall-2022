@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added Module 7 for both DSA and Web Dev.">
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/records/records.csv" beforeDir="false" afterPath="$PROJECT_DIR$/records/records.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebDev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Records.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Records.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +26,17 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -60,7 +76,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5282258&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -150,7 +166,18 @@
       <workItem from="1666465351970" duration="21430000" />
       <workItem from="1666561121146" duration="645000" />
       <workItem from="1666571428062" duration="3088000" />
-      <workItem from="1666580011611" duration="5529000" />
+      <workItem from="1666580011611" duration="5888000" />
+      <workItem from="1666633965038" duration="12258000" />
+      <workItem from="1666661189495" duration="9248000" />
+      <workItem from="1666707953886" duration="38000" />
+      <workItem from="1666708001338" duration="119000" />
+      <workItem from="1666721049056" duration="4000" />
+      <workItem from="1666728178705" duration="1821000" />
+      <workItem from="1666730111284" duration="222000" />
+      <workItem from="1666730801745" duration="170000" />
+      <workItem from="1666731600149" duration="20000" />
+      <workItem from="1666731630229" duration="72000" />
+      <workItem from="1666732196902" duration="2069000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -222,11 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666542913141</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed bugs">
+      <created>1666623688363</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666623688363</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="Application" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -246,7 +283,8 @@
     <MESSAGE value="Added Web Services questions, fixed typos in DSA and bugs in all classes. Played with Plotly themes." />
     <MESSAGE value="Removed redundant code, moved individual run methods to Main and renamed it &quot;flow&quot;." />
     <MESSAGE value="Added Module 7 for both DSA and Web Dev." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Module 7 for both DSA and Web Dev." />
+    <MESSAGE value="Fixed bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

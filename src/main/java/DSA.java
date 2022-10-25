@@ -1,5 +1,8 @@
 import java.util.Collections;
 
+/**
+ * @author Francois Boulay-Handfield
+ */
 public class DSA extends Course{
 
     private static ModuleOne moduleOne;
@@ -9,6 +12,7 @@ public class DSA extends Course{
     private static ModuleFive moduleFive;
     private static ModuleSix moduleSix;
     private static ModuleSeven moduleSeven;
+    private static ModuleEight moduleEight;
 
     public DSA(){
         moduleOne = new ModuleOne();
@@ -18,6 +22,7 @@ public class DSA extends Course{
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
         moduleSeven = new ModuleSeven();
+        moduleEight = new ModuleEight();
         setCourse("Data Structures and Algorithms");
     }
 
@@ -122,15 +127,15 @@ public class DSA extends Course{
             new Question("Which method can be used to produce what is known as a shallow copy of an object?", "Clone", ++count, module.getModule(), getCourse());
             new Question("In copies, what means that no new memory allocation happens for the other entities, and the only reference is copied to the other entities?", "Shallow Copy", ++count, module.getModule(), getCourse());
             new Question("In copies, what means that a new memory allocation happens for the other entities, and reference is not copied to the other entities?", "Deep Copy", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of accessing a Linked List node?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of searching a Linked List node?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of adding a node to aLinked List?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of removing a node from a Linked List?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity to getting the length of a Linked List?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of accessing a Doubly Linked List node?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of searching a Doubly Linked List node?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of inserting a node in a Doubly Linked List?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of deleting a node in a Doubly Linked List?", "O(1)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of accessing a Linked List node?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of searching a Linked List node?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of adding a node to a Linked List?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of removing a node from a Linked List?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity to getting the length of a Linked List?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of accessing a Doubly Linked List node?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of searching a Doubly Linked List node?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of inserting a node in a Doubly Linked List?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of deleting a node in a Doubly Linked List?", "1", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -165,11 +170,11 @@ public class DSA extends Course{
             new Question("Which notation is used for analyzing the best-case complexity of an algorithm?", "Big Omega", ++count, module.getModule(), getCourse());
             new Question("Which notation is used for analyzing the average-case complexity of an algorithm?", "Big Theta", ++count, module.getModule(), getCourse());
             new Question("Which notation is used for analyzing the worst-case complexity of an algorithm?", "Big-O", ++count, module.getModule(), getCourse());
-            new Question("What is the Big-Theta of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "O(n^3log(n))", ++count, module.getModule(), getCourse());
-            new Question("What is the Big-O of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "O(n^4)", ++count, module.getModule(), getCourse());
-            new Question("What is the slowest run time?", "O(n!)", ++count, module.getModule(), getCourse());
-            new Question("What is the worst case for Bubble Sort?", "O(n^2)", ++count, module.getModule(), getCourse());
-            new Question("What is the worst case for Insertion Sort?", "O(n^2)", ++count, module.getModule(), getCourse());
+            new Question("What is the Big-Theta of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "n^3logn", ++count, module.getModule(), getCourse());
+            new Question("What is the Big-O of -> f(n) = nlog(n) + n^2 + n^3log(n)?", "n^4", ++count, module.getModule(), getCourse());
+            new Question("What is the slowest run time?", "n!", ++count, module.getModule(), getCourse());
+            new Question("What is the worst case for Bubble Sort?", "n^2", ++count, module.getModule(), getCourse());
+            new Question("What is the worst case for Insertion Sort?", "n^2", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -190,7 +195,7 @@ public class DSA extends Course{
             new Question("In Java, what stores the parameters and local variables specific to a given call of the method, and information about which command in the body of the method is currently executing?", "Activation Frame", ++count, module.getModule(), getCourse());
             new Question("Which algorithm follows the divide and conquer approach in which the list is divided into two halves, and the item is compared with the middle element of the list?", "Binary Search", ++count, module.getModule(), getCourse());
             new Question("Which recursive method is designed so that each invocation of the body makes at most one new recursive call?", "Linear Recursion", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity for the Binary Search algorithm?", "O(log(n)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the Binary Search algorithm?", "logn", ++count, module.getModule(), getCourse());
             new Question("What do you call a method making two recursive calls?", "Binary Recursion", ++count, module.getModule(), getCourse());
             new Question("What is the process in which a method may make more than two recursive calls?", "Multiple Recursion", ++count, module.getModule(), getCourse());
             new Question("What stops the recursion from continuing on forever?", "Base Case", ++count, module.getModule(), getCourse());
@@ -221,15 +226,15 @@ public class DSA extends Course{
             new Question("Which principle does a Stack follow?", "LIFO", ++count, module.getModule(), getCourse());
             new Question("Inserting in a Queue is known as?", "Enqueue", ++count, module.getModule(), getCourse());
             new Question("Deletion in a Queue is known as?", "Dequeue", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of the pop() operation when the Stack is implemented using an array?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of accessing a Stack item?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of searching a Stack?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of pushing an item to a Stack?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of popping a Stack item?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of accessing a Queue item?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of searching a Queue item?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of enqueuing an item?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of dequeuing an item?", "O(1)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of the pop() operation when the Stack is implemented using an array?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of accessing a Stack item?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of searching a Stack?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of pushing an item to a Stack?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of popping a Stack item?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of accessing a Queue item?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of searching a Queue item?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of enqueuing an item?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of dequeuing an item?", "1", ++count, module.getModule(), getCourse());
             new Question("What do you call a collection of objects that are inserted and removed according to the last-in, first-out (LIFO) principle?", "Stack", ++count, module.getModule(), getCourse());
             new Question("Which Stack implementation has the drawback of a fixed-capacity?", "Array", ++count, module.getModule(), getCourse());
             new Question("Which design pattern applies to any context where we effectively want to modify an existing class so that its methods match those of a related, but different, class or interface?", "Adapter", ++count, module.getModule(), getCourse());
@@ -252,7 +257,7 @@ public class DSA extends Course{
         }
 
         public void questions() {
-            new Question("In Arraylists, what is the time complexity for adding an item?", "O(n)", ++count, module.getModule(), getCourse());
+            new Question("In Arraylists, what is the time complexity for adding an item?", "n", ++count, module.getModule(), getCourse());
             new Question("Java’s ArrayList class provides a more robust abstraction in allowing a user to add elements to the list with no apparent limit on the overall capacity. Name the algorithmic sleight of hand known to make this happen.", "Dynamic Array", ++count, module.getModule(), getCourse());
             new Question("In Array-based Arraylists, by which factor would you increase the capacity when existing array that has been filled?", "Twice", ++count, module.getModule(), getCourse());
             new Question("True | False, A series of push operations on an empty dynamic array is cost effective.", "True", ++count, module.getModule(), getCourse());
@@ -271,17 +276,17 @@ public class DSA extends Course{
             new Question("What do for loops call to move to the next object?", "Iterators", ++count, module.getModule(), getCourse());
             new Question("How many methods do iterators have?", "2", ++count, module.getModule(), getCourse());
             new Question("In an ArrayList of Integers, calling .remove() will delete the object or index?", "Index", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of searching an element in an array?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("Assuming we have a sorted Array, what is the run time of a Binary Search?", "O(logn)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of searching an element in an array?", "n", ++count, module.getModule(), getCourse());
+            new Question("Assuming we have a sorted Array, what is the run time of a Binary Search?", "logn", ++count, module.getModule(), getCourse());
             new Question("True | False, accessing an element and searching have both O(n) in an Array?", "False", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity for adding an item to an Array?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity for removing an item from an Array?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity for accessing an item in an Array?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity for searching an item in an Array?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of accessing an item in an Arraylist?", "O(1)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of removing an item in an Arraylist?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of getting the index of an item in an Arraylist?", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of checking if the Arraylist contains an item?", "O(n)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for adding an item to an Array?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for removing an item from an Array?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for accessing an item in an Array?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for searching an item in an Array?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of accessing an item in an Arraylist?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of removing an item in an Arraylist?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of getting the index of an item in an Arraylist?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of checking if the Arraylist contains an item?", "n", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -318,8 +323,8 @@ public class DSA extends Course{
             new Question("What is a proper tree structure used in analysis and strategy?", "Decision Trees", ++count, module.getModule(), getCourse());
             new Question("What is a node based binary tree that further has right and left subtrees?", "Binary Search Trees", ++count, module.getModule(), getCourse());
             new Question("Which of the Binary Tree and Binary Search Tree is unordered hence slower in process of insertion, deletion and searching?", "Binary Tree", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of a Binary Tree", "O(n)", ++count, module.getModule(), getCourse());
-            new Question("What is the time complexity of a Binary Search Tree?", "O(logn)", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of a Binary Tree", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of a Binary Search Tree?", "logn", ++count, module.getModule(), getCourse());
             new Question("What is utilized in the implementations of AVL Trees, Red Black Trees, and so on?", "Binary Search Trees", ++count, module.getModule(), getCourse());
             new Question("What refers to the process of visiting each node in a tree data structure exactly once?", "Traversal", ++count, module.getModule(), getCourse());
             new Question("True | False, similarly to stacks, queues and arrays, trees have only one way to traverse the data.", "False", ++count, module.getModule(), getCourse());
@@ -334,6 +339,47 @@ public class DSA extends Course{
         }
     }
 
+
+    // Module 8: Priority Queues, Adaptable Priority Queues, Heaps, Sorting with Priority Queues
+    static class ModuleEight {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleEight() {
+            module = new Module();
+            module.setModule(8);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("What is a collection of prioritized elements that allows arbitrary element insertion, and allows the removal of the element that has first priority?", "Priority Queue", ++count, module.getModule(), getCourse());
+            new Question("What does the user associate to an element in a Priority Queue?", "Key", ++count, module.getModule(), getCourse());
+            new Question("What do you call the key-value pair for a Priority Queue?", "Entry", ++count, module.getModule(), getCourse());
+            new Question("True | False, Priority Queues can have multiple entries with equivalent keys.", "True", ++count, module.getModule(), getCourse());
+            new Question("What is a partitioning design pattern and describes a group of objects that is treated the same way as a single instance of the same type of object?", "Composite Pattern", ++count, module.getModule(), getCourse());
+            new Question("Which Priority Queue entry has the highest priority?", "Dequeue", ++count, module.getModule(), getCourse());
+            new Question("What is an object that is external to the class of the keys it compares?", "Comparator", ++count, module.getModule(), getCourse());
+            new Question("Which ADT provides an efficient implementation of priority queues?", "Binary Heap", ++count, module.getModule(), getCourse());
+            new Question("What is the process of creating a heap data structure from a binary tree represented using an array?", "Heapify", ++count, module.getModule(), getCourse());
+            new Question("What do you call a binary tree where nodes are filled in from left to right?", "Complete", ++count, module.getModule(), getCourse());
+            new Question("Where should a new node be placed upon insertion in a complete Binary Tree?", "Rightmost Position", ++count, module.getModule(), getCourse());
+            new Question("Where should a new node be placed upon insetion in a complete Binary Tree when the bottom row is full?", "Leftmost Position", ++count, module.getModule(), getCourse());
+            new Question("What is the upward swapping process called?", "Up-Heap Bubbling", ++count, module.getModule(), getCourse());
+            new Question("What is the downward swapping process called?", "Down-Heap Bubbling", ++count, module.getModule(), getCourse());
+            new Question("What avoids some complexities of a linked tree structure?", "Array-based heap", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of adding an element in a linked-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of removing an element in a linked-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
+            new Question("How much more memory does a linked-based Heap take over the array-based implementation?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of adding an element in an array-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of removing an element in an array-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
+            new Question("In array-based Heaps, what is the index of the root?", "0", ++count, module.getModule(), getCourse());
+            new Question("What is the index of the left subchild of Node k?", "2k+1", ++count, module.getModule(), getCourse());
+            new Question("What is the index of the right subchild of Node k?", "2k+2", ++count, module.getModule(), getCourse());
+            new Question("What is the index of the parent of node k?", "floor((k-1) / 2)", ++count, module.getModule(), getCourse());
+        }
+    }
+
     public void release(boolean shuffle){
         moduleOne.questions();
         moduleTwo.questions();
@@ -342,6 +388,7 @@ public class DSA extends Course{
         moduleFive.questions();
         moduleSix.questions();
         moduleSeven.questions();
+        moduleEight.questions();
         if (shuffle) Collections.shuffle(allQuestions());
     }
 }

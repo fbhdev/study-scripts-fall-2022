@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+/**
+ * Logs user's stats
+ * @author Francois Boulay-Handfield
+ */
 public class Records {
 
     private static final ArrayList<String> names = new ArrayList<>();
@@ -14,6 +18,10 @@ public class Records {
     public Records(){
     }
 
+    /**
+     * save() handles the logic behind saving a JSON with user data
+     * @param course to save logs for
+     */
     public static void save(String course) {
         JSONObject obj = new JSONObject();
         obj.put("course", Course.getCourse());
@@ -39,6 +47,10 @@ public class Records {
         reset();
     }
 
+    /**
+     * @return the user's grade
+     * failsafe mechanisms keep stats stable
+     */
     public static int grade(){
         int grade = (int) new Grade().finalGrade();
         if (grade > 100) grade = 100;
@@ -53,6 +65,9 @@ public class Records {
         return grade;
     }
 
+    /**
+     * resets objects to 0 for the next round
+     */
     private static void reset(){
         names.clear();
         successes.clear();
@@ -60,18 +75,30 @@ public class Records {
         new Grade().reset();
     }
 
+    /**
+     * @param name adds the question name to the global names ArrayList
+     */
     public void addName(String name){
         names.add(name);
     }
 
+    /**
+     * @param success adds whether user was successful
+     */
     public void addSuccess(boolean success){
         successes.add(success);
     }
 
+    /**
+     * @return gets the total number of questions asked
+     */
     public static int getNumQuestions() {
         return numQuestions;
     }
 
+    /**
+     * @param numQuestions the number of questions to set
+     */
     public static void setNumQuestions(int numQuestions) {
         Records.numQuestions = numQuestions;
     }

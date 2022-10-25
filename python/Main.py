@@ -84,7 +84,8 @@ class Screen:
                          labels={"Questions": "Number of Questions", "Grade": "Grades"},
                          size="Questions",
                          template="plotly_dark",
-                         color_discrete_sequence=px.colors.qualitative.Pastel)
+                         color_discrete_sequence=px.colors.qualitative.Pastel
+                         )
         fig.update_xaxes(showgrid=False)
         for item in os.listdir(f"../records/plots"):
             os.remove(f"../records/plots/{item}")

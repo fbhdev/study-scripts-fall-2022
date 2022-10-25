@@ -1,7 +1,15 @@
 import java.util.ArrayList;
 
+/**
+ * Main class encapsulates the running time logic
+ * @author Francois Boulay-Handfield
+ */
 public class Main {
 
+    /**
+     * main() runs the program
+     * @param args the arguments to pass
+     */
     public static void main(String[] args)  {
         do {
             run();
@@ -9,6 +17,10 @@ public class Main {
         System.out.println("Thanks for studying!");
     }
 
+    /**
+     * selectCourse() acts as the welcome menu
+     * @return selection between 1 and 5
+     */
     public static int selectCourse(){
         System.out.println("1. Web Services");
         System.out.println("2. Web Development");
@@ -25,6 +37,10 @@ public class Main {
         return 0;
     }
 
+    /**
+     * again() prompts the user for another round of studying
+     * @return true if the user wishes to study more, false otherwise
+     */
     public static boolean again(){
         while (true) {
             Input input = new Input("Would you like to study more? (y/n)");
@@ -38,6 +54,11 @@ public class Main {
         }
     }
 
+    /**
+     * length() returns the desired quiz length, random or user-defined
+     * @param questions, the ArrayList with respective course questions
+     * @return the desired length of the quiz
+     */
     public static int length(ArrayList<Question> questions){
         int size = questions.size();
         System.out.println(size + " questions available.");
@@ -59,15 +80,17 @@ public class Main {
     }
 
 
+    /**
+     * random() handles logic regarding generation of maximum random number
+     * @param size of the ArrayList questions
+     * @return random length
+     */
     public static int random(int size){
         int length = 0;
-        Input random = new Input("Random number of questions?");
         while(true) {
+            Input random = new Input("Random number of questions?");
             if (random.getInput().equalsIgnoreCase("y")) {
-                length = (int) (Math.random() * size + 1);
-                if(length > 100){
-                    length = 100;
-                }
+                length = (int) (Math.random() * 100 + 1);
                 if (length > size) {
                     length = size;
                 }
@@ -83,6 +106,11 @@ public class Main {
         return length;
     }
 
+    /**
+     * flow() handles the quiz logic
+     * @param length number of available questions per respective course
+     * @param course that is being quizzed
+     */
     public static void flow(int length, String course) {
         if (length == 0) return;
         Records.setNumQuestions(length);
@@ -108,6 +136,9 @@ public class Main {
         Records.save(course);
     }
 
+    /**
+     * run() handles logic based on menu selection
+     */
     public static void run() {
         int choice = selectCourse();
         if (choice == 1){

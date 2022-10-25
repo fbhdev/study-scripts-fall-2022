@@ -33,11 +33,11 @@ public class WebServices extends Course {
         }
 
         public void questions(){
-            new Question("What is a program that is invoked by a URL and returns a response to the web client, via a transport protocol (i.e. HTTP)?", "Web Service", ++count, module.getModule(), getCourse());
-            new Question("What is a style of software design where services are provided to the other components by application components, through a communication protocol over a network?", "Service-Oriented Architecture", ++count, module.getModule(), getCourse());
+            new Question("What is a program that is invoked by a URL and returns a response to the web client, via HTTP?", "Web Service", ++count, module.getModule(), getCourse());
+            new Question("What is a style of software design where services are provided to the other components by application components over a network?", "SOA", ++count, module.getModule(), getCourse());
             new Question("What are modern interpretation of service-oriented architectures used to build distributed software systems?", "Microservices", ++count, module.getModule(), getCourse());
-            new Question("What is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently, such as retrieving a credit card statement online?", "Service", ++count, module.getModule(), getCourse());
-            new Question("What is the service interface / component that is typically hosted on a web server and makes the service available on the internet?", "Service Provider", ++count, module.getModule(), getCourse());
+            new Question("What is a discrete unit of functionality that can be accessed remotely and acted upon and updated independently?", "Service", ++count, module.getModule(), getCourse());
+            new Question("What do you call the owner of the Web Service?", "Service Provider", ++count, module.getModule(), getCourse());
             new Question("What do you call the consumer of the service?", "Client", ++count, module.getModule(), getCourse());
             new Question("What do you call the physical implementation of the service?", "Service Implementation", ++count, module.getModule(), getCourse());
             new Question("What is referred to a piece of code that converts parameters passed between client and server during a service call?", "Stub", ++count, module.getModule(), getCourse());
@@ -48,14 +48,31 @@ public class WebServices extends Course {
             new Question("Name the operation firstly discovering the services in the registry and then selecting the desired web service(s) from the search results", "Finding", ++count, module.getModule(), getCourse());
             new Question("Name the the final operation in the Web services architecture.", "Invocation", ++count, module.getModule(), getCourse());
             new Question("In service-oriented architecture, what do services use to describe both the functional characteristics of the service, like passing and parsing messages?", "Metadata", ++count, module.getModule(), getCourse());
-            new Question("How do you call components that are weakly associated (have breakable relationships) with each other, thus changes in one component least affect existence or performance of the other component?", "Loosely Coupled", ++count, module.getModule(), getCourse());
+            new Question("How do you call components that are weakly associated with each other, thus changes in one component least affect existence or performance of the other component?", "Loosely Coupled", ++count, module.getModule(), getCourse());
             new Question("What is a disadvantage of loosely coupled components?", "Consistency", ++count, module.getModule(), getCourse());
             new Question("True | False, can web services be consumed both synchronously and asynchronously?", "True", ++count, module.getModule(), getCourse());
-            new Question("What describes the public interface to a specific web service?", "Service Definition", ++count, module.getModule(), getCourse());
+            new Question("What contains the details of the interface and implementation of the service?", "Service Definition", ++count, module.getModule(), getCourse());
             new Question("What is referred to the process of the execution of the service and returning the result to the client?", "Service Processing", ++count, module.getModule(), getCourse());
             new Question("Name the protocol acting as conversation between the client and the server and the TCP/IP network model.", "HTTP", ++count, module.getModule(), getCourse());
             new Question("What is an enterprise application sees both requests and sessions from two angles?", "Web Server", ++count, module.getModule(), getCourse());
             new Question("What are used to pass additional information between the client and the server?", "Headers", ++count, module.getModule(), getCourse());
+            new Question("What is a set of rules that define how a web service is accessed?", "Service Contract", ++count, module.getModule(), getCourse());
+            new Question("Whose job is it to connect two pieces of software without limiting their own functionalities?", "API", ++count, module.getModule(), getCourse());
+            new Question("What is the application that is looking for and invoking or initiating an interaction with a service?", "Service Requestor", ++count, module.getModule(), getCourse());
+            new Question("What includes the design, deployment, and runtime requirements for each of the roles: service registry, service provider, and service discovery agency?", "Development Lifecycle", ++count, module.getModule(), getCourse());
+            new Question("Which phase of the development lifecycle includes development and testing of the web service implementation?", "Build", ++count, module.getModule(), getCourse());
+            new Question("Which phase includes the publication of the service interface and service implementation definition to a requestor or registry and installation?", "Deploy", ++count, module.getModule(), getCourse());
+            new Question("Where do you typically deploy your web service?", "Web Server", ++count, module.getModule(), getCourse());
+            new Question("Which phase is it when your web service is fully deployed, operational, and network accessible from the service provider?", "Run", ++count, module.getModule(), getCourse());
+            new Question("Which phase of the lifecycle covers ongoing management and administration of the web service?", "Manage", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -86,6 +103,14 @@ public class WebServices extends Course {
             new Question("What is a type of computer software that provides services to software applications beyond those available from the operating system. It can be described as \"software glue\"?", "Middleware", ++count, module.getModule(), getCourse());
             new Question("Name what can arbitrarily instantiate many instances of a servlet, although the number is typically small (e.g., 1 through 4).", "Web Server", ++count, module.getModule(), getCourse());
             new Question("Which Java class includes the methods by which the servlet developer must implement?", "HttpServlet", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -105,28 +130,35 @@ public class WebServices extends Course {
         public void questions(){
             new Question("What is an architectural style that standardizes stateless HTTP communication in client-server relationships?", "REST", ++count, module.getModule(), getCourse());
             new Question("What refers to the ability of software to easily integrate with other systems in terms of sharing functionality and data?", "interoperability", ++count, module.getModule(), getCourse());
-            new Question("Name the term meaning how calls can be made independently of one another while each call contains all of the data necessary to complete itself successfully.", "stateless", ++count, module.getModule(), getCourse());
+            new Question("Which RESTful constraint says the client and the server stay separate and independent?", "Client-Server Architecture", ++count, module.getModule(), getCourse());
+            new Question("What is the RESTful constraint saying that an API has to handle calls independently of each other.", "Statelessness", ++count, module.getModule(), getCourse());
+            new Question("What simplifies and decouples the architecture, which enables each part to evolve independently?", "Uniform Interface", ++count, module.getModule(), getCourse());
+            new Question("What do you call the design principle for separating a computer program into distinct sections?", "Separation of Concerns", ++count, module.getModule(), getCourse());
+            new Question("Which RESTful constraint says that the API's layers must not affect the request or the response?", "Layered System", ++count, module.getModule(), getCourse());
+            new Question("Which RESTful constraint says the client has the option to locally store certain pieces of data for a predetermined period of time?", "Cacheability", ++count, module.getModule(), getCourse());
+            new Question("Name the optional RESTful constraint that can help the client implement their own features on the go?", "Code on Demand", ++count, module.getModule(), getCourse());
             new Question("Which verb reads the information from a record in the database?", "GET", ++count, module.getModule(), getCourse());
             new Question("Which verb creates a record in the database?", "POST", ++count, module.getModule(), getCourse());
-            new Question("Which verb removes a record from the database?", "DELETE", ++count, module.getModule(), getCourse());
             new Question("Which verb changes a record's information in the database?", "PUT", ++count, module.getModule(), getCourse());
-            new Question("What refers to storing the server response in the client itself, so that a client need not make a server request for the same resource again and again?", "Caching", ++count, module.getModule(), getCourse());
-            new Question("What refers to the number of requests that the system can process simultaneously which can cause conflicts? ", "Concurrency", ++count, module.getModule(), getCourse());
+            new Question("Which verb removes a record from the database?", "DELETE", ++count, module.getModule(), getCourse());
+            new Question("What refers to the number of requests that the system can process simultaneously?", "Concurrency", ++count, module.getModule(), getCourse());
             new Question("What do you also call REST components? ", "Resources", ++count, module.getModule(), getCourse());
             new Question("What is a disadvantage of REST's statelessness?", "Additional Information", ++count, module.getModule(), getCourse());
-            new Question("What do you call the design principle for separating a computer program into distinct sections?", "Separation of Concerns", ++count, module.getModule(), getCourse());
-            new Question("True | False, responses define themselves as cacheable or not to prevent clients from getting stale or inappropriate data in response to further requests.", "True", ++count, module.getModule(), getCourse());
+            new Question("True | False, responses can define themselves as cacheable to prevent clients from getting stale or inappropriate data in response to further requests.", "True", ++count, module.getModule(), getCourse());
             new Question("True | False, a server cannot call multiple other servers to generate a response to the client.", "False", ++count, module.getModule(), getCourse());
-            new Question("What simplifies and decouples the architecture, which enables each part to evolve independently?", "Uniform Interface", ++count, module.getModule(), getCourse());
             new Question("Which protocol uses a MIME-like envelope format to encode representations?", "HTTP", ++count, module.getModule(), getCourse());
             new Question("Which non-access modifier should you avoid using out of concurrency issues in REST?", "Static", ++count, module.getModule(), getCourse());
             new Question("What are ordinary objects increasing readability and re-usability of a Java program that are widely accepted because of their easy maintenance?", "POJO", ++count, module.getModule(), getCourse());
-            new Question("In computer software, what is the part of the program that encodes the real-world business rules that determine how data can be created, stored, and changed. It is contrasted with the remainder of the software that might be concerned with lower-level details of managing a database or displaying the user interface, system infrastructure, or generally connecting various parts of the program.", "Business Logic", ++count, module.getModule(), getCourse());
+            new Question("In computer software, what is the part of the program that encodes the real-world business rules?", "Business Logic", ++count, module.getModule(), getCourse());
             new Question("What is a specification, a set of interfaces and annotations offered by Java EE?", "JAX-RS", ++count, module.getModule(), getCourse());
-            /*new Question("Which framework allows us to manage the lifecycle of stateful components via domain-specific lifecycle contexts and inject components (services) into client objects in a type-safe way?", "CDI", ++count, module.getModule(), getCourse());
-            new Question("What does CDI stand for?", "Contexts and Dependency Injection", ++count, module.getModule(), getCourse());
-            new Question("What allows us to implement factory classes, whose responsibility is the creation of fully-initialized services?", "@Produces", ++count, module.getModule(), getCourse());*/
-
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -149,10 +181,8 @@ public class WebServices extends Course {
             new Question("True | False, WADL is XML based.", "True", ++count, module.getModule(), getCourse());
             new Question("What is like a switchboard between the client and the server that also confirms that the client has authorization to send HTTP requests to the server?", "Uniform Interface", ++count, module.getModule(), getCourse());
             new Question("How are the details about the request sent to the server?", "Request Headers", ++count, module.getModule(), getCourse());
-            new Question("What uses the following syntax -> type/subtype, and are used to specify the content types in the Accept field", "MIME types", ++count, module.getModule(), getCourse());
+            new Question("What uses the following syntax -> type/subtype, and are used to specify the content types in the Accept field", "media types", ++count, module.getModule(), getCourse());
             new Question("What do you call the specification for the format of non-text e-mail attachments that allows the attachment to be sent over the Internet?", "MIME", ++count, module.getModule(), getCourse());
-            new Question("How would you denote a file containing HTML in MIME?", "text/html", ++count, module.getModule(), getCourse());
-            new Question("How would you denote a JSON file in MIME?", "application/json", ++count, module.getModule(), getCourse());
             new Question("Which important Response header tells the client what media type (e.g., application/json, application/javascript, etc.) a response is sent in as it helps the client know how to process the response body correctly?", "content-type", ++count, module.getModule(), getCourse());
             new Question("What alerts the client to information about the success of the operation?", "Status Codes", ++count, module.getModule(), getCourse());
             new Question("Which status code means a successful HTTP request?", "200", ++count, module.getModule(), getCourse());
@@ -187,10 +217,21 @@ public class WebServices extends Course {
             new Question("What Request header is used to inform the server by the client what content-type to send back?", "Accept", ++count, module.getModule(), getCourse());
             new Question("Which Response header indicates the security contexts without exposing the path information?", "Origin", ++count, module.getModule(), getCourse());
             new Question("What is the Request header using a characteristic string that lets servers and network peers identify the application, operating system, vendor?", "user-agent", ++count, module.getModule(), getCourse());
-            /*new Question("?", "", ++count, module.getModule(), getCourse());
-            new Question("?", "", ++count, module.getModule(), getCourse());
-            new Question("?", "", ++count, module.getModule(), getCourse());
-            new Question("?", "", ++count, module.getModule(), getCourse());*/
+            new Question("How would you denote a file containing HTML as a media type?", "text/html", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a JSON file as a media type?", "application/json", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a PDF file as a media type?", "application/pdf", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a PNG file as media type?", "image/png", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a CSS file as a media type?", "text/css", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a CSV file as a media type?", "text/csv", ++count, module.getModule(), getCourse());
+            new Question("How would you denote a JavaScript file as a media type?", "application/javascript", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -218,6 +259,14 @@ public class WebServices extends Course {
             new Question("What uses serialization and is the process of encoding an object to be sent across the network?", "Marshalling", ++count, module.getModule(), getCourse());
             new Question("Which class may be used to control the response that is being sent to the client?", "Response Builder", ++count, module.getModule(), getCourse());
             new Question("What is the practice of calling different methods in a single line instead of calling other methods with the same object reference separately? It is also known as named parameter idiom.", "Method Chaining", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -236,7 +285,7 @@ public class WebServices extends Course {
 
         public void questions() {
             new Question("Despite consuming significant bandwidth and resources, what is the protocol making it easier to operate across firewalls and proxies without modification?", "SOAP", ++count, module.getModule(), getCourse());
-            new Question("What is an XML-based interface description language that is used for describing the functionality offered by a web service?", "WSDL", ++count, module.getModule(), getCourse());
+            new Question("What is an XML-based interface description language used alongside SOAP?", "WSDL", ++count, module.getModule(), getCourse());
             new Question("What is the Java API for SOAP web services?", "JAX-WS", ++count, module.getModule(), getCourse());
             new Question("What inherits security measures from the underlying service transport?", "REST", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP permits more than only the XML data format.", "False", ++count, module.getModule(), getCourse());
@@ -251,6 +300,14 @@ public class WebServices extends Course {
             new Question("Which WSDL model says the structure of the SOAP request body must contain both the operation name and the set of method parameters?", "RPC", ++count, module.getModule(), getCourse());
             new Question("As part of the GlassFish project, what bundles the Reference Implementation and WSIT, the component providing enhanced support for Microsoft's .NET Framework?", "Metro", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP's WSDL cannot be used to described REST web services.", "False", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
