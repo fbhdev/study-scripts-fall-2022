@@ -334,7 +334,6 @@ public class DSA extends Course{
             new Question("What is the opposite of Preorder Traversal?", "Postorder Traversal", ++count, module.getModule(), getCourse());
             new Question("What is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layer-wise thus exploring the neighbour node?", "Breadth First Traversal", ++count, module.getModule(), getCourse());
             new Question("Which traversal technique follows the Left Root Right policy?", "Inorder Traversal", ++count, module.getModule(), getCourse());
-            new Question("What says that the left subtree of the root node is traversed first, then the root node, and then the right subtree of the root node is traversed?", "Left Root Right", ++count, module.getModule(), getCourse());
             new Question("What is the term used to unify the tree-traversal algorithms into a single framework?", "Euler Tour Traversal", ++count, module.getModule(), getCourse());
         }
     }
@@ -361,13 +360,13 @@ public class DSA extends Course{
             new Question("Which Priority Queue entry has the highest priority?", "Dequeue", ++count, module.getModule(), getCourse());
             new Question("What is an object that is external to the class of the keys it compares?", "Comparator", ++count, module.getModule(), getCourse());
             new Question("Which ADT provides an efficient implementation of priority queues?", "Binary Heap", ++count, module.getModule(), getCourse());
-            new Question("What is the process of creating a heap data structure from a binary tree represented using an array?", "Heapify", ++count, module.getModule(), getCourse());
+            new Question("What is the process of creating a data structure from a binary tree represented using an array?", "Heapify", ++count, module.getModule(), getCourse());
             new Question("What do you call a binary tree where nodes are filled in from left to right?", "Complete", ++count, module.getModule(), getCourse());
             new Question("Where should a new node be placed upon insertion in a complete Binary Tree?", "Rightmost Position", ++count, module.getModule(), getCourse());
             new Question("Where should a new node be placed upon insetion in a complete Binary Tree when the bottom row is full?", "Leftmost Position", ++count, module.getModule(), getCourse());
             new Question("What is the upward swapping process called?", "Up-Heap Bubbling", ++count, module.getModule(), getCourse());
             new Question("What is the downward swapping process called?", "Down-Heap Bubbling", ++count, module.getModule(), getCourse());
-            new Question("What avoids some complexities of a linked tree structure?", "Array-based heap", ++count, module.getModule(), getCourse());
+            new Question("Which ADT avoids complexities of a linked list tree structure?", "Array-based heap", ++count, module.getModule(), getCourse());
             new Question("What is the time complexity of adding an element in a linked-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
             new Question("What is the time complexity of removing an element in a linked-based Heap?", "nlogn", ++count, module.getModule(), getCourse());
             new Question("How much more memory does a linked-based Heap take over the array-based implementation?", "n", ++count, module.getModule(), getCourse());
@@ -381,12 +380,12 @@ public class DSA extends Course{
     }
 
     public void release(boolean shuffle){
-        moduleOne.questions();
-        moduleTwo.questions();
-        moduleThree.questions();
-        moduleFour.questions();
-        moduleFive.questions();
-        moduleSix.questions();
+//        moduleOne.questions();
+//        moduleTwo.questions();
+//        moduleThree.questions();
+//        moduleFour.questions();
+//        moduleFive.questions();
+//        moduleSix.questions();
         moduleSeven.questions();
         moduleEight.questions();
         if (shuffle) Collections.shuffle(allQuestions());

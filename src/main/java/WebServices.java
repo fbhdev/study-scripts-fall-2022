@@ -8,6 +8,7 @@ public class WebServices extends Course {
     private static ModuleFour moduleFour;
     private static ModuleFive moduleFive;
     private static ModuleSix moduleSix;
+    private static ModuleSeven moduleSeven;
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -16,6 +17,7 @@ public class WebServices extends Course {
         moduleFour = new ModuleFour();
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
+        moduleSeven = new ModuleSeven();
         setCourse("Web Services");
     }
 
@@ -291,23 +293,59 @@ public class WebServices extends Course {
             new Question("True | False, SOAP permits more than only the XML data format.", "False", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP is an architectural style and not a protocol.", "False", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP defines it own security.", "True", ++count, module.getModule(), getCourse());
-            new Question("Which XML tag defines the XML schema data types used by the web service in WSDL documents?", "types", ++count, module.getModule(), getCourse());
-            new Question("Which XML tag defines the data elements for each operation in WSDL documents?", "message", ++count, module.getModule(), getCourse());
-            new Question("Which XML tag describes the operations that can be performed and the messages involved in WSDL documents?", "portType", ++count, module.getModule(), getCourse());
-            new Question("Which XML tag defines the protocol and the data format for each port type in WSDL documents?", "binding", ++count, module.getModule(), getCourse());
-            new Question("Which WSDL style document says that you can structure the SOAP body any way you want it as long as the content of the SOAP message body is any arbitrary XML instance?", "Document Style", ++count, module.getModule(), getCourse());
+            new Question("What do you call the unit of communication in SOAP?", "message", ++count, module.getModule(), getCourse());
+            new Question("What indicates how exactly the SOAP message body is structured?", "Style", ++count, module.getModule(), getCourse());
+            new Question("Which WSDL style indicates that the SOAP message body contains a XML document which can be validated against pre-defined XML schema document?", "Document Style", ++count, module.getModule(), getCourse());
             new Question("In WSDL, what is Document Style also known as?", "Message-Oriented Style", ++count, module.getModule(), getCourse());
-            new Question("Which WSDL model says the structure of the SOAP request body must contain both the operation name and the set of method parameters?", "RPC", ++count, module.getModule(), getCourse());
-            new Question("As part of the GlassFish project, what bundles the Reference Implementation and WSIT, the component providing enhanced support for Microsoft's .NET Framework?", "Metro", ++count, module.getModule(), getCourse());
+            new Question("Which WSDL style indicates that the SOAP message body contains an XML representation of a method call and uses the names of the method and its parameters to generate XML structures that represents a method’s call stack?", "RPC Style", ++count, module.getModule(), getCourse());
             new Question("True | False, SOAP's WSDL cannot be used to described REST web services.", "False", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("True | False, RPC style is more efficient than Document style.", "False", ++count, module.getModule(), getCourse());
+            new Question("As part of the GlassFish project, what bundles the Reference Implementation and WSIT, the component providing enhanced support for Microsoft's .NET Framework?", "Metro", ++count, module.getModule(), getCourse());
+            new Question("What is a set of specifications defining a registry service for Web services and for other electronic and non-electronic services?", "UDDI", ++count, module.getModule(), getCourse());
+            new Question("True | False, SOAP is both platform and language independent.", "True", ++count, module.getModule(), getCourse());
+            new Question("True | False, SOAP can use REST.", "False", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    static class ModuleSeven {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleSeven() {
+            module = new Module();
+            module.setModule(7);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("What is an error in a SOAP communication resulting from various sources of problems?", "SOAP fault", ++count, module.getModule(), getCourse());
+            new Question("True | False, no special message is generated when a SOAP fault occurs.", "False", ++count, module.getModule(), getCourse());
+            new Question("What do you call a message that includes a fault element?", "Fault Message", ++count, module.getModule(), getCourse());
+            new Question("What do you call the data generated by the special message triggered by a SOAP fault?", "SOAP element", ++count, module.getModule(), getCourse());
+            new Question("What is an API for building Web Services and Clients that used Remote Procedure Calls and XML?", "JAX-RPC", ++count, module.getModule(), getCourse());
+            new Question("True | False, JAX-RPC is no longer supported.", "True", ++count, module.getModule(), getCourse());
+            new Question("What is the object-oriented equivalent of remote procedure calls?", "RMI", ++count, module.getModule(), getCourse());
+            new Question("What attempts to reclaim memory which as allocated by a program that is no longer referenced?", "Garbage Collection", ++count, module.getModule(), getCourse());
+            new Question("Name the error when a piece of memory is freed while there are still pointers to it.", "Dangling Pointers", ++count, module.getModule(), getCourse());
+            new Question("What occurs when the program tries freeing a region of memory that has already been freed, and perhaps already been allocated again?", "Double Free Bugs", ++count, module.getModule(), getCourse());
+            new Question("What reduces the performance of the computer by reducing the amount of available memory?", "Memory Leak", ++count, module.getModule(), getCourse());
+            new Question("True | False, memory leaks are not common in programming.", "False", ++count, module.getModule(), getCourse());
+            new Question("What is the most common type of Garbage Collection?", "Tracing", ++count, module.getModule(), getCourse());
+            new Question("What is the programming technique of storing the number of references, pointers, or handles to a resource such as an object or a block of memory?", "Reference Counting", ++count, module.getModule(), getCourse());
+            new Question("What is a compile-time technique helping reduce the garbage collection to be done, that can convert heap allocations to stack allocations?", "Escape Analysis", ++count, module.getModule(), getCourse());
+            new Question("Name the garbage collection where a remote client can hold references to an object.", "Distributed Garbage Collection", ++count, module.getModule(), getCourse());
+            new Question("True | False, Distributed Garbage Collection has to cooperate with local garbage collections in each process in order to keep global count or to globally trace accessibility of data.", "True", ++count, module.getModule(), getCourse());
+            new Question("True | False, Distributed Garbage Collection is cost-effective and fast in freeing memory.", "False", ++count, module.getModule(), getCourse());
+            new Question("What can Distributed Garbage Collection rely on to remain cheap and fast while freeing memory?", "Time Lease", ++count, module.getModule(), getCourse());
+            new Question("What allows processing tools to immediately determine whether a given XML document is a SOAP message?", "Envelope", ++count, module.getModule(), getCourse());
+            new Question("Which optional XML element is used to pass additional processing or control information?", "Header", ++count, module.getModule(), getCourse());
+            new Question("Which required element should have main information the sender wants to transmit to the receiver?", "Body", ++count, module.getModule(), getCourse());
+            new Question("What is a common SOAP issue faced when implementing security in distributed systems?", "Crossing Trust Domains", ++count, module.getModule(), getCourse());
+            new Question("Which SOAP attribute specifies whether it is mandatory or optional that a message receiver understands and processes the content of a SOAP header block?", "mustUnderstand", ++count, module.getModule(), getCourse());
+            new Question("Which SOAP attribute carries an URI value that names the recipient of a header block?", "role", ++count, module.getModule(), getCourse());
+            new Question("Which SOAP attribute indicates the encoding rules used to serialize parts of SOAP message and can only have values ‘1’ or ‘0’ (or, ‘true’ or ‘false’)?", "encodingStyle", ++count, module.getModule(), getCourse());
+            new Question("Which SOAP attributes are intended to be usable via qualified attribute names on any complex type referencing them?", "Global", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -318,6 +356,7 @@ public class WebServices extends Course {
         moduleFour.questions();
         moduleFive.questions();
         moduleSix.questions();
+        moduleSeven.questions();
         if (shuffle) Collections.shuffle(allQuestions());
     }
 }
