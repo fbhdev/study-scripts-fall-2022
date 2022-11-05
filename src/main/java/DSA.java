@@ -3,16 +3,17 @@ import java.util.Collections;
 /**
  * @author Francois Boulay-Handfield
  */
-public class DSA extends Course{
+public class DSA extends Course {
 
-    private static ModuleOne moduleOne;
-    private static ModuleTwo moduleTwo;
-    private static ModuleThree moduleThree;
-    private static ModuleFour moduleFour;
-    private static ModuleFive moduleFive;
-    private static ModuleSix moduleSix;
-    private static ModuleSeven moduleSeven;
-    private static ModuleEight moduleEight;
+    private final ModuleOne moduleOne;
+    private final ModuleTwo moduleTwo;
+    private final ModuleThree moduleThree;
+    private final ModuleFour moduleFour;
+    private final ModuleFive moduleFive;
+    private final ModuleSix moduleSix;
+    private final ModuleSeven moduleSeven;
+    private final ModuleEight moduleEight;
+    private final ModuleNine moduleNine;
 
     public DSA(){
         moduleOne = new ModuleOne();
@@ -23,11 +24,13 @@ public class DSA extends Course{
         moduleSix = new ModuleSix();
         moduleSeven = new ModuleSeven();
         moduleEight = new ModuleEight();
+        moduleNine = new ModuleNine();
         setCourse("Data Structures and Algorithms");
     }
 
     // Module 1 – Java/Object-Oriented Programming Review
-    static class ModuleOne {
+    // Chapter 1-2 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleOne {
 
         private final Module module;
         private int count = 0;
@@ -100,7 +103,8 @@ public class DSA extends Course{
     }
 
     // Module 2 – Linked Lists
-    static class ModuleTwo {
+    // Chapter 3 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleTwo {
 
         private final Module module;
         private int count = 10;
@@ -140,7 +144,8 @@ public class DSA extends Course{
     }
 
     // Module 3 – Algorithm Analysis
-    static class ModuleThree {
+    // Chapter 4 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleThree {
 
         private final Module module;
         private int count = 0;
@@ -179,7 +184,8 @@ public class DSA extends Course{
     }
 
     // Module 4 – Recursion
-    static class ModuleFour {
+    // Chapter 5 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleFour {
 
         private final Module module;
         private int count = 0;
@@ -210,7 +216,8 @@ public class DSA extends Course{
 
 
     // Module 5 – Stacks and Queues
-    static class ModuleFive {
+    // Chapter 6 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleFive {
 
         private final Module module;
         private int count = 0;
@@ -245,7 +252,8 @@ public class DSA extends Course{
     }
 
     // Chapter 6 – List and Iterators
-    static class ModuleSix {
+    // Chapter 7 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleSix {
 
         private final Module module;
         private int count = 0;
@@ -292,7 +300,8 @@ public class DSA extends Course{
 
 
     // General Trees, Binary Trees, Tree Traversals
-    static class ModuleSeven {
+    // Chapter 8 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleSeven {
 
         private final Module module;
         private int count = 0;
@@ -308,7 +317,7 @@ public class DSA extends Course{
             new Question("Which element does not have a parent element?", "Root", ++count, module.getModule(), getCourse());
             new Question("What's the smallest number of children an element can have?", "0", ++count, module.getModule(), getCourse());
             new Question("What do you call two nodes that are children of the same parent?", "Siblings", ++count, module.getModule(), getCourse());
-            new Question("What do you a node having no children?", "External", ++count, module.getModule(), getCourse());
+            new Question("What do you call a node having no children?", "External", ++count, module.getModule(), getCourse());
             new Question("What do you call a node with one or more children?", "Internal", ++count, module.getModule(), getCourse());
             new Question("What is any other node on the path from the node to the root?", "Ancestors", ++count, module.getModule(), getCourse());
             new Question("What do you call a node having the inverse relationship of ancestor?", "Descendants", ++count, module.getModule(), getCourse());
@@ -340,7 +349,8 @@ public class DSA extends Course{
 
 
     // Module 8: Priority Queues, Adaptable Priority Queues, Heaps, Sorting with Priority Queues
-    static class ModuleEight {
+    // Chapter 9 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleEight {
 
         private final Module module;
         private int count = 0;
@@ -376,18 +386,152 @@ public class DSA extends Course{
             new Question("What is the index of the left subchild of Node k?", "2k+1", ++count, module.getModule(), getCourse());
             new Question("What is the index of the right subchild of Node k?", "2k+2", ++count, module.getModule(), getCourse());
             new Question("What is the index of the parent of node k?", "floor((k-1) / 2)", ++count, module.getModule(), getCourse());
+            new Question("What is a sorting algorithm that places an unsorted element at its suitable place in each iteration?", "Insertion Sort", ++count, module.getModule(), getCourse());
+            new Question("Which index do you start Insertion Sort at?", "1", ++count, module.getModule(), getCourse());
+            new Question("What is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list?", "Selection Sort", ++count, module.getModule(), getCourse());
         }
     }
 
+    // Module 9: Maps, Hash Tables, Sorted Maps, Skip Lists
+    // Chapter 10 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleNine {
+
+        private final Module module;
+        private int count = 0;
+    
+        public ModuleNine() {
+            module = new Module();
+            module.setModule(9);
+            allModules().add(module);
+        }
+    
+        public void questions() {
+            new Question("What is an abstract data type designed to efficiently store and retrieve values based upon unique search keys?", "Maps", ++count, module.getModule(), getCourse());
+            new Question("What do you call Key-Value pairs stored in a Map?", "Entries", ++count, module.getModule(), getCourse());
+            new Question("True | False, Keys are required to be unique.", "True", ++count, module.getModule(), getCourse());
+            new Question("What do you also call Maps?", "Associative Arrays", ++count, module.getModule(), getCourse());
+            new Question("What do you call the unordered association of key/value pairs?", "Hash Maps", ++count, module.getModule(), getCourse());
+            new Question("What is any function that can be used to map data of arbitrary size to fixed-size values:", "Hash Functions", ++count, module.getModule(), getCourse());
+            new Question("What happens if there are two or more keys with the same hash value?", "Collision", ++count, module.getModule(), getCourse());
+            new Question("What can then be used as a way to narrow down our search when looking for the item in the map?", "Hash Code", ++count, module.getModule(), getCourse());
+            new Question("What do you also call a Hash Code?", "Hash", ++count, module.getModule(), getCourse());
+            new Question("What is a technique to make things more efficient by effectively narrowing down the search at the outset?", "Hashing", ++count, module.getModule(), getCourse());
+            new Question("What mixes two fixed length inputs and produces a single fixed length output of the same as one of the inputs?", "Compression Functions", ++count, module.getModule(), getCourse());
+            new Question("Name the compression method diving the key value K with modulo M being the size of the Hash Table?", "Division Method", ++count, module.getModule(), getCourse());
+            new Question("Which of the compression methods helps eliminate repeated patterns in a set of integer keys?", "MAD", ++count, module.getModule(), getCourse());
+            new Question("Which of the collision resolution methods uses an additional data structure, preferably a linked list for dynamic allocation into buckets?", "Separate Chaining", ++count, module.getModule(), getCourse());
+            new Question("Which of the collision resolution methods look for the next availability generated by an algorithm?", "Open Addressing", ++count, module.getModule(), getCourse());
+            new Question("Which of the Open Addressing techniques adds 1 to the current computed position and takes modulus based on the table size?", "Linear Probing", ++count, module.getModule(), getCourse());
+            new Question("Which of the Open Addressing techniques uses exponents to solve collisions?", "Quadratic Probing", ++count, module.getModule(), getCourse());
+            new Question("Which inconvenience can Quadratic Probing lead to?", "Secondary Clustering", ++count, module.getModule(), getCourse());
+            new Question("What is the Time Complexity of Hashing?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the Time Complexity of Rehashing?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is a measure that decides when to increase the HashTable capacity to maintain the search and insert operation complexity of O(1).?", "Load Factor", ++count, module.getModule(), getCourse());
+            new Question("What is done because of the increasing Load Factor?", "Rehashing", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the get() method in Hash Tables?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the put() method in Hash Tables?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the remove() method in Hash Tables?", "n", ++count, module.getModule(), getCourse());
+            new Question("Which implementation of Maps has sorted Keys?", "Sorted Maps", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the get() method in Sorted Maps?", "logn", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the put() method in Sorted Maps?", "n", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the remove() method in Sorted Maps?", "n", ++count, module.getModule(), getCourse());
+            new Question("What do you call the maximum value of a function?", "Maxima", ++count, module.getModule(), getCourse());
+            new Question("What is a probabilistic data structure that allows quick data sorting with completely random data sets?", "Skip List", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the get() method in Skip Lists?", "logn", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the put() method in Skip Lists?", "logn", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity for the remove() method in Skip Lists?", "logn", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    // Module 10: Binary Search Trees, Balance Search Trees, AVL Trees, Red-Black Trees
+    // Chapter 11 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleTen {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleTen() {
+            module = new Module();
+            module.setModule(10);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    // Module 11: Selection Sort, Merge Sort, Quick Sort and Analysis of Sorting Algorithms
+    // Chapter 12 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleEleven {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleEleven() {
+            module = new Module();
+            module.setModule(11);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    // Module 12: Text Processing Techniques
+    // Chapter 13 Data Structures and Algorithms in Java, 6th Edition, Goodrich, Tamassia & Goldwasser, 2016
+    private static class ModuleTwelve {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleTwelve() {
+            module = new Module();
+            module.setModule(12);
+            allModules().add(module);
+        }
+
+        public void questions() {
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+            new Question("", "", ++count, module.getModule(), getCourse());
+        }
+    }
+
+
     public void release(boolean shuffle){
-//        moduleOne.questions();
-//        moduleTwo.questions();
-//        moduleThree.questions();
-//        moduleFour.questions();
-//        moduleFive.questions();
-//        moduleSix.questions();
+        moduleOne.questions();
+        moduleTwo.questions();
+        moduleThree.questions();
+        moduleFour.questions();
+        moduleFive.questions();
+        moduleSix.questions();
         moduleSeven.questions();
         moduleEight.questions();
+        moduleNine.questions();
         if (shuffle) Collections.shuffle(allQuestions());
     }
 }

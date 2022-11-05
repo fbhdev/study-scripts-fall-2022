@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Fixed bugs">
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added questions to Web Services and pruned DSA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
@@ -69,7 +69,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5282258&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -178,7 +178,10 @@
       <workItem from="1667064000378" duration="6000" />
       <workItem from="1667228957425" duration="19017000" />
       <workItem from="1667317824877" duration="3000" />
-      <workItem from="1667321922188" duration="3336000" />
+      <workItem from="1667321922188" duration="9698000" />
+      <workItem from="1667530800220" duration="2577000" />
+      <workItem from="1667672955229" duration="10250000" />
+      <workItem from="1667685631784" duration="3376000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -264,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666734288398</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added questions to Web Services and pruned DSA">
+      <created>1667326758648</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667326758648</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +302,8 @@
     <MESSAGE value="Removed redundant code, moved individual run methods to Main and renamed it &quot;flow&quot;." />
     <MESSAGE value="Added Module 7 for both DSA and Web Dev." />
     <MESSAGE value="Fixed bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs" />
+    <MESSAGE value="Added questions to Web Services and pruned DSA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added questions to Web Services and pruned DSA" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

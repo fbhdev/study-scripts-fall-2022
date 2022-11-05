@@ -2,13 +2,13 @@ import java.util.Collections;
 
 public class WebServices extends Course {
 
-    private static ModuleOne moduleOne;
-    private static ModuleTwo moduleTwo;
-    private static ModuleThree moduleThree;
-    private static ModuleFour moduleFour;
-    private static ModuleFive moduleFive;
-    private static ModuleSix moduleSix;
-    private static ModuleSeven moduleSeven;
+    private final ModuleOne moduleOne;
+    private final ModuleTwo moduleTwo;
+    private final ModuleThree moduleThree;
+    private final ModuleFour moduleFour;
+    private final ModuleFive moduleFive;
+    private final ModuleSix moduleSix;
+    private final ModuleSeven moduleSeven;
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -23,7 +23,7 @@ public class WebServices extends Course {
 
 
     // Module 1: Introduction to Web Services
-    static class ModuleOne{
+    private static class ModuleOne{
 
         private final Module module;
         private int count = 0;
@@ -80,7 +80,7 @@ public class WebServices extends Course {
 
 
     // Module 2: Java Web and Servlets
-    static class ModuleTwo {
+    private static class ModuleTwo {
 
         private final Module module;
         private int count = 0;
@@ -118,7 +118,7 @@ public class WebServices extends Course {
 
 
     // Module 3: RESTful Web Services
-    static class ModuleThree{
+    private static class ModuleThree{
 
         private final Module module;
         private int count = 0;
@@ -166,7 +166,7 @@ public class WebServices extends Course {
 
 
     // Module 4: REST, The Client Side
-    static class ModuleFour{
+    private static class ModuleFour{
 
         private final Module module;
         private int count = 0;
@@ -239,7 +239,7 @@ public class WebServices extends Course {
 
 
     // Module 5: Understanding XML and JSON Data Types
-    static class ModuleFive{
+    private static class ModuleFive{
 
         private final Module module;
         private int count = 0;
@@ -274,7 +274,7 @@ public class WebServices extends Course {
 
 
     // Module 6: SOAP Web Services
-    static class ModuleSix {
+    private static class ModuleSix {
 
         private final Module module;
         private int count = 0;
@@ -307,7 +307,8 @@ public class WebServices extends Course {
         }
     }
 
-    static class ModuleSeven {
+    // Module 7: Understanding SOAP Messages
+    private static class ModuleSeven {
 
         private final Module module;
         private int count = 0;
@@ -346,6 +347,70 @@ public class WebServices extends Course {
             new Question("Which SOAP attribute carries an URI value that names the recipient of a header block?", "role", ++count, module.getModule(), getCourse());
             new Question("Which SOAP attribute indicates the encoding rules used to serialize parts of SOAP message and can only have values ‘1’ or ‘0’ (or, ‘true’ or ‘false’)?", "encodingStyle", ++count, module.getModule(), getCourse());
             new Question("Which SOAP attributes are intended to be usable via qualified attribute names on any complex type referencing them?", "Global", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    // Module 8: SOAP Attachments
+    private static class ModuleEight {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleEight() {
+            module = new Module();
+            module.setModule(8);
+            allModules().add(module);
+        }
+
+        public void questions(){
+            new Question("What is a method fo efficiently sending binary data to and from Web Services?", "MTOM", ++count, module.getModule(), getCourse());
+            new Question("What is a mechanism defined for the serialization and deserialization XML Information Sets?", "XOP", ++count, module.getModule(), getCourse());
+            new Question("What do you also call XML information sets?", "infosets", ++count, module.getModule(), getCourse());
+            new Question("Which Java class represents a persistent set of properties and can be saved to and loaded from a stream?", "Properties", ++count, module.getModule(), getCourse());
+            new Question("Which parent class is Properties belonging to?", "Hashtable", ++count, module.getModule(), getCourse());
+            new Question("True | False, multiple threads can share a single Properties object without the need of external synchronization.", "True", ++count, module.getModule(), getCourse());
+            new Question("What is a standard Java API to produce and consume messages conforming SOAP specifications?", "SAAJ", ++count, module.getModule(), getCourse());
+        }
+    }
+
+    // Module 9: Microservices
+    private static class ModuleNine {
+
+        private final Module module;
+        private int count = 0;
+
+        public ModuleNine() {
+            module = new Module();
+            module.setModule(9);
+            allModules().add(module);
+        }
+
+        public void questions(){
+            new Question("What involves fitting together resources and systems from diverse organizations?", "Distributed Software Systems", ++count, module.getModule(), getCourse());
+            new Question("What are enumerated as services, organized into logical domains, and somehow managed ", "", ++count, module.getModule(), getCourse());
+            new Question("What do you call functions that could range from processing an order, authenticating users into a web app, or updating a customer's mailing address?", "Business Functions", ++count, module.getModule(), getCourse());
+            new Question("Which Web Service flavor supports only simple request/ response operations?", "Type 1", ++count, module.getModule(), getCourse());
+            new Question("Which Web Service flavor implements some form of coordination between inbound and outbound operations?", "Type 2", ++count, module.getModule(), getCourse());
+            new Question("What do you call call the Type 2 flavor?", "Complex", ++count, module.getModule(), getCourse());
+            new Question("What provides deployment and a run-time support environment that makes a web service highly distributed?", "Service Container", ++count, module.getModule(), getCourse());
+            new Question("Where does the Service Provider publish the Web Service?", "Service Registry", ++count, module.getModule(), getCourse());
+            new Question("Where does the Service Client find the Web Service?", "Service Registry", ++count, module.getModule(), getCourse());
+            new Question("What is the first operation when publishing a Web Service?", "Describing", ++count, module.getModule(), getCourse());
+            new Question("What is the second operation when publishing a Web Service?", "Registration", ++count, module.getModule(), getCourse());
+            new Question("What is the first operation when finding a Web Service?", "Discovering", ++count, module.getModule(), getCourse());
+            new Question("What is the second operation when finding a Web Service?", "Selecting", ++count, module.getModule(), getCourse());
+            new Question("What is the final operation in the Web Services architecture?", "Invocation", ++count, module.getModule(), getCourse());
+            new Question("Which operation is it when the Service Requestor invokes or initiates an interaction at run-time?", "Binding", ++count, module.getModule(), getCourse());
+            new Question("Where do you locate and contract the Binding Details", "Service Description", ++count, module.getModule(), getCourse());
+            new Question("What is the Physical Manifestation of the abstract service endpoint that's providing the implementation of the service interface?", "Service Container", ++count, module.getModule(), getCourse());
+            new Question("What acts as an application Service Provider and as a Service Requestor?", "Service Aggregator", ++count, module.getModule(), getCourse());
+            new Question("What are trusted parties that force Service Providers to adhere to information practices that comply with privacy law regulations, or in the abgense of such laws, industry best practices?", "Service Brokers", ++count, module.getModule(), getCourse());
+            new Question("In microservice architecture, what are processes that communicate with each other over the network in order to fulfill a goal?", "Services", ++count, module.getModule(), getCourse());
+            new Question("What is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services.", "Microservices", ++count, module.getModule(), getCourse());
+            new Question("True | False, each microservice should be independently deployable.", "True", ++count, module.getModule(), getCourse());
+            new Question("True | False, microservices don't need to be loosely coupled with one another.", "False", ++count, module.getModule(), getCourse());
+            new Question("True | False, each service unit of the entire application should be the smallest and capable of delivering one specific business goal.", "True", ++count, module.getModule(), getCourse());
+            new Question("What are a set of subroutine definitions, communication protocols, and tools for building software", "APIs", ++count, module.getModule(), getCourse());
         }
     }
 
