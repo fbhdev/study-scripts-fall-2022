@@ -456,17 +456,17 @@ public class DSA extends Course {
             allModules().add(module);
         }
 
-        public void questions() {
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-        }
+//        public void questions() {
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//        }
     }
 
     // Module 11: Selection Sort, Merge Sort, Quick Sort and Analysis of Sorting Algorithms
@@ -482,17 +482,17 @@ public class DSA extends Course {
             allModules().add(module);
         }
 
-        public void questions() {
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-        }
+//        public void questions() {
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//        }
     }
 
     // Module 12: Text Processing Techniques
@@ -508,17 +508,17 @@ public class DSA extends Course {
             allModules().add(module);
         }
 
-        public void questions() {
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-            new Question("", "", ++count, module.getModule(), getCourse());
-        }
+//        public void questions() {
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//            new Question("", "", ++count, module.getModule(), getCourse());
+//        }
     }
 
 

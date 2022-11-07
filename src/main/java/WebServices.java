@@ -9,6 +9,8 @@ public class WebServices extends Course {
     private final ModuleFive moduleFive;
     private final ModuleSix moduleSix;
     private final ModuleSeven moduleSeven;
+    private final ModuleEight moduleEight;
+    private final ModuleNine moduleNine;
 
     public WebServices() {
         moduleOne = new ModuleOne();
@@ -18,6 +20,8 @@ public class WebServices extends Course {
         moduleFive = new ModuleFive();
         moduleSix = new ModuleSix();
         moduleSeven = new ModuleSeven();
+        moduleEight = new ModuleEight();
+        moduleNine = new ModuleNine();
         setCourse("Web Services");
     }
 
@@ -415,13 +419,15 @@ public class WebServices extends Course {
     }
 
     public void release(boolean shuffle){
-        moduleOne.questions();
-        moduleTwo.questions();
-        moduleThree.questions();
-        moduleFour.questions();
-        moduleFive.questions();
-        moduleSix.questions();
+//        moduleOne.questions();
+//        moduleTwo.questions();
+//        moduleThree.questions();
+//        moduleFour.questions();
+//        moduleFive.questions();
+//        moduleSix.questions();
         moduleSeven.questions();
+        moduleEight.questions();
+//        moduleNine.questions();
         if (shuffle) Collections.shuffle(allQuestions());
     }
 }
