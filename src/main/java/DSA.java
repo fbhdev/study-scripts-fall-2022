@@ -456,7 +456,18 @@ public class DSA extends Course {
             allModules().add(module);
         }
 
-//        public void questions() {
+        public void questions() {
+            new Question("What is a self-balancing binary search tree in which each node maintains extra information called a balance factor whose value is either -1, 0 or +1.", "AVL trees", ++count, module.getModule(), getCourse());
+            new Question("What is the time complexity of the height of an AVL tree storing n entries?", "logn", ++count, module.getModule(), getCourse());
+            new Question("What is the difference between the height of the left subtree and that of the right subtree of that node?", "Balance Factor", ++count, module.getModule(), getCourse());
+            new Question("How many kinds of rotations can the AVL perform?", "4", ++count, module.getModule(), getCourse());
+            new Question("Which rotation says the arrangement of the nodes on the right is transformed into the arrangements on the left node?", "Left Rotation", ++count, module.getModule(), getCourse());
+            new Question("Which rotation says the arrangement of the nodes on the left is transformed into the arrangements on the right node?", "Right Rotation", ++count, module.getModule(), getCourse());
+            new Question("True | False, a node is always deleted as a leaf node.", "True", ++count, module.getModule(), getCourse());
+            new Question("What do you call a tree with nodes that have two or more children?", "Multiway Search Tree", ++count, module.getModule(), getCourse());
+            new Question("What is a self-balancing binary search tree in which each node contains an extra bit?", "Red-Black Tree", ++count, module.getModule(), getCourse());
+            new Question("In Red-Black trees, what color is the root?", "Black", ++count, module.getModule(), getCourse());
+            new Question("True | False, not every leaf is black in Red-Black trees.", "False", ++count, module.getModule(), getCourse());
 //            new Question("", "", ++count, module.getModule(), getCourse());
 //            new Question("", "", ++count, module.getModule(), getCourse());
 //            new Question("", "", ++count, module.getModule(), getCourse());
@@ -464,9 +475,7 @@ public class DSA extends Course {
 //            new Question("", "", ++count, module.getModule(), getCourse());
 //            new Question("", "", ++count, module.getModule(), getCourse());
 //            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//        }
+        }
     }
 
     // Module 11: Selection Sort, Merge Sort, Quick Sort and Analysis of Sorting Algorithms

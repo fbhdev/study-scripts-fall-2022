@@ -71,14 +71,6 @@ public class WebServices extends Course {
             new Question("Where do you typically deploy your web service?", "Web Server", ++count, module.getModule(), getCourse());
             new Question("Which phase is it when your web service is fully deployed, operational, and network accessible from the service provider?", "Run", ++count, module.getModule(), getCourse());
             new Question("Which phase of the lifecycle covers ongoing management and administration of the web service?", "Manage", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -109,14 +101,6 @@ public class WebServices extends Course {
             new Question("What is a type of computer software that provides services to software applications beyond those available from the operating system. It can be described as \"software glue\"?", "Middleware", ++count, module.getModule(), getCourse());
             new Question("Name what can arbitrarily instantiate many instances of a servlet, although the number is typically small (e.g., 1 through 4).", "Web Server", ++count, module.getModule(), getCourse());
             new Question("Which Java class includes the methods by which the servlet developer must implement?", "HttpServlet", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -157,14 +141,6 @@ public class WebServices extends Course {
             new Question("What are ordinary objects increasing readability and re-usability of a Java program that are widely accepted because of their easy maintenance?", "POJO", ++count, module.getModule(), getCourse());
             new Question("In computer software, what is the part of the program that encodes the real-world business rules?", "Business Logic", ++count, module.getModule(), getCourse());
             new Question("What is a specification, a set of interfaces and annotations offered by Java EE?", "JAX-RS", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -230,14 +206,6 @@ public class WebServices extends Course {
             new Question("How would you denote a CSS file as a media type?", "text/css", ++count, module.getModule(), getCourse());
             new Question("How would you denote a CSV file as a media type?", "text/csv", ++count, module.getModule(), getCourse());
             new Question("How would you denote a JavaScript file as a media type?", "application/javascript", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -265,14 +233,6 @@ public class WebServices extends Course {
             new Question("What uses serialization and is the process of encoding an object to be sent across the network?", "Marshalling", ++count, module.getModule(), getCourse());
             new Question("Which class may be used to control the response that is being sent to the client?", "Response Builder", ++count, module.getModule(), getCourse());
             new Question("What is the practice of calling different methods in a single line instead of calling other methods with the same object reference separately? It is also known as named parameter idiom.", "Method Chaining", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
-//            new Question("", "", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -330,7 +290,8 @@ public class WebServices extends Course {
             new Question("What do you call the data generated by the special message triggered by a SOAP fault?", "SOAP element", ++count, module.getModule(), getCourse());
             new Question("What is an API for building Web Services and Clients that used Remote Procedure Calls and XML?", "JAX-RPC", ++count, module.getModule(), getCourse());
             new Question("True | False, JAX-RPC is no longer supported.", "True", ++count, module.getModule(), getCourse());
-            new Question("What is the object-oriented equivalent of remote procedure calls?", "RMI", ++count, module.getModule(), getCourse());
+            new Question("What is used to build distributed applications by providing remote communication between Java programs?", "RMI", ++count, module.getModule(), getCourse());
+            new Question("Name the namespace on which all RMI server objects are placed", "RMI Registry", ++count, module.getModule(), getCourse());
             new Question("What attempts to reclaim memory which as allocated by a program that is no longer referenced?", "Garbage Collection", ++count, module.getModule(), getCourse());
             new Question("Name the error when a piece of memory is freed while there are still pointers to it.", "Dangling Pointers", ++count, module.getModule(), getCourse());
             new Question("What occurs when the program tries freeing a region of memory that has already been freed, and perhaps already been allocated again?", "Double Free Bugs", ++count, module.getModule(), getCourse());
@@ -343,8 +304,9 @@ public class WebServices extends Course {
             new Question("True | False, Distributed Garbage Collection has to cooperate with local garbage collections in each process in order to keep global count or to globally trace accessibility of data.", "True", ++count, module.getModule(), getCourse());
             new Question("True | False, Distributed Garbage Collection is cost-effective and fast in freeing memory.", "False", ++count, module.getModule(), getCourse());
             new Question("What can Distributed Garbage Collection rely on to remain cheap and fast while freeing memory?", "Time Lease", ++count, module.getModule(), getCourse());
-            new Question("What allows processing tools to immediately determine whether a given XML document is a SOAP message?", "Envelope", ++count, module.getModule(), getCourse());
+            new Question("What solves the problem of knowing when you are done receiving a message and are ready to process it?", "Envelope", ++count, module.getModule(), getCourse());
             new Question("Which optional XML element is used to pass additional processing or control information?", "Header", ++count, module.getModule(), getCourse());
+            new Question("Which attribute can specify the recipient of the SOAP header?", "Actor", ++count, module.getModule(), getCourse());
             new Question("Which required element should have main information the sender wants to transmit to the receiver?", "Body", ++count, module.getModule(), getCourse());
             new Question("What is a common SOAP issue faced when implementing security in distributed systems?", "Crossing Trust Domains", ++count, module.getModule(), getCourse());
             new Question("Which SOAP attribute specifies whether it is mandatory or optional that a message receiver understands and processes the content of a SOAP header block?", "mustUnderstand", ++count, module.getModule(), getCourse());
@@ -367,13 +329,17 @@ public class WebServices extends Course {
         }
 
         public void questions(){
-            new Question("What is a method fo efficiently sending binary data to and from Web Services?", "MTOM", ++count, module.getModule(), getCourse());
+            new Question("What is the use of MIME to optimize the bitstream transmission of SOAP messages that contain significantly large base64Binary elements?", "MTOM", ++count, module.getModule(), getCourse());
+            new Question("What is a MIME-based attachment mechanism for SOAP/HTTP?", "SWA", ++count, module.getModule(), getCourse());
             new Question("What is a mechanism defined for the serialization and deserialization XML Information Sets?", "XOP", ++count, module.getModule(), getCourse());
             new Question("What do you also call XML information sets?", "infosets", ++count, module.getModule(), getCourse());
             new Question("Which Java class represents a persistent set of properties and can be saved to and loaded from a stream?", "Properties", ++count, module.getModule(), getCourse());
             new Question("Which parent class is Properties belonging to?", "Hashtable", ++count, module.getModule(), getCourse());
             new Question("True | False, multiple threads can share a single Properties object without the need of external synchronization.", "True", ++count, module.getModule(), getCourse());
             new Question("What is a standard Java API to produce and consume messages conforming SOAP specifications?", "SAAJ", ++count, module.getModule(), getCourse());
+            new Question("Which class represents the SAAJ API in Java?", "SOAPConnection", ++count, module.getModule(), getCourse());
+            new Question("What do you call the connection type going from one endpoint to another?", "point-to-point", ++count, module.getModule(), getCourse());
+            new Question("How do you call messages sent using the SAAJ API?", "Request-Response Messages", ++count, module.getModule(), getCourse());
         }
     }
 
@@ -408,7 +374,7 @@ public class WebServices extends Course {
             new Question("Where do you locate and contract the Binding Details", "Service Description", ++count, module.getModule(), getCourse());
             new Question("What is the Physical Manifestation of the abstract service endpoint that's providing the implementation of the service interface?", "Service Container", ++count, module.getModule(), getCourse());
             new Question("What acts as an application Service Provider and as a Service Requestor?", "Service Aggregator", ++count, module.getModule(), getCourse());
-            new Question("What are trusted parties that force Service Providers to adhere to information practices that comply with privacy law regulations, or in the abgense of such laws, industry best practices?", "Service Brokers", ++count, module.getModule(), getCourse());
+            new Question("What are trusted parties that force Service Providers to adhere to information practices that comply with privacy law regulations, or in the absence of such laws, industry best practices?", "Service Brokers", ++count, module.getModule(), getCourse());
             new Question("In microservice architecture, what are processes that communicate with each other over the network in order to fulfill a goal?", "Services", ++count, module.getModule(), getCourse());
             new Question("What is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services.", "Microservices", ++count, module.getModule(), getCourse());
             new Question("True | False, each microservice should be independently deployable.", "True", ++count, module.getModule(), getCourse());
