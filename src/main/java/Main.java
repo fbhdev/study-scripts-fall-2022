@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Main class encapsulates the running time logic
@@ -6,13 +11,18 @@ import java.util.ArrayList;
  */
 public class Main {
 
+    static String course = "";
+    private enum CourseType {
+        WEB_SERVICES, WEB_DEVELOPMENT, PROGRAMMING_TECHNIQUES_2, DATA_STRUCTURES_AND_ALGORITHMS
+    }
+
     /**
      * main() runs the program
      * @param args the arguments to pass
      */
     public static void main(String[] args)  {
         do {
-            run();
+            processCommands();
         } while (again());
         System.out.println("Thanks for studying!");
     }
@@ -74,11 +84,8 @@ public class Main {
                 break;
             }
         }
-        System.out.println("You will answer " + length + " questions.");
-        System.out.println();
         return length;
     }
-
 
     /**
      * random() handles logic regarding generation of maximum random number
@@ -92,7 +99,7 @@ public class Main {
             if (random.getInput().equalsIgnoreCase("y")) {
                 length = (int) (Math.random() * 100 + 1);
                 if (length > size) {
-                    length = size;
+                    length = (int) (Math.random() * size + 1);
                 }
                 break;
             }
@@ -109,14 +116,14 @@ public class Main {
     /**
      * flow() handles the quiz logic
      * @param length number of available questions per respective course
-     * @param course that is being quizzed
      */
-    public static void flow(int length, String course) {
+    public static void flow(int length){
         if (length == 0) return;
         Records.setNumQuestions(length);
         System.out.println();
         System.out.println("Welcome to the " + course + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
+        System.out.println();
         for (Question question : Course.allQuestions()) {
             if (length == 0) {
                 break;
@@ -127,7 +134,6 @@ public class Main {
             else {
                 System.out.println(length + " question left");
             }
-            System.out.println(question);
             question.askUser();
             length--;
         }
@@ -136,36 +142,56 @@ public class Main {
         Records.save(course);
     }
 
+    public static void load(CourseType course) {
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new FileReader(course + ".csv"));
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        String line;
+        try {
+            while ((line = reader.readLine()) != null) {
+                String[] split = line.split(";");
+                if (split.length == 4) {
+                    new Question(split[0], split[1], Integer.parseInt(split[2]), split[3]);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void release(CourseType course, boolean shuffle){
+        load(course);
+        if (shuffle) Collections.shuffle(Course.allQuestions());
+    }
+
     /**
      * run() handles logic based on menu selection
      */
-    public static void run() {
+    public static void processCommands() {
         int choice = selectCourse();
         if (choice == 1){
-            WebServices ws = new WebServices();
-            System.out.println(Course.getCourse());
-            ws.release(true);
-            flow(length(Course.allQuestions()), Course.getCourse());
+            course = "Web Services";
+            release(CourseType.WEB_SERVICES, true);
+            flow(length(Course.allQuestions()));
         }
         else if (choice == 2){
-            WebDev wd = new WebDev();
-            System.out.println(Course.getCourse());
-            wd.release(true);
-            flow(length(Course.allQuestions()), Course.getCourse());
+            course = "Web Development";
+            release(CourseType.WEB_DEVELOPMENT, true);
+            flow(length(Course.allQuestions()));
         }
         else if (choice == 3){
-            DSA dsa = new DSA();
-            System.out.println(Course.getCourse());
-            dsa.release(true);
-            flow(length(Course.allQuestions()), Course.getCourse());
+            course = "Data Structures and Algorithms";
+            release(CourseType.DATA_STRUCTURES_AND_ALGORITHMS, true);
+            flow(length(Course.allQuestions()));
         }
-
 //        else if (choice == 4){
 //            PT2 pt2 = new PT2();
 //            pt2.release(true);
 //            pt2.run(length(pt2.allQuestions()));
 //        }
-
         else if (choice == 5){
             System.exit(0);
         }

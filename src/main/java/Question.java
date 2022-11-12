@@ -7,7 +7,6 @@ public class Question extends Course {
     private final String question;
     private final String course;
     private final String answer;
-    private final int number;
     private Grade grade = new Grade();
     private Records records = new Records();
 
@@ -15,14 +14,12 @@ public class Question extends Course {
      * Question() constructor instantiates the Question object
      * @param question the question to ask user
      * @param answer the expected answer
-     * @param number the question's number
      * @param module the module the question belongs to
      * @param course the course the question belongs to
      */
-    public Question(String question, String answer, int number, int module, String course) {
+    public Question(String question, String answer, int module, String course) {
         this.question = question;
         this.answer = answer;
-        this.number = number;
         this.module = module;
         this.course = course;
         allQuestions().add(this);
@@ -71,11 +68,8 @@ public class Question extends Course {
         return answer;
     }
 
-    /**
-     * @return the question's number
-     */
-    public int getNumber() {
-        return number;
+    public int getModule(){
+        return module;
     }
 
     /**
@@ -83,6 +77,6 @@ public class Question extends Course {
      */
     @Override
     public String toString() {
-        return "Module " + module + " | Question " + getNumber();
+        return getQuestion();
     }
 }

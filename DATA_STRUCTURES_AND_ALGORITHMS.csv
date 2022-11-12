@@ -1,0 +1,259 @@
+What do you call the name of a class, method or variable in Java?;identifier;1;Data Structures and Algorithms
+True | False, Strings of the primitive type in Java?;False;1;Data Structures and Algorithms
+What do you call the primary actors in Java?;Objects;1;Data Structures and Algorithms
+What are blocks of code that can be called to perform actions?;Methods;1;Data Structures and Algorithms
+Which operator returns a reference to the newly created instance; the returned reference is typically assigned to a variable for further use?;new;1;Data Structures and Algorithms
+What are the default values for reference variables?;null;1;Data Structures and Algorithms
+Which modifiers control the level of access that the defining class grants to other classes in the context of a larger Java program?;Access Control Modifiers;1;Data Structures and Algorithms
+Which class modifier designates that all classes may access the defined aspect?;Public;1;Data Structures and Algorithms
+True | False, classes that are designated as subclasses of the given class cannot be accessed with the Protected class modifier.;False;1;Data Structures and Algorithms
+Which modifier designates that access to a defined member of a class be granted only to code within that class?;Private;1;Data Structures and Algorithms
+Which modifier is used to store global information about a class, as in its value is associated with the class as a whole, rather than with each individual instance of that class?;Static;1;Data Structures and Algorithms
+Which modifier means that a method's or class's signature is provided but without an implementation of the method body?;Abstract;1;Data Structures and Algorithms
+Which modifier can be initialized as part of that declaration, but can never again be assigned a new value?;Final;1;Data Structures and Algorithms
+What defines the name and parameters for a method?;Signature;1;Data Structures and Algorithms
+Which keyword must be used when a method does not return a value?;void;1;Data Structures and Algorithms
+Are all objects passed by value or reference?;Value;1;Data Structures and Algorithms
+Which passing value is it when Java makes a copy in memory of the parameter’s value, or a copy of the contents of the parameter?;Pass by Value;1;Data Structures and Algorithms
+Which passing value is it when Java stores a copy of the address to the parameter rather than the value itself?;Pass by Reference;1;Data Structures and Algorithms
+What is a special kind of method that is used to initialize a newly created instance of the class so that it will be in a consistent and stable initial state?;Constructor;1;Data Structures and Algorithms
+True | False, constructors can be static, abstract or final.;False;1;Data Structures and Algorithms
+True | False, constructors can be Protected or Private;True;1;Data Structures and Algorithms
+When a class has multiple constructors, what must be different for each individual constructor?;Signature;1;Data Structures and Algorithms
+True | False, you can use the keyword "this" in the body of a static method.;False;1;Data Structures and Algorithms
+Which keyword refers to the object known as thing in the caller’s context?;This;1;Data Structures and Algorithms
+What means that once an instance is created and initialized, the value of that instance cannot be changed?;Immutable;1;Data Structures and Algorithms
+What is the process of implicitly converting between base types and their wrapper types?;Automatic Boxing and Unboxing;1;Data Structures and Algorithms
+What is a special class representing static constants with the final keyword?;Enums;1;Data Structures and Algorithms
+What involves the use of literals, variables, and operators?;Expressions;1;Data Structures and Algorithms
+What is any constant value that can be used in an assignment or other expression?;Literals;1;Data Structures and Algorithms
+What is an operation that allows us to change the type of a value?;Casting;1;Data Structures and Algorithms
+Which loop allows the boolean condition to be checked at the end of each pass of the loop rather than before each pass?;Do-While;1;Data Structures and Algorithms
+Which statement causes the execution to skip over the remaining steps of the current iteration of the loop body, but then, unlike the break statement, the flow of control returns to the top of the loop, assuming its condition remains satisfied?;Continue;1;Data Structures and Algorithms
+What is the Object-Oriented design goal that is, capable of handling unexpected inputs that are not explicitly defined for its application?;Robustness;1;Data Structures and Algorithms
+Because modern software applications are used for many years, what is the Object-Oriented design goal specifying that software needs to be able to evolve over time in response to changing conditions in its environment?;Adaptability;1;Data Structures and Algorithms
+Which Object-Oriented design goal says the same code should be usable as a component of different systems in various applications?;Reusability;1;Data Structures and Algorithms
+What do you call the notion of distilling a complicated system down to its most fundamental parts?;Abstraction;1;Data Structures and Algorithms
+What is a mathematical model of a data structure that specifies the type of data stored, the operations supported on them, and the types of parameters of the operations?;Abstract Data Type;1;Data Structures and Algorithms
+Which Object-Oriented principle says different components of a software system should not reveal the internal details of their respective implementations?;Encapsulation;1;Data Structures and Algorithms
+Which Object-Oriented principle refers to an organizing principle in which different components of a software system are divided into separate functional units?;Modularity;1;Data Structures and Algorithms
+In Object-Oriented programming, what do you call the mechanism for a modular and hierarchical organization?;Inheritance;1;Data Structures and Algorithms
+True | False, a constructor for a subclass not making an explicit call to super or this as its first command will still have it called implicitly behind the scenes.;True;1;Data Structures and Algorithms
+What refers to the ability of a reference variable to take different forms?;Polymorphism;1;Data Structures and Algorithms
+What states that a variable (or parameter) with a declared type can be assigned an instance from any direct or indirect subclass of that type?;Liskov Substitution Principle;1;Data Structures and Algorithms
+What is the name of the process deciding at runtime to call the version of the method that is most specific to the actual type of the referenced object (not the declared type)?;Dynamic Dispatch;1;Data Structures and Algorithms
+What determines the next number by adding a fixed constant to the previous value?;Arithmetic Progression;1;Data Structures and Algorithms
+What determines the next number by multiplying the previous value by a fixed constant?;Geometric Progression;1;Data Structures and Algorithms
+What are collection of method declarations with no data and no bodies?;Interfaces;1;Data Structures and Algorithms
+What is the ability of extending from more than one type?;Multiple Inheritance;1;Data Structures and Algorithms
+True | False, multiple inheritance is allowed for both interfaces and classes.;False;1;Data Structures and Algorithms
+Which keyword prepares users about the possibility of an exceptional case, so that they might be better prepared to handle an exception that may arise?;Throws;1;Data Structures and Algorithms
+What are typically thrown only by the Java Virtual Machine and designate the most serious situations that are unlikely to be recoverable, such as when the virtual machine is asked to execute a corrupt class file, or when the system runs out of memory?;Errors;1;Data Structures and Algorithms
+Which conversion is automatically performed to store the result of an expression into a variable, without the need for an explicit cast?;Widening;1;Data Structures and Algorithms
+Which conversion requires an explicit cast?;Narrowing;1;Data Structures and Algorithms
+Which operator allows us to test whether an object variable is referring to an object that belongs to a particular type?;instanceof;1;Data Structures and Algorithms
+Which keyword can help restrict a formal parameter type in generics?;extends;1;Data Structures and Algorithms
+Which nested class is most like a traditional class; its instances have no association with any specific instance of the outer class?;Static Nested Class;1;Data Structures and Algorithms
+Which nested class has access to other members of the enclosing class, even if they are declared private?;Inner Class;1;Data Structures and Algorithms
+When an array is instantiated in memory, what are its default values?;null;2;Data Structures and Algorithms
+Which sorting algorithm proceeds by considering one element at a time, placing the element in the correct order relative to those before it?;Insertion-Sort;2;Data Structures and Algorithms
+In Java, are Arrays mutable or immutable objects?;Mutable;2;Data Structures and Algorithms
+What do you call a collection of nodes that collectively form a linear sequence?;Linked List;2;Data Structures and Algorithms
+Which Linked List says each node stores a reference to an object that is an element of the sequence, as well as a reference to the next node of the list?;Singly Linked List;2;Data Structures and Algorithms
+What do you call the reference to the first node of the Linked List?;Head;2;Data Structures and Algorithms
+What do you call the last node in a Linked List?;Tail;2;Data Structures and Algorithms
+What is the process of identifying the tail as the node having null as its next reference?;Link Hopping;2;Data Structures and Algorithms
+Name the algorithm in which Operating Systems allow processes to effectively share use of the CPUs.;Round-Robin Scheduling;2;Data Structures and Algorithms
+What is the structure which is essentially a singularly linked list in which the next reference of the tail node is set to refer back to the head of the list ?;Circularly Linked List;2;Data Structures and Algorithms
+What is a Linked List in which each node keeps an explicit reference to the node before it and a reference to the node after it?;Doubly Linked List;2;Data Structures and Algorithms
+What common name do you call the special nodes at both ends of the Linked List?;Sentinels;2;Data Structures and Algorithms
+Which method can be used to produce what is known as a shallow copy of an object?;Clone;2;Data Structures and Algorithms
+In copies, what means that no new memory allocation happens for the other entities, and the only reference is copied to the other entities?;Shallow Copy;2;Data Structures and Algorithms
+In copies, what means that a new memory allocation happens for the other entities, and reference is not copied to the other entities?;Deep Copy;2;Data Structures and Algorithms
+What is the time complexity of accessing a Linked List node?;n;2;Data Structures and Algorithms
+What is the time complexity of searching a Linked List node?;n;2;Data Structures and Algorithms
+What is the time complexity of adding a node to a Linked List?;1;2;Data Structures and Algorithms
+What is the time complexity of removing a node from a Linked List?;1;2;Data Structures and Algorithms
+What is the time complexity to getting the length of a Linked List?;n;2;Data Structures and Algorithms
+What is the time complexity of accessing a Doubly Linked List node?;n;2;Data Structures and Algorithms
+What is the time complexity of searching a Doubly Linked List node?;n;2;Data Structures and Algorithms
+What is the time complexity of inserting a node in a Doubly Linked List?;1;2;Data Structures and Algorithms
+What is the time complexity of deleting a node in a Doubly Linked List?;1;2;Data Structures and Algorithms
+What is a systematic way of organizing and accessing data?;Data Structure;3;Data Structures and Algorithms
+What is a step-by-step procedure for performing some task in a finite amount of time?;Algorithm;3;Data Structures and Algorithms
+What corresponds to a low-level instruction with an execution time that is constant?;Primitive Operation;3;Data Structures and Algorithms
+What requires that algorithms do well on every input, thus making it the standard for success?;Worst-case analysis;3;Data Structures and Algorithms
+Which function is useful in algorithm analysis because it characterizes the number of steps needed to do a basic operation on a computer, like adding two numbers, assigning a value to a variable, or comparing two numbers?;Constant;3;Data Structures and Algorithms
+Name the algorithmic function that is the inverse of power.;Logarithm;3;Data Structures and Algorithms
+Which function arises in algorithm analysis any time we have to do a single basic operation for each of n elements?;Linear;3;Data Structures and Algorithms
+Which function grows a little more rapidly than the linear function and a lot less rapidly than the quadratic function?;n-log-n;3;Data Structures and Algorithms
+What is the function when an inner loop performs a linear number of operations and the other loop a linear number of times?;Quadratic;3;Data Structures and Algorithms
+Which function assigns to an input value n the product of n with itself 3 times?;Cubic;3;Data Structures and Algorithms
+What are algebraic expressions that consist of variables and coefficients?;Polynomials;3;Data Structures and Algorithms
+What is the numerical factor of a term containing constant and variables?;Coefficients;3;Data Structures and Algorithms
+Which notation gives us a shorthand way of expressing sums of increasing terms that have a regular structure?;Summation;3;Data Structures and Algorithms
+Which function assigns to the input argument n the value obtained by multiplying the base by itself n times?;Factorial;3;Data Structures and Algorithms
+What refers to computing the running time of any operation in mathematical units of computation?;Asymptotic Analysis;3;Data Structures and Algorithms
+Which notation is used for analyzing the best-case complexity of an algorithm?;Big Omega;3;Data Structures and Algorithms
+Which notation is used for analyzing the average-case complexity of an algorithm?;Big Theta;3;Data Structures and Algorithms
+Which notation is used for analyzing the worst-case complexity of an algorithm?;Big-O;3;Data Structures and Algorithms
+What is the Big-Theta of -> f(n) = nlog(n) + n^2 + n^3log(n)?;n^3logn;3;Data Structures and Algorithms
+What is the Big-O of -> f(n) = nlog(n) + n^2 + n^3log(n)?;n^4;3;Data Structures and Algorithms
+What is the slowest run time?;n!;3;Data Structures and Algorithms
+What is the worst case for Bubble Sort?;n^2;3;Data Structures and Algorithms
+What is the worst case for Insertion Sort?;n^2;3;Data Structures and Algorithms
+What is any function that calls an instance of itself?;Recursion;4;Data Structures and Algorithms
+In Java, what stores the parameters and local variables specific to a given call of the method, and information about which command in the body of the method is currently executing?;Activation Frame;4;Data Structures and Algorithms
+Which algorithm follows the divide and conquer approach in which the list is divided into two halves, and the item is compared with the middle element of the list?;Binary Search;4;Data Structures and Algorithms
+Which recursive method is designed so that each invocation of the body makes at most one new recursive call?;Linear Recursion;4;Data Structures and Algorithms
+What is the time complexity for the Binary Search algorithm?;logn;4;Data Structures and Algorithms
+What do you call a method making two recursive calls?;Binary Recursion;4;Data Structures and Algorithms
+What is the process in which a method may make more than two recursive calls?;Multiple Recursion;4;Data Structures and Algorithms
+What stops the recursion from continuing on forever?;Base Case;4;Data Structures and Algorithms
+What is a quick solution to the Element Uniqueness Problem in an Array?;Sort;4;Data Structures and Algorithms
+What can quickly swamp computing resources, not only due to rapid use of the CPU, but because each successive call creates a frame requiring additional memory?;Infinite Recursion;4;Data Structures and Algorithms
+What is a type of buffer overflow error that occurs when a computer program tries to use more memory space in the call stack than has been allocated to that stack?;Stack Overflow;4;Data Structures and Algorithms
+What is defined as a recursive function in which the recursive call is the last statement that is executed by the function?;Tail Recursion;4;Data Structures and Algorithms
+What does Tail Recursion reduce?;Stack Frames;4;Data Structures and Algorithms
+True | False, In languages like Java, recursion is typically less expensive than iteration.;False;4;Data Structures and Algorithms
+Which principle does a Queue follow?;FIFO;5;Data Structures and Algorithms
+Which principle does a Stack follow?;LIFO;5;Data Structures and Algorithms
+Inserting in a Queue is known as?;Enqueue;5;Data Structures and Algorithms
+Deletion in a Queue is known as?;Dequeue;5;Data Structures and Algorithms
+What is the time complexity of the pop() operation when the Stack is implemented using an array?;n;5;Data Structures and Algorithms
+What is the time complexity of accessing a Stack item?;n;5;Data Structures and Algorithms
+What is the time complexity of searching a Stack?;n;5;Data Structures and Algorithms
+What is the time complexity of pushing an item to a Stack?;1;5;Data Structures and Algorithms
+What is the time complexity of popping a Stack item?;1;5;Data Structures and Algorithms
+What is the time complexity of accessing a Queue item?;n;5;Data Structures and Algorithms
+What is the time complexity of searching a Queue item?;n;5;Data Structures and Algorithms
+What is the time complexity of enqueuing an item?;1;5;Data Structures and Algorithms
+What is the time complexity of dequeuing an item?;1;5;Data Structures and Algorithms
+What do you call a collection of objects that are inserted and removed according to the last-in, first-out (LIFO) principle?;Stack;5;Data Structures and Algorithms
+Which Stack implementation has the drawback of a fixed-capacity?;Array;5;Data Structures and Algorithms
+Which design pattern applies to any context where we effectively want to modify an existing class so that its methods match those of a related, but different, class or interface?;Adapter;5;Data Structures and Algorithms
+What do you call the collections of objects that are inserted and removed according to the first-in, first-out (FIFO) principle?;Queue;5;Data Structures and Algorithms
+What do you call a doubled-ended Queue?;Deque;5;Data Structures and Algorithms
+Which of the Linked Lists is more appropriate for Deques?;Doubly Linked Lists;5;Data Structures and Algorithms
+In Arraylists, what is the time complexity for adding an item?;n;6;Data Structures and Algorithms
+Java’s ArrayList class provides a more robust abstraction in allowing a user to add elements to the list with no apparent limit on the overall capacity. Name the algorithmic sleight of hand known to make this happen.;Dynamic Array;6;Data Structures and Algorithms
+In Array-based Arraylists, by which factor would you increase the capacity when existing array that has been filled?;Twice;6;Data Structures and Algorithms
+True | False, A series of push operations on an empty dynamic array is cost effective.;True;6;Data Structures and Algorithms
+Name the algorithmic design pattern showing that performing a sequence of push operations on a dynamic array is quite efficient.;Amortization;6;Data Structures and Algorithms
+What happens when a constant number of additional cells are reserved each time an array is resized?;Arithmetic Progression;6;Data Structures and Algorithms
+In array-based sequences, what provides an excellent description of the location of an element, or the location at which an insertion or deletion should take place?;integer indices;6;Data Structures and Algorithms
+What are lists that allows you to add, remove, insert, and sort elements within the list?;Positional Lists;6;Data Structures and Algorithms
+What acts as a marker or token within a broader positional list?;Position;6;Data Structures and Algorithms
+Which value is returned when the before method is invoked at the front of the list, or when first or last methods are called upon an empty list?;null;6;Data Structures and Algorithms
+What is Positional List ideally implemented with?;Doubly Linked List;6;Data Structures and Algorithms
+True | False, In array-based positional lists, we have to shift position objects to make room for the new position to fill in the hole crested by the removal of the old position.;True;6;Data Structures and Algorithms
+What is a software design pattern that abstracts the process of scanning through a sequence of elements, one element at a time?;Iterators;6;Data Structures and Algorithms
+What do you call the iterator maintaining its own private copy of the sequence of elements, which is constructed at the time the iterator object is created?;Snapshot Iterator;6;Data Structures and Algorithms
+What do you call the iterator that does not make an upfront copy–instead performing a piecewise traversal of the primary structure only when the next() method is called to request another element?;Lazy Iterator;6;Data Structures and Algorithms
+What thread-safe support do robust Collections classes provide?;Concurrency;6;Data Structures and Algorithms
+What do for loops call to move to the next object?;Iterators;6;Data Structures and Algorithms
+How many methods do iterators have?;2;6;Data Structures and Algorithms
+In an ArrayList of Integers, calling .remove() will delete the object or index?;Index;6;Data Structures and Algorithms
+What is the time complexity of searching an element in an array?;n;6;Data Structures and Algorithms
+Assuming we have a sorted Array, what is the run time of a Binary Search?;logn;6;Data Structures and Algorithms
+True | False, accessing an element and searching have both O(n) in an Array?;False;6;Data Structures and Algorithms
+What is the time complexity for adding an item to an Array?;n;6;Data Structures and Algorithms
+What is the time complexity for removing an item from an Array?;n;6;Data Structures and Algorithms
+What is the time complexity for accessing an item in an Array?;1;6;Data Structures and Algorithms
+What is the time complexity for searching an item in an Array?;n;6;Data Structures and Algorithms
+What is the time complexity of accessing an item in an Arraylist?;1;6;Data Structures and Algorithms
+What is the time complexity of removing an item in an Arraylist?;n;6;Data Structures and Algorithms
+What is the time complexity of getting the index of an item in an Arraylist?;n;6;Data Structures and Algorithms
+What is the time complexity of checking if the Arraylist contains an item?;n;6;Data Structures and Algorithms
+What's the abstract data type storing elements hierarchically?;Trees;7;Data Structures and Algorithms
+Which element does not have a parent element?;Root;7;Data Structures and Algorithms
+What's the smallest number of children an element can have?;0;7;Data Structures and Algorithms
+What do you call two nodes that are children of the same parent?;Siblings;7;Data Structures and Algorithms
+What do you call a node having no children?;External;7;Data Structures and Algorithms
+What do you call a node with one or more children?;Internal;7;Data Structures and Algorithms
+What is any other node on the path from the node to the root?;Ancestors;7;Data Structures and Algorithms
+What do you call a node having the inverse relationship of ancestor?;Descendants;7;Data Structures and Algorithms
+What connects two nodes to show that there is a relationship between them?;Edges;7;Data Structures and Algorithms
+What is a sequence of nodes such that any two consecutive nodes in the sequence form an edge?;Paths;7;Data Structures and Algorithms
+What do you call the meaningful linear order among the children of each node?;Ordered;7;Data Structures and Algorithms
+What do you call the length of the path from the root to the node?;Depth;7;Data Structures and Algorithms
+What do you call the number of edges on the longest path from the node to a leaf?;Height;7;Data Structures and Algorithms
+What do you also call an external node?;Leaf;7;Data Structures and Algorithms
+What is a tree data structure in which each parent node can have at most two children?;Binary Trees;7;Data Structures and Algorithms
+What do you call a Binary Tree with 0 or 2 children?;Proper;7;Data Structures and Algorithms
+What is a proper tree structure used in analysis and strategy?;Decision Trees;7;Data Structures and Algorithms
+What is a node based binary tree that further has right and left subtrees?;Binary Search Trees;7;Data Structures and Algorithms
+Which of the Binary Tree and Binary Search Tree is unordered hence slower in process of insertion, deletion and searching?;Binary Tree;7;Data Structures and Algorithms
+What is the time complexity of a Binary Tree;n;7;Data Structures and Algorithms
+What is the time complexity of a Binary Search Tree?;logn;7;Data Structures and Algorithms
+What is utilized in the implementations of AVL Trees, Red Black Trees, and so on?;Binary Search Trees;7;Data Structures and Algorithms
+What refers to the process of visiting each node in a tree data structure exactly once?;Traversal;7;Data Structures and Algorithms
+True | False, similarly to stacks, queues and arrays, trees have only one way to traverse the data.;False;7;Data Structures and Algorithms
+What says the root node is first visited, then left sub-tree and after that right sub-tree is visited?;Preorder Traversal;7;Data Structures and Algorithms
+Which policy does the Preorder Traversal technique follow?;Root Left Right;7;Data Structures and Algorithms
+Which policy does the Postorder Traversal Technique follow?;Left Right Root;7;Data Structures and Algorithms
+What is the opposite of Preorder Traversal?;Postorder Traversal;7;Data Structures and Algorithms
+What is a traversing algorithm where you should start traversing from a selected node (source or starting node) and traverse the graph layer-wise thus exploring the neighbour node?;Breadth First Traversal;7;Data Structures and Algorithms
+Which traversal technique follows the Left Root Right policy?;Inorder Traversal;7;Data Structures and Algorithms
+What is the term used to unify the tree-traversal algorithms into a single framework?;Euler Tour Traversal;7;Data Structures and Algorithms
+What is a collection of prioritized elements that allows arbitrary element insertion, and allows the removal of the element that has first priority?;Priority Queue;8;Data Structures and Algorithms
+What does the user associate to an element in a Priority Queue?;Key;8;Data Structures and Algorithms
+What do you call the key-value pair for a Priority Queue?;Entry;8;Data Structures and Algorithms
+True | False, Priority Queues can have multiple entries with equivalent keys.;True;8;Data Structures and Algorithms
+What is a partitioning design pattern and describes a group of objects that is treated the same way as a single instance of the same type of object?;Composite Pattern;8;Data Structures and Algorithms
+Which Priority Queue entry has the highest priority?;Dequeue;8;Data Structures and Algorithms
+What is an object that is external to the class of the keys it compares?;Comparator;8;Data Structures and Algorithms
+Which ADT provides an efficient implementation of priority queues?;Binary Heap;8;Data Structures and Algorithms
+What is the process of creating a data structure from a binary tree represented using an array?;Heapify;8;Data Structures and Algorithms
+What do you call a binary tree where nodes are filled in from left to right?;Complete;8;Data Structures and Algorithms
+Where should a new node be placed upon insertion in a complete Binary Tree?;Rightmost Position;8;Data Structures and Algorithms
+Where should a new node be placed upon insetion in a complete Binary Tree when the bottom row is full?;Leftmost Position;8;Data Structures and Algorithms
+What is the upward swapping process called?;Up-Heap Bubbling;8;Data Structures and Algorithms
+What is the downward swapping process called?;Down-Heap Bubbling;8;Data Structures and Algorithms
+Which ADT avoids complexities of a linked list tree structure?;Array-based heap;8;Data Structures and Algorithms
+What is the time complexity of adding an element in a linked-based Heap?;nlogn;8;Data Structures and Algorithms
+What is the time complexity of removing an element in a linked-based Heap?;nlogn;8;Data Structures and Algorithms
+How much more memory does a linked-based Heap take over the array-based implementation?;n;8;Data Structures and Algorithms
+What is the time complexity of adding an element in an array-based Heap?;nlogn;8;Data Structures and Algorithms
+What is the time complexity of removing an element in an array-based Heap?;nlogn;8;Data Structures and Algorithms
+In array-based Heaps, what is the index of the root?;0;8;Data Structures and Algorithms
+What is the index of the left subchild of Node k?;2k+1;8;Data Structures and Algorithms
+What is the index of the right subchild of Node k?;2k+2;8;Data Structures and Algorithms
+What is the index of the parent of node k?;floor((k-1) / 2);8;Data Structures and Algorithms
+What is a sorting algorithm that places an unsorted element at its suitable place in each iteration?;Insertion Sort;8;Data Structures and Algorithms
+Which index do you start Insertion Sort at?;1;8;Data Structures and Algorithms
+What is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list?;Selection Sort;8;Data Structures and Algorithms
+What is an abstract data type designed to efficiently store and retrieve values based upon unique search keys?;Maps;9;Data Structures and Algorithms
+What do you call Key-Value pairs stored in a Map?;Entries;9;Data Structures and Algorithms
+True | False, Keys are required to be unique.;True;9;Data Structures and Algorithms
+What do you also call Maps?;Associative Arrays;9;Data Structures and Algorithms
+What do you call the unordered association of key/value pairs?;Hash Maps;9;Data Structures and Algorithms
+What is any function that can be used to map data of arbitrary size to fixed-size values:;Hash Functions;9;Data Structures and Algorithms
+What happens if there are two or more keys with the same hash value?;Collision;9;Data Structures and Algorithms
+What can then be used as a way to narrow down our search when looking for the item in the map?;Hash Code;9;Data Structures and Algorithms
+What do you also call a Hash Code?;Hash;9;Data Structures and Algorithms
+What is a technique to make things more efficient by effectively narrowing down the search at the outset?;Hashing;9;Data Structures and Algorithms
+What mixes two fixed length inputs and produces a single fixed length output of the same as one of the inputs?;Compression Functions;9;Data Structures and Algorithms
+Name the compression method diving the key value K with modulo M being the size of the Hash Table?;Division Method;9;Data Structures and Algorithms
+Which of the compression methods helps eliminate repeated patterns in a set of integer keys?;MAD;9;Data Structures and Algorithms
+Which of the collision resolution methods uses an additional data structure, preferably a linked list for dynamic allocation into buckets?;Separate Chaining;9;Data Structures and Algorithms
+Which of the collision resolution methods look for the next availability generated by an algorithm?;Open Addressing;9;Data Structures and Algorithms
+Which of the Open Addressing techniques adds 1 to the current computed position and takes modulus based on the table size?;Linear Probing;9;Data Structures and Algorithms
+Which of the Open Addressing techniques uses exponents to solve collisions?;Quadratic Probing;9;Data Structures and Algorithms
+Which inconvenience can Quadratic Probing lead to?;Secondary Clustering;9;Data Structures and Algorithms
+What is the Time Complexity of Hashing?;n;9;Data Structures and Algorithms
+What is the Time Complexity of Rehashing?;n;9;Data Structures and Algorithms
+What is a measure that decides when to increase the HashTable capacity to maintain the search and insert operation complexity of O(1).?;Load Factor;9;Data Structures and Algorithms
+What is done because of the increasing Load Factor?;Rehashing;9;Data Structures and Algorithms
+What is the time complexity for the get() method in Hash Tables?;n;9;Data Structures and Algorithms
+What is the time complexity for the put() method in Hash Tables?;n;9;Data Structures and Algorithms
+What is the time complexity for the remove() method in Hash Tables?;n;9;Data Structures and Algorithms
+Which implementation of Maps has sorted Keys?;Sorted Maps;9;Data Structures and Algorithms
+What is the time complexity for the get() method in Sorted Maps?;logn;9;Data Structures and Algorithms
+What is the time complexity for the put() method in Sorted Maps?;n;9;Data Structures and Algorithms
+What is the time complexity for the remove() method in Sorted Maps?;n;9;Data Structures and Algorithms
+What do you call the maximum value of a function?;Maxima;9;Data Structures and Algorithms
+What is a probabilistic data structure that allows quick data sorting with completely random data sets?;Skip List;9;Data Structures and Algorithms
+What is the time complexity for the get() method in Skip Lists?;logn;9;Data Structures and Algorithms
+What is the time complexity for the put() method in Skip Lists?;logn;9;Data Structures and Algorithms
+What is the time complexity for the remove() method in Skip Lists?;logn;9;Data Structures and Algorithms
