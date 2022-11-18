@@ -17,7 +17,7 @@ public class Course {
      * @param course the course to set
      * @throws IllegalArgumentException if course not in isValid()
      */
-    public void setCourse(String course) {
+    public static void setCourse(String course) {
         if(!isValid(course)){
             throw new IllegalArgumentException("Invalid course");
         }
@@ -28,7 +28,7 @@ public class Course {
      * @param course to set
      * @return true if in String[] courses, false otherwise
      */
-    public boolean isValid(String course){
+    public static boolean isValid(String course){
         String[] courses = {
                 "Web Development",
                 "Web Services",

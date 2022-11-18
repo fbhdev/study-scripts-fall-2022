@@ -2,8 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Main class encapsulates the running time logic
@@ -11,13 +14,16 @@ import java.util.Collections;
  */
 public class Main {
 
-    static String course = "";
+    private static String course;
+    private static final int MODULES = 10;
+
     private enum CourseType {
         WEB_SERVICES, WEB_DEVELOPMENT, PROGRAMMING_TECHNIQUES_2, DATA_STRUCTURES_AND_ALGORITHMS
     }
 
+
     /**
-     * main() runs the program
+     * <h1>main</h1>
      * @param args the arguments to pass
      */
     public static void main(String[] args)  {
@@ -28,7 +34,7 @@ public class Main {
     }
 
     /**
-     * selectCourse() acts as the welcome menu
+     * <h1>selectCourse</h1>
      * @return selection between 1 and 5
      */
     public static int selectCourse(){
@@ -48,7 +54,49 @@ public class Main {
     }
 
     /**
-     * again() prompts the user for another round of studying
+     * <h1>selectModules</h1>
+     * @return true if user wants to study again, false otherwise
+     */
+    public static ArrayList<Integer> selectModules(){
+        Input input;
+        Matcher matcher;
+        Pattern pattern;
+        ArrayList<Integer> modules = new ArrayList<>();
+        while(true) {
+            String question = "Select modules to study (1-" + MODULES + ") | 0 to add all modules, \"Exit\" to exit";
+            System.out.println();
+            input = new Input(question);
+            pattern = Pattern.compile("exit", Pattern.CASE_INSENSITIVE);
+            matcher = pattern.matcher(input.getInput());
+            if (matcher.find()) {
+                System.out.println("No more modules selected.");
+                System.out.println();
+                break;
+            }
+            try {
+                int module = Integer.parseInt(input.getInput());
+                System.out.println(module + " added to study list.");
+                if (module > 0 && module <= MODULES) {
+                    modules.add(module);
+                }
+                else if(module == 0){
+                    for (int count = 1; count <= MODULES; count++) {
+                        modules.add(count);
+                    }
+                    System.out.println("All modules added to study list.");
+                    break;
+                }
+            }
+            catch (Exception e) {
+                System.out.println("Invalid input");
+            }
+        }
+        Collections.sort(modules);
+        return modules;
+    }
+
+    /**
+     * <h1>again</h1>
      * @return true if the user wishes to study more, false otherwise
      */
     public static boolean again(){
@@ -65,7 +113,7 @@ public class Main {
     }
 
     /**
-     * length() returns the desired quiz length, random or user-defined
+     * <h1>length</h1>
      * @param questions, the ArrayList with respective course questions
      * @return the desired length of the quiz
      */
@@ -88,7 +136,7 @@ public class Main {
     }
 
     /**
-     * random() handles logic regarding generation of maximum random number
+     * <h1>random</h1>
      * @param size of the ArrayList questions
      * @return random length
      */
@@ -114,12 +162,13 @@ public class Main {
     }
 
     /**
-     * flow() handles the quiz logic
+     * <h1>flow</h1>
      * @param length number of available questions per respective course
      */
     public static void flow(int length){
         if (length == 0) return;
         Records.setNumQuestions(length);
+        Course.setCourse(course);
         System.out.println();
         System.out.println("Welcome to the " + course + " quiz!");
         System.out.println("You will be asked " + length + " questions.");
@@ -142,7 +191,13 @@ public class Main {
         Records.save(course);
     }
 
-    public static void load(CourseType course) {
+
+    /**
+     * <h1>load</h1>
+     * @param course the course to set
+     * @param modules the modules to set
+     */
+    public static void load(CourseType course, ArrayList<Integer> modules) {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(course + ".csv"));
@@ -151,9 +206,16 @@ public class Main {
         }
         String line;
         try {
+            int module;
             while ((line = reader.readLine()) != null) {
                 String[] split = line.split(";");
-                if (split.length == 4) {
+                try {
+                    module = Integer.parseInt(split[2]);
+                }
+                catch (Exception e){
+                    continue;
+                }
+                if (split.length == 4 && modules.contains(module)) {
                     new Question(split[0], split[1], Integer.parseInt(split[2]), split[3]);
                 }
             }
@@ -162,13 +224,18 @@ public class Main {
         }
     }
 
+    /**
+     * <h1>release</h1>
+     * @param course the course to set
+     * @param shuffle whether to shuffle the questions or not
+     */
     public static void release(CourseType course, boolean shuffle){
-        load(course);
+        load(course, selectModules());
         if (shuffle) Collections.shuffle(Course.allQuestions());
     }
 
     /**
-     * run() handles logic based on menu selection
+     * <h1>processCommands</h1>
      */
     public static void processCommands() {
         int choice = selectCourse();

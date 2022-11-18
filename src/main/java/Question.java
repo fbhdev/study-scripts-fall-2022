@@ -77,6 +77,6 @@ public class Question extends Course {
      */
     @Override
     public String toString() {
-        return getQuestion();
+        return getModule() + " → " + getQuestion();
     }
 }

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Fixed a handful of Web Services questions + added DSA questions for Module 10">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SaveQuestions.java" afterDir="false" />
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Transferred class-specific Question objects into new, respective csv files read at runtime.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATA_STRUCTURES_AND_ALGORITHMS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATA_STRUCTURES_AND_ALGORITHMS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_SERVICES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_SERVICES.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebDev.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WebServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WebServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +68,17 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;Embedded JDK&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/francoisboulay-handfield/Library/Mobile Documents/com~apple~CloudDocs/McGill/Fall 2022/study-script-fall2022/records&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/francoisboulay-handfield/Library/Mobile Documents/com~apple~CloudDocs/McGill/Fall 2022/study-script-fall2022&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5282258&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/records" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -200,7 +200,13 @@
       <workItem from="1667847507124" duration="13263000" />
       <workItem from="1667863310303" duration="6000" />
       <workItem from="1668199898728" duration="7897000" />
-      <workItem from="1668216874766" duration="7525000" />
+      <workItem from="1668216874766" duration="8313000" />
+      <workItem from="1668225999033" duration="14000" />
+      <workItem from="1668275002030" duration="3000" />
+      <workItem from="1668440914036" duration="4928000" />
+      <workItem from="1668465081680" duration="2215000" />
+      <workItem from="1668486644292" duration="2000" />
+      <workItem from="1668528720612" duration="14973000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -314,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668214080757</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Transferred class-specific Question objects into new, respective csv files read at runtime.">
+      <created>1668225026954</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668225026954</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +358,8 @@
     <MESSAGE value="Added questions to Web Services and pruned DSA" />
     <MESSAGE value="Added questions to Web Services and DSA" />
     <MESSAGE value="Fixed a handful of Web Services questions + added DSA questions for Module 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a handful of Web Services questions + added DSA questions for Module 10" />
+    <MESSAGE value="Transferred class-specific Question objects into new, respective csv files read at runtime." />
+    <option name="LAST_COMMIT_MESSAGE" value="Transferred class-specific Question objects into new, respective csv files read at runtime." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

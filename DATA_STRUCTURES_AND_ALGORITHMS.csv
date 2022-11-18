@@ -244,7 +244,7 @@ Which inconvenience can Quadratic Probing lead to?;Secondary Clustering;9;Data S
 What is the Time Complexity of Hashing?;n;9;Data Structures and Algorithms
 What is the Time Complexity of Rehashing?;n;9;Data Structures and Algorithms
 What is a measure that decides when to increase the HashTable capacity to maintain the search and insert operation complexity of O(1).?;Load Factor;9;Data Structures and Algorithms
-What is done because of the increasing Load Factor?;Rehashing;9;Data Structures and Algorithms
+What is performed in maps because of the increasing Load Factor?;Rehashing;9;Data Structures and Algorithms
 What is the time complexity for the get() method in Hash Tables?;n;9;Data Structures and Algorithms
 What is the time complexity for the put() method in Hash Tables?;n;9;Data Structures and Algorithms
 What is the time complexity for the remove() method in Hash Tables?;n;9;Data Structures and Algorithms
@@ -257,3 +257,31 @@ What is a probabilistic data structure that allows quick data sorting with compl
 What is the time complexity for the get() method in Skip Lists?;logn;9;Data Structures and Algorithms
 What is the time complexity for the put() method in Skip Lists?;logn;9;Data Structures and Algorithms
 What is the time complexity for the remove() method in Skip Lists?;logn;9;Data Structures and Algorithms
+What is a self-balancing binary search tree in which each node maintains extra information called a balance factor whose value is either -1, 0 or +1?;AVL Tree;10;Data Structures and Algorithms
+What is the time complexity for the get() method in AVL Trees?;logn;10;Data Structures and Algorithms
+What is the difference between the height of the left subtree and that of the right subtree of that node?;Balance Factor;10;Data Structures and Algorithms
+What is the time complexity for the put() method in AVL Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the remove() method in AVL Trees?;logn;10;Data Structures and Algorithms
+Which rotation is used to balance the tree when the balance factor of a node is -2?;Right Rotation;10;Data Structures and Algorithms
+Which rotation is used to balance the tree when the balance factor of a node is +2?;Left Rotation;10;Data Structures and Algorithms
+True | False, a node in an AVL tree is always deleted as a leaf node.;True;10;Data Structures and Algorithms
+What is a self-balancing binary search tree in which each node maintains extra information called a color which can be either red or black?;Red-Black Tree;10;Data Structures and Algorithms
+What is put on the node colors to ensure that the tree remains balanced?;Color Constraints;10;Data Structures and Algorithms
+True | False, the root of a Red-Black Tree is always black.;True;10;Data Structures and Algorithms
+True | False, the children of a red node are always black.;True;10;Data Structures and Algorithms
+True | False, the number of black nodes on any path from the root to a leaf is always the same.;True;10;Data Structures and Algorithms
+How many properties does Red-Black nodes have?;5;10;Data Structures and Algorithms
+What is the time complexity for the get() method in Red-Black Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the put() method in Red-Black Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the remove() method in Red-Black Trees?;logn;10;Data Structures and Algorithms
+True | False, a node in a Red-Black tree is always inserted as a red node.;True;10;Data Structures and Algorithms
+What  is a special type of self-balancing search tree in which each node can contain more than one key and can have more than two children?;B-Tree;10;Data Structures and Algorithms
+What is the time complexity for the get() method in B-Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the put() method in B-Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the remove() method in B-Trees?;logn;10;Data Structures and Algorithms
+What is a data structure that quickly allows us to maintain a sorted list of numbers?;Binary Search Tree;10;Data Structures and Algorithms
+True | False, all nodes of the right subtree in a Binary Search Tree are greater than the root.;True;10;Data Structures and Algorithms
+True | False, all nodes of the left subtree in a Binary Search Tree are less than the root.;True;10;Data Structures and Algorithms
+What is the time complexity for the get() method in Binary Search Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the put() method in Binary Search Trees?;logn;10;Data Structures and Algorithms
+What is the time complexity for the remove() method in Binary Search Trees?;logn;10;Data Structures and Algorithms

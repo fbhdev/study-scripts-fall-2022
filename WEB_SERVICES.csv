@@ -94,7 +94,7 @@ Which class fills the void of java.net not providing the full flexibility of htt
 True | False, headers are case sensitive.;True;4;Web Services
 Which type of headers contains the location of the source that has been requested by the client?;Response Headers;4;Web Services
 What is the type of headers applied on both Request and Response types?;General Headers;4;Web Services
-Which Response header defines the authentication method that should be used to gain access to a resource behind a proxy serve?;Proxy-Authenticate;4;Web Services
+r?;Proxy-Authenticate;4;Web Services
 Which Request header contains the credentials to authenticate a user agent to a proxy server?;Proxy-Authorization;4;Web Services
 Which header contains the time in seconds the object was in a proxy cache?;Age;4;Web Services
 Which header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs)?;cache-control;4;Web Services
@@ -187,7 +187,7 @@ What are enumerated as services, organized into logical domains, and somehow man
 What do you call functions that could range from processing an order, authenticating users into a web app, or updating a customer's mailing address?;Business Functions;9;Web Services
 Which Web Service flavor supports only simple request/ response operations?;Type 1;9;Web Services
 Which Web Service flavor implements some form of coordination between inbound and outbound operations?;Type 2;9;Web Services
-What do you call call the Type 2 flavor?;Complex;9;Web Services
+What do you call the Type 2 flavor?;Complex;9;Web Services
 What provides deployment and a run-time support environment that makes a web service highly distributed?;Service Container;9;Web Services
 Where does the Service Provider publish the Web Service?;Service Registry;9;Web Services
 Where does the Service Client find the Web Service?;Service Registry;9;Web Services
@@ -202,8 +202,50 @@ What is the Physical Manifestation of the abstract service endpoint that's provi
 What acts as an application Service Provider and as a Service Requestor?;Service Aggregator;9;Web Services
 What are trusted parties that force Service Providers to adhere to information practices that comply with privacy law regulations, or in the absence of such laws, industry best practices?;Service Brokers;9;Web Services
 In microservice architecture, what are processes that communicate with each other over the network in order to fulfill a goal?;Services;9;Web Services
+What makes the application easier to understand, develop, test and become more resilient to architecture erosion?;Modularity;9;Web Services
+What is the process of breaking down a monolithic application into smaller, more manageable pieces?;Decomposition;9;Web Services
 What is a variant of the service-oriented architecture (SOA) architectural style that structures an application as a collection of loosely coupled services.;Microservices;9;Web Services
 True | False, each microservice should be independently deployable.;True;9;Web Services
 True | False, microservices don't need to be loosely coupled with one another.;False;9;Web Services
 True | False, each service unit of the entire application should be the smallest and capable of delivering one specific business goal.;True;9;Web Services
-What are a set of subroutine definitions, communication protocols, and tools for building software;APIs;9;Web Services
+Which framework takes care of most of the low-level details of building the web application to allow us to focus on features and business logic?;Spring;9;Web Services
+What is a framework and inversion of control container for the Java platform?;Spring;9;Web Services
+What is a set of functions and procedures that allow the creation of applications that access the features or data of an operating system, application, or other service;APIs;9;Web Services
+What is an architectural pattern commonly used for developing user interfaces that divide the related program logic into 3 interconnected elements?;MVC;9;Web Services
+What is the Model responsible for in MVC?;Business logic;9;Web Services
+What is the View responsible for in MVC?;User interface;9;Web Services
+What is the Controller responsible for in MVC?;Input processing;9;Web Services
+Which of the MVC elements receives user input from the controller?;Model;9;Web Services
+Which of the MVC elements updates the view to reflect the changes in the model?;Controller;9;Web Services
+Which of the MVC elements displays the data to the user?;View;9;Web Services
+What is the programming principle saying that it is the framework expresses the purpose of the task-specific code?;Inversion of Control;9;Web Services
+True | False, the Spring framework is an inversion of control container.;True;9;Web Services
+Name the design pattern that is a form of Inversion of Control and that aims to separate the concerns of construction and use of an object.;Dependency Injection;9;Web Services
+True | False, the Spring framework is a dependency injection container.;True;9;Web Services
+In Dependency Injection, what introduces the dependency?;Client;9;Web Services
+In Dependency Injection, what is the dependency?;Service;9;Web Services
+In Dependency Injection, what introduces services to the client?;Injector;9;Web Services
+What is the most common form of Dependency Injection?;Constructor Injection;9;Web Services
+In Computer Science, what does Spring use and gives it the ability of processes to examine, introspect, and modify its own structure and behaviour?;Reflection;9;Web Services
+In a loosely coupled system, what are less constrained to the same platform, language, operating system or build environment?;Components;9;Web Services
+What provides availability, scalability, and fault tolerance?;Distributed Systems;9;Web Services
+What requires proper description of a Web Service in terms of business, service and technical information?;Publication;10;Web Services
+What deals with persistently storing the Web Service descriptions in the Web Services registry?;Registration;10;Web Services
+What keeps track of the Web Services that are available for use?;Registry;10;Web Services
+What is the process of finding a Web Service?;Discovery;10;Web Services
+True | False, Service Registries do not contain all the metadata about Web Services and their associated objects.;false;10;Web Services
+What is the process of locating a Web Service?;Discovery;10;Web Services
+True | False, Discovery is not an important part of the Web Services architecture.;False;10;Web Services
+True | False, Discovery is not a process dependent on the architecture of the Service Registry.;False;10;Web Services
+Which of the Discovery types says that the Service Implementation details are bound at design time?;Static Discovery;10;Web Services
+Which of the Discovery types says that the Service Implementation details are bound at run-time?;Dynamic Discovery;10;Web Services
+What is referred to automatically switching to a redundant or standby service?;Failover;10;Web Services
+What is referred to manually switching to a redundant or standby service?;Switchover;10;Web Services
+What has allowed failover practices to become less reliant on physical hardware?;Virtualization;10;Web Services
+What is a virtualization technology that allows multiple operating systems to run on a single physical server?;Hypervisor;10;Web Services
+What usually uses a "heartbeat" to monitor the health of a service?;Load Balancer;10;Web Services
+What is a software that distributes network or application traffic across a number of servers?;Load Balancer;10;Web Services
+What is a cross-industry initiative to create a registry of Web Services?;UDDI;10;Web Services
+True | False, UDDI is deprecated.;True;10;Web Services
+What is a REST based service that is primarily used in the AWS cloud for locating services for the purpose of load balancing and failover in a distributed application?;Eureka;10;Web Services
+What allows services to find and communicate with each other without hard-coding hostname and port number?;Service Discovery;10;Web Services
