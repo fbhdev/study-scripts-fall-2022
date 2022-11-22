@@ -183,7 +183,6 @@ Which class represents the SAAJ API in Java?;SOAPConnection;8;Web Services
 What do you call the connection type going from one endpoint to another?;point-to-point;8;Web Services
 How do you call messages sent using the SAAJ API?;Request-Response Messages;8;Web Services
 What involves fitting together resources and systems from diverse organizations?;Distributed Software Systems;9;Web Services
-What are enumerated as services, organized into logical domains, and somehow managed ;;9;Web Services
 What do you call functions that could range from processing an order, authenticating users into a web app, or updating a customer's mailing address?;Business Functions;9;Web Services
 Which Web Service flavor supports only simple request/ response operations?;Type 1;9;Web Services
 Which Web Service flavor implements some form of coordination between inbound and outbound operations?;Type 2;9;Web Services
@@ -249,3 +248,44 @@ What is a cross-industry initiative to create a registry of Web Services?;UDDI;1
 True | False, UDDI is deprecated.;True;10;Web Services
 What is a REST based service that is primarily used in the AWS cloud for locating services for the purpose of load balancing and failover in a distributed application?;Eureka;10;Web Services
 What allows services to find and communicate with each other without hard-coding hostname and port number?;Service Discovery;10;Web Services
+What do you call the attack when a perpetrator positions himself in a conversation between a user and an application—either to eavesdrop or to impersonate one of the parties, making it appear as if a normal exchange of information is underway?;Man in the Middle;11;Web Services
+Which of the security principles states secret information is protected from unauthorized disclosure?;Confidentiality;11;Web Services
+Which of the security principles states that information is protected from unauthorized modification?;Integrity;11;Web Services
+Which of the security principles states that information is protected from unauthorized access?;Availability;11;Web Services
+What is a cryptographic algorithm that takes a message of any length and produces a fixed-length output called a hash value?;Hashing;11;Web Services
+What is the process of scrambling a message so that it is unreadable?;Encryption;11;Web Services
+What is the process of converting a body of information from one system of communication to another?;Encoding;11;Web Services
+WHat is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation?;Base64;11;Web Services
+What is a cryptographic algorithm that uses a public key to encrypt a message and a private key to decrypt it?;Asymmetric Encryption;11;Web Services
+What is a cryptographic algorithm that uses a single key to encrypt and decrypt a message?;Symmetric Encryption;11;Web Services
+What is a cryptographic hash function that produces a 256-bit (32-byte) hash value?;SHA-256;11;Web Services
+What is a cryptographic hash function that produces a 512-bit (64-byte) hash value?;SHA-512;11;Web Services
+What is the term used when clients and servers establish secret keys with which to communicate?;Handshake;11;Web Services
+True | False, the handshake process is a one-way process.;False;11;Web Services
+Which is the best protocol that provides secure communications over a computer network?;TLS;11;Web Services
+What is the process of determining whether someone or something is, in fact, who or what it is declared to be?;Authentication;11;Web Services
+What is the function of specifying the identity of a user or process?;Identification;11;Web Services
+What does TLS stand for?;Transport Layer Security;11;Web Services
+What is an open standard for exchanging authentication and authorization data between an identity provider and a service provider?;SAML;11;Web Services
+What can help identify who got access to the data and how they got it?;Logging;11;Web Services
+What is an extension to SOAP that allows for the secure exchange of messages between two parties?;WS-Security;11;Web Services
+What is the practice of using security software, hardware, techniques, best practices and procedures to protect computer applications from external security threats?;Application Security;11;Web Services
+What is the process of identifying and fixing security vulnerabilities in software?;Vulnerability Assessment;11;Web Services
+Which commonly used software countermeasure determine how files are executed and how data is handled based based on the specific installed program?;Application Firewall;11;Web Services
+What is a software that monitors and controls the network traffic based on predetermined security rules?;Network Firewall;11;Web Services
+Which attack says the software improperly writes past a memory boundary?;Out of bounds write;11;Web Services
+Which attack targets software that improperly reads past a memory boundary?;Out of bounds read;11;Web Services
+Which attack targets the improper neutralization of potentially malicious input?;Cross-site scripting;11;Web Services
+Which attack targets the improper neutralization of special elements used in an SQL command?;SQL Injection;11;Web Services
+Which attack targets the lack of validation or improper validation of user-supplied input?;Input Validation;11;Web Services
+Which attack targets the improper neutralization of special elements used in an OS command?;OS Command Injection;11;Web Services
+Which attack targets software that references memory locations that are not allocated?;Memory Corruption;11;Web Services
+Which attack targets improper limitation of a path name to a restricted directory?;Directory Traversal;11;Web Services
+Which attack targets a web app failing to validate a user request was intentionally sent?;Cross site request forgery;11;Web Services
+What refers to vulnerabilities that enable attackers to elevate their own permissions or otherwise bypass access controls to gain access to data or systems they are not authorized to use?;Privilege Escalation;11;Web Services
+What refers to vulnerabilities caused by failures to apply cryptographic solutions to data protection?;Cryptography Failures;11;Web Services
+What enable attacks to submit malicious code to a web application?;Injection Flaws;11;Web Services
+What refers to risks incurred because of system architecture or design flaws?;Architecture Flaws;11;Web Services
+What occurs when occur when an application's security configuration enables attacks?;Configuration Flaws;11;Web Services
+What relates to an application's use of software components that are unpatched, out of date, or otherwise vulnerable?;Component Flaws;11;Web Services
+What covers vulnerabilities related to application code and infrastructure?;Code Flaws;11;Web Services

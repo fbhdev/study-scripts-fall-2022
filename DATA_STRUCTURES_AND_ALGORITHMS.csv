@@ -285,3 +285,47 @@ True | False, all nodes of the left subtree in a Binary Search Tree are less tha
 What is the time complexity for the get() method in Binary Search Trees?;logn;10;Data Structures and Algorithms
 What is the time complexity for the put() method in Binary Search Trees?;logn;10;Data Structures and Algorithms
 What is the time complexity for the remove() method in Binary Search Trees?;logn;10;Data Structures and Algorithms
+Which family of algorithms breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved?;Divide and Conquer;11;Data Structures and Algorithms
+What is the first step in the Divide and Conquer algorithm?;Divide;11;Data Structures and Algorithms
+What is the second step in the Divide and Conquer algorithm?;Conquer;11;Data Structures and Algorithms
+What is the third step in the Divide and Conquer algorithm?;Combine;11;Data Structures and Algorithms
+True | False, the Divide and Conquer algorithm is a recursive algorithm.;True;11;Data Structures and Algorithms
+True | False, the Binary Search algorithm works on unsorted arrays;false;11;Data Structures and Algorithms
+Which of the sorting algorithms divide the array into two halves until we repeatedly divide the array into two halves until we have only one element in each half?;Merge Sort;11;Data Structures and Algorithms
+True | False, you can perform Merge Sort on an unsorted array.;True;11;Data Structures and Algorithms
+What is the time complexity for Merge Sort?;nlogn;11;Data Structures and Algorithms
+What is the time complexity for Binary Search?;logn;11;Data Structures and Algorithms
+What is the time complexity for Quick Sort?;nlogn;11;Data Structures and Algorithms
+What is the tendency of a processor to access the same set of memory locations repeatedly?;Locality of Reference;11;Data Structures and Algorithms
+What is a hardware optimization that takes the benefits of spatial and temporal locality and can be used on several levels of the memory hierarchy?;Cache;11;Data Structures and Algorithms
+What is a typical memory reference feature of regular programs?;Spatial Locality;11;Data Structures and Algorithms
+What is the tendency of programs to use data items over and again during the course of their execution?;Temporal Locality;11;Data Structures and Algorithms
+What is the time complexity of traversing items in merge sort?;n;11;Data Structures and Algorithms
+What is the time complexity of the height of a merge sort tree?;logn;11;Data Structures and Algorithms
+What is a mathematical model that defines a sequence based on a rule that gives the next term as a function of the previous term?;Recurrence Relation;11;Data Structures and Algorithms
+True | False, recursive Merge Sort is fasted than array-based Merge Sort.;True;11;Data Structures and Algorithms
+Which sorting algorithm works by selecting a pivot element from the array and portioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot?;Quick Sort;11;Data Structures and Algorithms
+True | False, Quick Sort is a stable sorting algorithm.;False;11;Data Structures and Algorithms
+What is the first step in Quick Sort?;Partition;11;Data Structures and Algorithms
+What is the second step in Quick Sort?;Recursively Sort;11;Data Structures and Algorithms
+What is the time complexity of Quick Sort?;n^2;11;Data Structures and Algorithms
+What is the time complexity of the height of a Quick Sort tree?;n;11;Data Structures and Algorithms
+What is the time complexity of traversing items in Quick Sort?;n;11;Data Structures and Algorithms
+What means that it uses only a small amount of memory in addition to that needed for the original input?;In-place;11;Data Structures and Algorithms
+What can speed up Quick Sort?;Random Pivot;11;Data Structures and Algorithms
+Which heuristic will more often choose a good pivot and computing a median of three may require lower overhead than selecting a pivot with a random number generator.;Median of Three;11;Data Structures and Algorithms
+What is a sorting algorithm that is based on the idea of inserting each item into its proper place to form the sorted list?;Insertion Sort;11;Data Structures and Algorithms
+True | False, Quick Sort has a better performance on large data sets.;True;11;Data Structures and Algorithms
+What is the time complexity of Insertion Sort?;n^2;11;Data Structures and Algorithms
+What is a sorting algorithm that divides the unsorted array elements into several groups?;Bucket Sort;11;Data Structures and Algorithms
+What is a sorting algorithm that compares two adjacent elements and swaps them until they are in the intended order?;Bubble Sort;11;Data Structures and Algorithms
+What is the time complexity of Bubble Sort?;n^2;11;Data Structures and Algorithms
+What is a type of memory addressing that often arises when addressing vectors in sparse linear algebra operations?;Scatter/Gather;11;Data Structures and Algorithms
+What is a sorting algorithm that selects the smallest element from an unsorted list in each iteration and places that element at the beginning of the unsorted list?;Selection Sort;11;Data Structures and Algorithms
+What is the time complexity of Selection Sort?;n^2;11;Data Structures and Algorithms
+What do you need to find as the first step in Selection Sort?;Smallest Value;11;Data Structures and Algorithms
+In sorting algorithms, what says that the relative order of the items with equal sort keys is maintained?;Stability;11;Data Structures and Algorithms
+True | False, Heapsort is a stable sorting algorithm;False;11;Data Structures and Algorithms
+What is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value?;Radix Sort;11;Data Structures and Algorithms
+True | False, Radix Sort is a stable sorting algorithm.;True;11;Data Structures and Algorithms
+What is a hybrid approach that is essentially a bottom-up merge-sort that takes advantage of initial runs in the data while using insertion-sort to build additional runs?;Tim Sort;11;Data Structures and Algorithms

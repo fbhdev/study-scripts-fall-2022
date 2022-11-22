@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.regex.Matcher;
@@ -15,7 +14,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     private static String course;
-    private static final int MODULES = 10;
+    private static final int MODULES = 11;
 
     private enum CourseType {
         WEB_SERVICES, WEB_DEVELOPMENT, PROGRAMMING_TECHNIQUES_2, DATA_STRUCTURES_AND_ALGORITHMS
@@ -64,6 +63,9 @@ public class Main {
         ArrayList<Integer> modules = new ArrayList<>();
         while(true) {
             String question = "Select modules to study (1-" + MODULES + ") | 0 to add all modules, \"Exit\" to exit";
+            if (modules.size() > 0) {
+                System.out.println("Selected modules: " + modules);
+            }
             System.out.println();
             input = new Input(question);
             pattern = Pattern.compile("exit", Pattern.CASE_INSENSITIVE);
