@@ -329,3 +329,19 @@ True | False, Heapsort is a stable sorting algorithm;False;11;Data Structures an
 What is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value?;Radix Sort;11;Data Structures and Algorithms
 True | False, Radix Sort is a stable sorting algorithm.;True;11;Data Structures and Algorithms
 What is a hybrid approach that is essentially a bottom-up merge-sort that takes advantage of initial runs in the data while using insertion-sort to build additional runs?;Tim Sort;11;Data Structures and Algorithms
+Which text processing method compares the pattern to the text taking one character a time?;Brute Force;12;Data Structures and Algorithms
+Which text processing method is an approach for solving a problem by selecting the best option available at the moment?;Greedy;12;Data Structures and Algorithms
+What is the time complexity for the Brute Force algorithm?;n*m;12;Data Structures and Algorithms
+Which text processing algorithm takes a a backward approach to the problem of finding a pattern in a text?;Boyer-Moore;12;Data Structures and Algorithms
+Which Boyer-Moore heuristic says that if the pattern is not found in the text, then the pattern is shifted by the length of the pattern?;Bad Character Heuristic;12;Data Structures and Algorithms
+Which Boyer-Moore heuristic looks for the last occurrence of the character in the pattern and shifts the pattern so that the character aligns with the last occurrence of the character in the pattern?;Good Suffix Heuristic;12;Data Structures and Algorithms
+Which text processing algorithm is a pattern matching algorithm that uses a hash function to find the pattern in the text?;Rabin-Karp;12;Data Structures and Algorithms
+What is the time complexity of the Boyer-Moore algorithm?;n*m;12;Data Structures and Algorithms
+Which text processing algorithm precomputes self-overlaps between portions of the pattern so that when a mismatch occurs, the pattern can be shifted by more than one character?;KMP;12;Data Structures and Algorithms
+What is the time complexity of the KMP algorithm?;n+m;12;Data Structures and Algorithms
+Which ADT does the Trie data structure implement?;Tree;12;Data Structures and Algorithms
+True | False, a Trie has an empty root node.;True;12;Data Structures and Algorithms
+What do you call the trie similar to standard trie but ensures that each internal node has at least two children?;Compressed Trie;12;Data Structures and Algorithms
+What do you call the core information stored by a search engine?;Inverted Index;12;Data Structures and Algorithms
+What is a data structure that stores a set of strings in a way that allows for efficient retrieval of strings that share a common prefix?;Trie;12;Data Structures and Algorithms
+What is a technique of compressing data to reduce its size without losing any of the details?;Huffman Coding;12;Data Structures and Algorithms

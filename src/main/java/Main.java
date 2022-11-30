@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class Main {
 
     private static String course;
-    private static final int MODULES = 11;
+    private static final int MODULES = 12;
 
     private enum CourseType {
         WEB_SERVICES, WEB_DEVELOPMENT, PROGRAMMING_TECHNIQUES_2, DATA_STRUCTURES_AND_ALGORITHMS
@@ -64,7 +64,11 @@ public class Main {
         while(true) {
             String question = "Select modules to study (1-" + MODULES + ") | 0 to add all modules, \"Exit\" to exit";
             if (modules.size() > 0) {
-                System.out.println("Selected modules: " + modules);
+                StringBuilder sb = new StringBuilder();
+                for(int module : modules){
+                    sb.append(module).append(" ");
+                }
+                System.out.println("Selected modules: " + sb);
             }
             System.out.println();
             input = new Input(question);
