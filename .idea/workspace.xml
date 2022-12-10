@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added Module 11 questions for DSA and Web Services">
+    <list default="true" id="6f2fb65a-c2b4-44fd-87dd-72b7db6ef1b6" name="Changes" comment="Added Module 12 questions for DSA">
+      <change afterPath="$PROJECT_DIR$/json-simple-1.1.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATA_STRUCTURES_AND_ALGORITHMS.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATA_STRUCTURES_AND_ALGORITHMS.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WEB_SERVICES.csv" beforeDir="false" afterPath="$PROJECT_DIR$/WEB_SERVICES.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +218,15 @@
       <workItem from="1669585729169" duration="65000" />
       <workItem from="1669677156355" duration="714000" />
       <workItem from="1669689437549" duration="2000" />
-      <workItem from="1669764186478" duration="665000" />
+      <workItem from="1669764186478" duration="688000" />
+      <workItem from="1669783233811" duration="27000" />
+      <workItem from="1669783611473" duration="73000" />
+      <workItem from="1670261000976" duration="2808000" />
+      <workItem from="1670274410379" duration="4101000" />
+      <workItem from="1670278750461" duration="696000" />
+      <workItem from="1670553727329" duration="4734000" />
+      <workItem from="1670568086185" duration="5797000" />
+      <workItem from="1670606825322" duration="15123000" />
     </task>
     <task id="LOCAL-00001" summary="Added logging component + fixed bugs + added JSON dependency">
       <created>1666021619251</created>
@@ -352,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669077051603</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added Module 12 questions for DSA">
+      <created>1669768010742</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669768010742</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +402,8 @@
     <MESSAGE value="Transferred class-specific Question objects into new, respective csv files read at runtime." />
     <MESSAGE value="Added Module 10 questions for DSA and Web Services" />
     <MESSAGE value="Added Module 11 questions for DSA and Web Services" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Module 11 questions for DSA and Web Services" />
+    <MESSAGE value="Added Module 12 questions for DSA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Module 12 questions for DSA" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

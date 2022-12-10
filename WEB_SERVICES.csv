@@ -94,8 +94,8 @@ Which class fills the void of java.net not providing the full flexibility of htt
 True | False, headers are case sensitive.;True;4;Web Services
 Which type of headers contains the location of the source that has been requested by the client?;Response Headers;4;Web Services
 What is the type of headers applied on both Request and Response types?;General Headers;4;Web Services
-r?;Proxy-Authenticate;4;Web Services
-Which Request header contains the credentials to authenticate a user agent to a proxy server?;Proxy-Authorization;4;Web Services
+Which Response header contains the credentials to authenticate a user agent to a proxy server?;Proxy-Authenticate;4;Web Services
+Which Request header contains the credentials to authorize a user agent to a proxy server?;Proxy-Authorization;4;Web Services
 Which header contains the time in seconds the object was in a proxy cache?;Age;4;Web Services
 Which header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs)?;cache-control;4;Web Services
 Which header clears browsing data (cookies, storage, cache) associated with the requesting website?;Clear-Site-Data;4;Web Services
@@ -289,3 +289,19 @@ What refers to risks incurred because of system architecture or design flaws?;Ar
 What occurs when occur when an application's security configuration enables attacks?;Configuration Flaws;11;Web Services
 What relates to an application's use of software components that are unpatched, out of date, or otherwise vulnerable?;Component Flaws;11;Web Services
 What covers vulnerabilities related to application code and infrastructure?;Code Flaws;11;Web Services
+What are normally associated with content control and control filtering?;Web Filters;12;Web Services
+What is software that restricts or controls the content an Internet user is capable to access?;Web Filter;12;Web Services
+What determines what content will be available or blocked?;Filtering Policy;12;Web Services
+What works by detecting patterns in content, such as objects inside photos or text strings, that signal undesired content that must be restricted or screened out?;Content Filtering;12;Web Services
+What are commonly specified in content filters, and if they match, they signify undesired content that should be filtered out?;Strings;12;Web Services
+What is a type of content filtering that uses a database of known malicious URLs to block access to them?;URL Filtering;12;Web Services
+What is a type of content filtering that uses a database of known malicious IP addresses to block access to them?;IP Filtering;12;Web Services
+What is a type of content filtering that uses a database of known malicious domains to block access to them?;Domain Filtering;12;Web Services
+What is a type of content filtering that uses a database of known malicious file types to block access to them?;File Type Filtering;12;Web Services
+What is a type of content filtering that uses a database of known malicious search terms to block access to them?;Search Engine Filtering;12;Web Services
+Which JAX-RS interface implements Request filters?;ContainerRequestFilter;12;Web Services
+Which JAX-RS interface implements Response filters?;ContainerResponseFilter;12;Web Services
+Which ContainerRequestFilter annotation will execute before the request is processed?;PreMatching;12;Web Services
+Which ContainerRequestFilter annotation will execute after the request is processed?;PostMatching;12;Web Services
+Which filter will run before the HTTP request is matched to a specific JAX-RS method?;HttpMethodOverride;12;Web Services
+Which method uses the ContainerRequestContext parameter to check the value of the HTTP header?;filter;12;Web Services

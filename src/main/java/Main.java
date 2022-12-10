@@ -52,46 +52,65 @@ public class Main {
         return 0;
     }
 
+    private static boolean isValidAnswer(String input, String expected){
+        Pattern pattern = Pattern.compile(expected, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
+        return matcher.find();
+    }
+
+    private static void selectedModules(ArrayList<Integer> modules){
+        if (modules.size() > 0) {
+            StringBuilder sb = new StringBuilder();
+            for(int module : modules){
+                sb.append(module).append(" ");
+            }
+            System.out.println("Selected modules: " + sb);
+        }
+    }
+
+    private static boolean isAllSelected(ArrayList<Integer> modules){
+        return modules.size() == MODULES;
+    }
+
+    private static void addModule(String input, ArrayList<Integer> modules){
+        int module = Integer.parseInt(input);
+        if (module > 0 && module <= MODULES) {
+            System.out.println(module + " added to study list.");
+            modules.add(module);
+        }
+        else if(module == 0){
+            for (int count = 1; count <= MODULES; count++) {
+                modules.add(count);
+            }
+            System.out.println(modules.size() + " modules added to study list.");
+        }
+        else {
+            System.out.println("Invalid module number.");
+        }
+    }
+
     /**
      * <h1>selectModules</h1>
      * @return true if user wants to study again, false otherwise
      */
     public static ArrayList<Integer> selectModules(){
         Input input;
-        Matcher matcher;
-        Pattern pattern;
         ArrayList<Integer> modules = new ArrayList<>();
         while(true) {
-            String question = "Select modules to study (1-" + MODULES + ") | 0 to add all modules, \"Exit\" to exit";
-            if (modules.size() > 0) {
-                StringBuilder sb = new StringBuilder();
-                for(int module : modules){
-                    sb.append(module).append(" ");
-                }
-                System.out.println("Selected modules: " + sb);
+            if (isAllSelected(modules)) {
+                break;
             }
+            selectedModules(modules);
+            String question = "Select modules to study (1-" + MODULES + ") | 0 to add all modules, \"Exit\" to exit";
             System.out.println();
             input = new Input(question);
-            pattern = Pattern.compile("exit", Pattern.CASE_INSENSITIVE);
-            matcher = pattern.matcher(input.getInput());
-            if (matcher.find()) {
+            if (isValidAnswer(input.getInput(), "exit")) {
                 System.out.println("No more modules selected.");
                 System.out.println();
                 break;
             }
             try {
-                int module = Integer.parseInt(input.getInput());
-                System.out.println(module + " added to study list.");
-                if (module > 0 && module <= MODULES) {
-                    modules.add(module);
-                }
-                else if(module == 0){
-                    for (int count = 1; count <= MODULES; count++) {
-                        modules.add(count);
-                    }
-                    System.out.println("All modules added to study list.");
-                    break;
-                }
+                addModule(input.getInput(), modules);
             }
             catch (Exception e) {
                 System.out.println("Invalid input");
