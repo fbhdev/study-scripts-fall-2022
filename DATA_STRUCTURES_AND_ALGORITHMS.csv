@@ -308,7 +308,7 @@ Which sorting algorithm works by selecting a pivot element from the array and po
 True | False, Quick Sort is a stable sorting algorithm.;False;11;Data Structures and Algorithms
 What is the first step in Quick Sort?;Partition;11;Data Structures and Algorithms
 What is the second step in Quick Sort?;Recursively Sort;11;Data Structures and Algorithms
-What is the time complexity of Quick Sort?;n^2;11;Data Structures and Algorithms
+What is the time complexity of Quick Sort?;nlogn;11;Data Structures and Algorithms
 What is the time complexity of the height of a Quick Sort tree?;n;11;Data Structures and Algorithms
 What is the time complexity of traversing items in Quick Sort?;n;11;Data Structures and Algorithms
 What means that it uses only a small amount of memory in addition to that needed for the original input?;In-place;11;Data Structures and Algorithms
