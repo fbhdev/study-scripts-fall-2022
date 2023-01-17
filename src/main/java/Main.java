@@ -52,12 +52,22 @@ public class Main {
         return 0;
     }
 
+    /**
+     * <h1>isValidAnswer</h1>
+     * @param input the input to process
+     * @param expected the expected input
+     * @return true if the input is the expected input
+     */
     private static boolean isValidAnswer(String input, String expected){
         Pattern pattern = Pattern.compile(expected, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(input);
         return matcher.find();
     }
 
+    /**
+     * <h1>selectedModules</h1>
+     * @param modules the modules to process
+     */
     private static void selectedModules(ArrayList<Integer> modules){
         if (modules.size() > 0) {
             StringBuilder sb = new StringBuilder();
@@ -68,10 +78,20 @@ public class Main {
         }
     }
 
+    /**
+     * <h1>isAllSelected</h1>
+     * @param modules the modules to process
+     * @return the total number of modules
+     */
     private static boolean isAllSelected(ArrayList<Integer> modules){
         return modules.size() == MODULES;
     }
 
+    /**
+     * <h1>addModule</h1>
+     * @param input the input to process
+     * @param modules the modules to process
+     */
     private static void addModule(String input, ArrayList<Integer> modules){
         int module = Integer.parseInt(input);
         if (module > 0 && module <= MODULES) {
@@ -91,7 +111,7 @@ public class Main {
 
     /**
      * <h1>selectModules</h1>
-     * @return true if user wants to study again, false otherwise
+     * @return the selected modules
      */
     public static ArrayList<Integer> selectModules(){
         Input input;

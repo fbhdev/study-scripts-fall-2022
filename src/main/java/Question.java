@@ -1,4 +1,5 @@
 /**
+ * <h1>Question</h1>
  * @author Francois Boulay-Handfield
  */
 public class Question extends Course {
@@ -34,7 +35,7 @@ public class Question extends Course {
     }
 
     /**
-     * askUser() handles quizzing flow
+     * <h1>askUser</h1>
      */
     public void askUser(){
         Input input = new Input(getQuestion());
@@ -55,6 +56,7 @@ public class Question extends Course {
     }
 
     /**
+     * <h1>getQuestion</h1>
      * @return the question asked the user
      */
     public String getQuestion() {
@@ -62,17 +64,23 @@ public class Question extends Course {
     }
 
     /**
+     * <h1>getAnswer</h1>
      * @return the expected answer
      */
     public String getAnswer() {
         return answer;
     }
 
+    /**
+     * <h1>getModule</h1>
+     * @return the module the question belongs to
+     */
     public int getModule(){
         return module;
     }
 
     /**
+     * <h1>toString</h1>
      * @return a formatted string
      */
     @Override

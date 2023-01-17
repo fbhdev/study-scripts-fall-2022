@@ -55,6 +55,22 @@ public class Grade {
 
     /**
      * isValid() checks if the grade is valid
+     * @return true or false if the grade is valid
+     */
+    public int getTotal() {
+        return total;
+    }
+
+    /**
+     * isValid() checks if the grade is valid
+     * @param total the total to set
+     */
+    public void setTotal(int total) {
+        Grade.total = total;
+    }
+
+    /**
+     * isValid() checks if the grade is valid
      * @param grade the grade to set
      * @return true if the grade is between 0 and 100
      */

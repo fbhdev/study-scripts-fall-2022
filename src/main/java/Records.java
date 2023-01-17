@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 
 /**
  * Logs user's stats
+ * <h1>Records</h1>
  * @author Francois Boulay-Handfield
  */
 public class Records {
@@ -15,11 +16,16 @@ public class Records {
     private static final ArrayList<Boolean> successes = new ArrayList<>();
     private static int numQuestions;
 
+    /**
+     * Constructor
+     * <h1>Records</h1>
+     */
     public Records(){
     }
 
     /**
      * save() handles the logic behind saving a JSON with user data
+     * <h1>save</h1>
      * @param course to save logs for
      */
     public static void save(String course) {
@@ -48,6 +54,7 @@ public class Records {
     }
 
     /**
+     * <h1>grade</h1>
      * @return the user's grade
      * failsafe mechanisms keep stats stable
      */
@@ -66,6 +73,7 @@ public class Records {
     }
 
     /**
+     * <h1>reset</h1>
      * resets objects to 0 for the next round
      */
     private static void reset(){
@@ -76,6 +84,7 @@ public class Records {
     }
 
     /**
+     * <h1>addName</h1>
      * @param name adds the question name to the global names ArrayList
      */
     public void addName(String name){
@@ -83,6 +92,7 @@ public class Records {
     }
 
     /**
+     * <h1>addSuccess</h1>
      * @param success adds whether user was successful
      */
     public void addSuccess(boolean success){
@@ -90,6 +100,7 @@ public class Records {
     }
 
     /**
+     * <h1>getNumQuestions</h1>
      * @return gets the total number of questions asked
      */
     public static int getNumQuestions() {
@@ -97,6 +108,7 @@ public class Records {
     }
 
     /**
+     * <h1>setNumQuestions</h1>
      * @param numQuestions the number of questions to set
      */
     public static void setNumQuestions(int numQuestions) {
