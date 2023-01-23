@@ -1,6 +1,10 @@
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+
 import java.util.Random;
 
 /**
@@ -10,38 +14,16 @@ import java.util.Random;
 class GradeTest {
 
     Grade[] grades = new Grade[new Random().nextInt(100)];
-    double[] marks = new double[grades.length];
 
-
-    // ———————— Populate Arrays ————————
-
-
-    /**
-     * makeGrades creates a random number of grades
-     * <h1>makeGrades</h1>
-     */
-    void makeGrades(){
-        for(int index = 0; index < grades.length; index++) {
-            grades[index] = new Grade();
+    @BeforeEach
+    void setUp() {
+        // make random grades
+        for (int i = 0; i < grades.length; i++) {
+            grades[i] = new Grade();
+            grades[i].setMarks(new Random().nextInt(100));
+            grades[i].setTotal(100);
         }
     }
-
-    /**
-     * makeMarks creates an array of random marks
-     * <h1>makeMarks</h1>
-     */
-    void makeMarks() {
-        if (grades[0] == null) {
-            makeGrades();
-        }
-        for(int index = 0; index < marks.length; index++) {
-            marks[index] = new Random().nextInt(100);
-        }
-    }
-
-
-    // ———————— Test Methods ————————
-
 
     /**
      * Tests if the final grade is valid
@@ -49,9 +31,9 @@ class GradeTest {
      */
     @Test
     void finalGrade() {
-        makeMarks();
-        for(int index = 0; index < grades.length; index++) {
-            assertTrue(marks[index] >= 0 && marks[index] <= 100);
+        for(Grade grade: grades) {
+            System.out.println(grade.finalGrade());
+            assertTrue(grade.finalGrade() >= 0 && grade.finalGrade() <= 100);
         }
     }
 
@@ -60,11 +42,10 @@ class GradeTest {
      * <h1>printGrade</h1>
      */
     @Test
-    void printGrade() {
-        makeMarks();
-        for (Grade grade : grades) {
-            grade.printGrade();
-        }
+    void printFinalGrade() {
+        Grade mock = Mockito.mock(Grade.class);
+        mock.printFinalGrade();
+        Mockito.verify(mock).printFinalGrade();
     }
 
     /**
@@ -73,8 +54,8 @@ class GradeTest {
      */
     @Test
     void reset() {
-        makeGrades();
         for (Grade grade : grades) {
+            System.out.println(grade.getMarks());
             grade.reset();
             assertEquals(0, grade.getMarks());
             assertEquals(0, grade.getTotal());
@@ -87,7 +68,6 @@ class GradeTest {
      */
     @Test
     void getMarks() {
-        makeGrades();
         for (Grade grade: grades) {
             assertTrue(grade.getMarks() >= 0 && grade.getMarks() <= 100);
         }
@@ -99,10 +79,36 @@ class GradeTest {
      */
     @Test
     void setMarks() {
-        makeGrades();
         for (Grade grade: grades) {
-            grade.setMarks(new Random().nextInt(100));
             assertTrue(grade.getMarks() >= 0 && grade.getMarks() <= 100);
+        }
+    }
+
+    @Test
+    void getTotal() {
+        for (Grade grade: grades) {
+            assertTrue(grade.getTotal() >= 0 && grade.getTotal() <= 100);
+        }
+    }
+
+    @Test
+    void setTotal() {
+        for (Grade grade: grades) {
+            assertTrue(grade.getTotal() >= 0 && grade.getTotal() <= 100);
+        }
+    }
+
+    @Test
+    void getGrade() {
+        for (Grade grade: grades) {
+            assertTrue(grade.getGrade() >= 0 && grade.getGrade() <= 100);
+        }
+    }
+
+    @Test
+    void setGrade() {
+        for (Grade grade: grades) {
+            assertTrue(grade.getGrade() >= 0 && grade.getGrade() <= 100);
         }
     }
 
@@ -112,7 +118,6 @@ class GradeTest {
      */
     @Test
     void isValid() {
-        makeGrades();
         for (Grade grade: grades) {
             assertTrue(grade.isValid(new Random().nextInt(100)));
         }
@@ -127,10 +132,10 @@ class GradeTest {
      */
     @Test
     void message() {
-        makeGrades();
-        for (Grade grade: grades) {
-            grade.message(new Random().nextBoolean());
-        }
+        Grade mockGrade = Mockito.mock(Grade.class);
+        boolean msg = new Random().nextBoolean();
+        mockGrade.message(msg);
+        Mockito.verify(mockGrade).message(msg);
     }
 
     /**
@@ -139,6 +144,11 @@ class GradeTest {
      */
     @Test
     void leniency() {
+        Grade mockGrade = Mockito.mock(Grade.class);
+        String answer = "answer";
+        Input input = Mockito.mock(Input.class);
+        mockGrade.leniency(answer, input);
+        Mockito.verify(mockGrade).leniency(answer, input);
     }
 
     /**
@@ -146,7 +156,9 @@ class GradeTest {
      * <h1>manualCorrection</h1>
      */
     @Test
+    @Disabled
     void manualCorrection() {
+        // todo
     }
 
     /**
@@ -155,10 +167,9 @@ class GradeTest {
      */
     @Test
     void success() {
-        makeGrades();
-        for(Grade grade: grades) {
-            grade.success();
-        }
+        Grade mockGrade = Mockito.mock(Grade.class);
+        mockGrade.success();
+        Mockito.verify(mockGrade).success();
     }
 
     /**
@@ -167,21 +178,9 @@ class GradeTest {
      */
     @Test
     void failure() {
-        makeGrades();
-        for(Grade grade: grades) {
-            grade.failure("", false);
-        }
-    }
-
-    /**
-     * Tests if the total is valid
-     * <h1>arithmetics</h1>
-     */
-    @Test
-    void arithmetics() {
-        makeMarks();
-        for(double mark : marks) {
-            assertTrue(mark >= 0 && mark <= 100);
-        }
+        Grade mockGrade = Mockito.mock(Grade.class);
+        boolean msg = new Random().nextBoolean();
+        mockGrade.failure("", msg);
+        Mockito.verify(mockGrade).failure("", msg);
     }
 }

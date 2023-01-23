@@ -37,14 +37,15 @@ public class Main {
      * @return selection between 1 and 5
      */
     public static int selectCourse(){
-        System.out.println("1. Web Services");
-        System.out.println("2. Web Development");
-        System.out.println("3. Data Structures and Algorithms");
-        System.out.println("4. Programming Techniques 2");
-        System.out.println("5. Exit");
+        int menuCount = 0;
+        System.out.println(++menuCount + ". Web Services");
+        System.out.println(++menuCount + ". Web Development");
+        System.out.println(++menuCount + ". Data Structures and Algorithms");
+        System.out.println(++menuCount + ". Programming Techniques 2");
+        System.out.println(++menuCount + ". Exit");
         Input input = new Input("Select a course");
         System.out.println();
-        for(int count = 1; count <= 5; count++){
+        for(int count = 1; count <= menuCount; count++){
             if(input.getInput().equals(String.valueOf(count))){
                 return count;
             }
@@ -147,13 +148,15 @@ public class Main {
     public static boolean again(){
         while (true) {
             Input input = new Input("Would you like to study more? (y/n)");
-            if (input.getInput().equalsIgnoreCase("y")) {
+            if (isValidAnswer(input.getInput(), "^y")) {
                 return true;
             }
-            if (input.getInput().equalsIgnoreCase("n")) {
+            else if (isValidAnswer(input.getInput(), "^n")) {
                 return false;
             }
-            System.out.print("Please enter a valid input -> ");
+            else {
+                System.out.println("Invalid input");
+            }
         }
     }
 
@@ -231,11 +234,10 @@ public class Main {
             question.askUser();
             length--;
         }
-        new Grade().printGrade();
+        new Grade().printFinalGrade();
         Course.allQuestions().clear();
         Records.save(course);
     }
-
 
     /**
      * <h1>load</h1>

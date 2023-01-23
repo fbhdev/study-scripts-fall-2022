@@ -4,27 +4,30 @@
 public class Grade {
 
     private static int marks = 0;
+    private static double grade = 0;
     private static int total = 0;
     private Records records = new Records();
 
     /**
-     * finalGrade() calculates the final grade of the user
+     * Sets and returns the final grade after arithmetic operations
+     * <h1>finalGrade</h1>
      * @return the final grade
      */
     public double finalGrade(){
         if(!isValid(getMarks())){
             throw new IllegalArgumentException("Invalid grade");
         }
-        setMarks(getMarks());
-        return arithmetics(getMarks());
+        setGrade((double) getMarks() / getTotal() * 100);
+        return getGrade();
     }
 
     /**
-     * printGrade() prints the grade of the user
+     * Formats and print the final grade
+     * <h1>printFinalGrade</h1>
      */
-    public void printGrade(){
-        double percentage = arithmetics(getMarks());
-        System.out.print("Scored " + getMarks() + "/" + total);
+    public void printFinalGrade(){
+        double percentage = finalGrade();
+        System.out.print("Scored " + getMarks() + "/" + getTotal());
         System.out.println("\t–\tYour grade is: " + String.format("%.2f", percentage) + "%");
         System.out.println();
     }
@@ -66,7 +69,23 @@ public class Grade {
      * @param total the total to set
      */
     public void setTotal(int total) {
-        Grade.total = total;
+        this.total = total;
+    }
+
+    /**
+     * <h1>getGrade</h1>>
+     * @return the grade
+     */
+    public double getGrade() {
+        return grade;
+    }
+
+    /**
+     * <h1>setGrade</h1>
+     * @param grade the grade to set
+     */
+    public void setGrade(double grade) {
+        this.grade = grade;
     }
 
     /**
@@ -125,7 +144,7 @@ public class Grade {
     public boolean manualCorrection(String answer){
         System.out.println("The correct answer is: " + answer);
         while(true){
-            Input input = new Input("Is manual correction justified in this case? (y/n)");
+            Input input = new Input("Is manual correction justified? (y/n)");
             if(input.getInput().equals("y")) {
                 return true;
             }
@@ -157,15 +176,6 @@ public class Grade {
         message(false);
         records.addSuccess(false);
         if(message) System.out.println(" -> Correct answer is: " + answer);
-    }
-
-    /**
-     * arithmetics() returns the percentage of the grade
-     * @param marks The grade (marks) to be converted to percentage
-     * @return The percentage of the grade
-     */
-    public double arithmetics(int marks){
-        return (double) marks / total * 100;
     }
 }
 
